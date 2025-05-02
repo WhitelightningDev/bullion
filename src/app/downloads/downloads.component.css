@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+p-chip {
+  margin-top: 20px; /* Adjust as needed */
+}
