@@ -1,19 +1,33 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
-    <div class="container-fluid">
-      <img src="bitcoin.png"  width="60" class="m-2">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <div class="container-fluid">
+    <img src="bitcoin.png" width="60" class="m-2" alt="Logo">
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
+      aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarsExample02">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-        </ul>
-        <form role="search">
-          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarsExample02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/poolfeatures" routerLinkActive="active">Pool Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/fees" routerLinkActive="active">Fees</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/downloads" routerLinkActive="active">Downloads</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
+        </li>
+      </ul>
+      <form role="search">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,0 +1,4 @@
+.nav-link.active {
+  border-bottom: 2px solid #ffffff; /* White underline, adjust as needed */
+  transition: border-bottom 0.3s ease;
+}
