@@ -1,1 +1,60 @@
-<p>contactus works!</p>
+<p-toast></p-toast>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <p-card header="Contact Us">
+        <div class="d-flex justify-content-center mb-3">
+          <i class="pi pi-envelope" style="font-size: 2rem; color: #007bff;"></i> <!-- Icon added here -->
+        </div>
+        <form (ngSubmit)="onSubmit()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              id="name"
+              type="text"
+              pInputText
+              [(ngModel)]="name"
+              name="name"
+              class="form-control"
+              placeholder="Enter your full name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              id="email"
+              type="email"
+              pInputText
+              [(ngModel)]="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter your email address"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              id="message"
+              pInputTextarea
+              rows="5"
+              [(ngModel)]="message"
+              name="message"
+              class="form-control"
+              placeholder="Type your message here"
+            ></textarea>
+          </div>
+
+          <button
+            pButton
+            type="submit"
+            label="Send Message"
+            class="btn btn-primary w-100"
+          ></button>
+        </form>
+      </p-card>
+    </div>
+  </div>
+</div>
