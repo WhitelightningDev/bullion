@@ -1,12 +1,6 @@
-<h1 class="text-white text-center mt-5">All our downloads all in one place</h1>
-
-<div class="d-flex flex-column justify-content-center align-items-center">
-  <p-chip class="align-self-center"  icon="pi pi-arrow-down" />
-</div>
-
-<div class="d-flex justify-content-center align-items-center vh-100">
-  <div class="card-container">
-    <p-card [style]="{ width: '30rem', overflow: 'hidden' }">
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="text-center">
+    <p-card [style]="{ width: '30rem', overflow: 'hidden' }" class="mb-4">
       <ng-template pTemplate="header">
         <img alt="Card" class="img-fluid" src="download-screenshot.png" />
       </ng-template>
@@ -15,16 +9,25 @@
         User Guide for Co-Op Members
       </ng-template>
 
-      <p>
+      <p class="px-3">
         HOW TO REGISTER ON THE MY CO-OP APP AS USER AND THEN OPEN AN ACCOUNT TO APPLY FOR MEMBERSHIP
       </p>
+
+      <div class="d-flex justify-content-between px-3 pb-3">
+        <p-button 
+          label="Download PDF" 
+          icon="pi pi-download" 
+          severity="primary" 
+          (click)="openFileInNewTab()">
+        </p-button>
+
+        <p-button 
+          label="Login" 
+          icon="pi pi-sign-in" 
+          severity="primary" 
+          (click)="newMemberLogin()">
+        </p-button>
+      </div>
     </p-card>
-    <p-button 
-      label="Download PDF" 
-      icon="pi pi-download" 
-      severity="primary" 
-      class="mt-5" 
-      (click)="openFileInNewTab()">
-    </p-button>
   </div>
 </div>
