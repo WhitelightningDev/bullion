@@ -1,33 +1,54 @@
-<div class="container vh-100 d-flex justify-content-center align-items-center">
-  <div class="text-center">
-    <p-card [style]="{ width: '30rem', overflow: 'hidden' }" class="mb-4">
-      <ng-template pTemplate="header">
-        <img alt="Card" class="img-fluid" src="download-screenshot.png" />
-      </ng-template>
-
-      <ng-template pTemplate="title">
-        User Guide for Co-Op Members
-      </ng-template>
-
-      <p class="px-3">
-        HOW TO REGISTER ON THE MY CO-OP APP AS USER AND THEN OPEN AN ACCOUNT TO APPLY FOR MEMBERSHIP
-      </p>
-
-      <div class="d-flex justify-content-between px-3 pb-3">
-        <p-button 
-          label="Download PDF" 
-          icon="pi pi-download" 
-          severity="primary" 
-          (click)="openFileInNewTab()">
-        </p-button>
-
-        <p-button 
-          label="Login" 
-          icon="pi pi-sign-in" 
-          severity="primary" 
-          (click)="newMemberLogin()">
-        </p-button>
-      </div>
-    </p-card>
+<!-- Hero Section -->
+<section class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <i class="bi bi-cloud-download-fill fs-1 mb-3"></i>
+    <h2 class="display-6">Download Documents</h2>
+    <p class="lead">Here you can download all the documents relevant to this Co-op.</p>
   </div>
-</div>
+</section>
+
+<!-- Content Section -->
+<section class="container py-5">
+  <div class="row align-items-center g-5">
+
+    <!-- Image -->
+    <div class="col-md-6">
+      <img
+        src="bullion-beperk-image.png"
+        alt="Bullion Co-op"
+        class="img-fluid rounded shadow-sm mx-auto d-block"
+        style="max-width: 300px;"
+        loading="lazy">
+    </div>
+
+    <!-- Text + Buttons -->
+    <div class="col-md-6 text-md-start text-center">
+      <h1 class="text-dark fw-bold mb-3 text-white">Bullion CIPC Document</h1>
+      <p class="mb-4 text-white">Access and download the official documents for the Bullion Co-operative below.</p>
+
+      <div class="d-grid gap-3 d-md-flex justify-content-md-start">
+        <!-- View Button -->
+        <button
+          type="button"
+          class="btn btn-primary btn-lg px-4"
+          (click)="openModal()">
+          <i class="bi bi-eye me-2"></i>View
+        </button>
+
+        <!-- Download Button -->
+        <a
+          href="assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf"
+          download
+          class="btn btn-outline-secondary btn-lg px-4">
+          <i class="bi bi-download me-2"></i>Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PDF Viewer Modal Component -->
+<app-pdf-viewer-popup
+  [show]="showModal"
+  [pdfSrc]="'assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf'">
+</app-pdf-viewer-popup>
