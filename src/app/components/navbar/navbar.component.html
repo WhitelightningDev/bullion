@@ -1,14 +1,21 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
+<nav class="navbar navbar-expand-lg rounded-4 bg-light py-3 border-bottom ">
   <div class="container-fluid">
-    <img src="bullion-logo.png" width="60" class="m-3" alt="Logo">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="bullion-logo.png" width="50" height="50" class="d-inline-block align-top me-2" alt="Logo">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02"
-      aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+    </a>
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarsExample02">
-      <ul class="navbar-nav me-auto">
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <!-- Left Nav Links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link" routerLink="/" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">Home</a>
@@ -26,9 +33,21 @@
           <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
         </li>
       </ul>
-      <form role="search">
-        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-      </form>
+
+      <!-- Right Side - Auth Links -->
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item me-2">
+          <a class="nav-link d-flex align-items-center" routerLink="/register" routerLinkActive="active">
+            <i class="bi bi-person-plus-fill me-1"></i> Register
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="https://system.mycoop.co.za/account/login">
+            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+          </a>
+        </li>
+      </ul>
+
     </div>
   </div>
 </nav>
