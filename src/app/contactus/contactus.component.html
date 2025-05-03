@@ -1,11 +1,27 @@
+<!-- Toast for notifications -->
 <p-toast></p-toast>
 
 <div class="container my-5">
+  <!-- Organization Info -->
+  <div class="row justify-content-center mb-4">
+    <div class="col-md-10 text-center text-white">
+      <h2>Contact Information</h2>
+      <p><strong>Bullion Beperk Primary Co-operative Ltd</strong> | Reg no. 2023 / 005086 / 24</p>
+      <p>10 Swart Street, Tergniet, Western Cape, South Africa, 6525</p>
+      <p>Email: <a href="mailto:info@bullionlimited.co.za" class="text-white">info&#64;bullionlimited.co.za</a> |
+         Web: <a href="https://www.bullionlimited-co.co.za" target="_blank" class="text-white">www.bullionlimited-co.co.za</a>
+      </p>
+      <p><strong>Admin Queries:</strong> Willem - 083 375 9003 | Anneke - 082 297 3542</p>
+      <p><strong>Other Info:</strong> Johan Keyser - 083 627 0670 | Steven Volschenk - 082 508 0564</p>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
   <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-      <p-card header="Contact Us">
+      <p-card header="Send Us a Message">
         <div class="d-flex justify-content-center mb-3">
-          <i class="pi pi-envelope" style="font-size: 2rem; color: #007bff;"></i> <!-- Icon added here -->
+          <i class="pi pi-envelope" style="font-size: 2rem; color: #007bff;"></i>
         </div>
         <form (ngSubmit)="onSubmit()">
           <div class="mb-3">
