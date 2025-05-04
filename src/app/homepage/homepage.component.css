@@ -14,8 +14,8 @@ width: 900px;
 
 .hero-section {
     position: relative;
-  
- 
+
+
   }
 
   .hero-image {
@@ -83,3 +83,13 @@ width: 900px;
       display: block !important;
     }
   }
+
+  #welcome-header {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+  }
+
+  #welcome-header.visible {
+    opacity: 1;
+  }
+
