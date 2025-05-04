@@ -1,19 +1,7 @@
 /* fees.component.css */
 
+/* Layout spacing */
 .card {
-  margin-bottom: 1.5rem;
-}
-
-h1, h2 {
-  font-weight: bold;
-}
-
-.table th, .table td {
-  text-align: center;
-}
-
-table {
-  width: 100%;
   margin-bottom: 1.5rem;
 }
 
@@ -21,6 +9,57 @@ table {
   padding: 1.25rem;
 }
 
+h1, h2 {
+  font-weight: bold;
+}
+
+/* Chart canvas background */
 canvas {
-  background-color: #222;  /* Ensure canvas has a dark background */
+  background-color: #222;
+}
+
+/* Table styling */
+.table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-size: 0.95rem;
+  padding: 0.75rem;
+}
+
+/* Allow horizontal scrolling on small screens */
+.table-responsive {
+  overflow-x: auto;
+}
+
+/* Improve nested list readability inside table cells */
+.table td div {
+  margin-bottom: 0.25rem;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .table th,
+  .table td {
+    font-size: 0.85rem;
+    padding: 0.5rem;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
 }

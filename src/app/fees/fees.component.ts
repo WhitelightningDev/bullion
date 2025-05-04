@@ -20,17 +20,38 @@ export class FeesComponent implements OnInit {
       type: 'bar',
       data: {
         labels: [
-          '< R100,000',
-          '≥ R100,000',
-          '≥ R500,000',
-          '≥ R1,000,000',
-          '≥ R2,500,000'
+          'Admin Fee (<R100k)',
+          'Admin Fee (≥R100k)',
+          'Admin Fee (≥R500k)',
+          'Admin Fee (≥R1M)',
+          'Admin Fee (≥R2.5M)',
+          'Commission',
+          'Switching',
+          'Withdrawals',
+          'Courier',
+          'Collection',
+          'Ongoing (Gold)',
+          'Ongoing (Silver)'
         ],
         datasets: [{
-          label: 'Administration Fee (%)',
-          data: [1.50, 1.25, 0.75, 0.50, 0.25],
-          backgroundColor: 'rgba(0, 123, 255, 0.6)',
-          borderColor: 'rgba(0, 123, 255, 1)',
+          label: 'Fee (%) / Fixed',
+          data: [
+            1.50, 1.25, 0.75, 0.50, 0.25,
+            NaN, // Commission is variable
+            0.25,
+            0.15,
+            0.4,  // Insurance % component only
+            0.15,
+            1.0,
+            0.8
+          ],
+          backgroundColor: [
+            'rgba(0, 123, 255, 0.6)', 'rgba(0, 123, 255, 0.6)', 'rgba(0, 123, 255, 0.6)',
+            'rgba(0, 123, 255, 0.6)', 'rgba(0, 123, 255, 0.6)', 'rgba(255, 193, 7, 0.6)',
+            'rgba(40, 167, 69, 0.6)', 'rgba(220, 53, 69, 0.6)', 'rgba(108, 117, 125, 0.6)',
+            'rgba(23, 162, 184, 0.6)', 'rgba(102, 16, 242, 0.6)', 'rgba(102, 16, 242, 0.6)'
+          ],
+          borderColor: 'rgba(255, 255, 255, 1)',
           borderWidth: 1
         }]
       },
@@ -44,7 +65,7 @@ export class FeesComponent implements OnInit {
           },
           title: {
             display: true,
-            text: 'Administration Fees by Deposit Amount',
+            text: 'Fee Structure Overview',
             color: 'white',
             font: {
               size: 18,
@@ -53,53 +74,46 @@ export class FeesComponent implements OnInit {
           },
           tooltip: {
             callbacks: {
-              label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.raw}%`
+              label: (tooltipItem) => {
+                const value = tooltipItem.raw as number;
+                return isNaN(value)
+                  ? 'Variable / Fixed fee'
+                  : `${tooltipItem.dataset.label}: ${value}%`;
+              }
             }
           }
         },
         scales: {
           x: {
-            title: {
-              display: true,
-              text: 'Deposit Bracket (ZAR)',
+            ticks: {
               color: 'white',
               font: {
-                size: 14,
-                weight: 'bold'
+                size: 10
               }
             },
             grid: {
               color: 'rgba(255, 255, 255, 0.1)'
-            },
-            ticks: {
-              color: 'white',
-              font: {
-                size: 12
-              }
             }
           },
           y: {
             beginAtZero: true,
             title: {
               display: true,
-              text: 'Fee Percentage (%)',
+              text: 'Percentage (%)',
               color: 'white',
               font: {
                 size: 14,
                 weight: 'bold'
               }
             },
-            grid: {
-              color: 'rgba(255, 255, 255, 0.1)'
-            },
             ticks: {
               color: 'white',
-              font: {
-                size: 12
-              },
               callback: function (value) {
                 return value + '%';
               }
+            },
+            grid: {
+              color: 'rgba(255, 255, 255, 0.1)'
             }
           }
         }
