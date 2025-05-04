@@ -1,3 +1,10 @@
 .card:hover{
   border-color: blue;
 }
+.container {
+  background-image: url('/undraw_bitcoin_q7r1.svg');
+  background-size: contain;       /* or 'contain' or 'auto', depending on your need */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed; /* Optional: makes it stay during scroll */
+}
