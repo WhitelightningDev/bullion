@@ -1,53 +1,63 @@
-<nav class="navbar navbar-expand-lg rounded-4 bg-light py-3 border-bottom ">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 rounded-4 border">
+  <div class="container-fluid px-4">
     <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" routerLink="/">
-      <img src="bullion-logo.png" width="50" height="50" class="d-inline-block align-top me-2" alt="Logo">
-
+    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+      <img src="bullion-logo.png" width="45" height="45" class="rounded-circle" alt="Logo">
+      <span class="fw-bold fs-5 text-dark">Bullion Co-Op</span>
     </a>
 
     <!-- Toggler -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <!-- Left Nav Links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/" routerLinkActive="active"
+          <a class="nav-link fw-semibold text-dark" routerLink="/" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/poolfeatures" routerLinkActive="active">Pools</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/poolfeatures" routerLinkActive="active">Pools</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/fees" routerLinkActive="active">Fees</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/fees" routerLinkActive="active">Fees</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/downloads" routerLinkActive="active">Downloads</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/downloads" routerLinkActive="active">Downloads</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact-us" routerLinkActive="active">Contact Us</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/contact-us" routerLinkActive="active">Contact</a>
         </li>
       </ul>
 
       <!-- Right Side - Auth Links -->
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item me-2">
-          <a class="nav-link d-flex align-items-center" routerLink="/register" routerLinkActive="active">
-            <i class="bi bi-person-plus-fill me-1"></i> Register
-          </a>
+      <ul class="navbar-nav ms-auto gap-2 align-items-center">
+        <li class="nav-item">
+          <button
+            type="button"
+            class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2"
+            data-bs-toggle="modal"
+            data-bs-target="#registerGuideModal"
+          >
+            <i class="bi bi-person-plus-fill"></i> Register
+          </button>
         </li>
         <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="https://system.mycoop.co.za/account/login">
-            <i class="bi bi-box-arrow-in-right me-1"></i> Login
+          <a
+            class="btn btn-primary rounded-pill px-3 d-flex align-items-center gap-2 text-white"
+            href="https://system.mycoop.co.za/account/login"
+          >
+            <i class="bi bi-box-arrow-in-right"></i> Login
           </a>
         </li>
       </ul>
-
     </div>
   </div>
 </nav>
+
+<app-registerpopup></app-registerpopup>
