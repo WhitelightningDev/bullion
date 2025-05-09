@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { PdfViewerPopupComponent } from '../popups/pdf-viewer-popup/pdf-viewer-popup.component';
+import { RegisterModalComponent } from "../popups/register-modal/register-modal.component";
 
 @Component({
   selector: 'app-downloads',
   standalone: true,
-  imports: [PdfViewerPopupComponent],
+  imports: [PdfViewerPopupComponent, RegisterModalComponent],
   templateUrl: './downloads.component.html',
   styleUrls: ['./downloads.component.css']
 })
