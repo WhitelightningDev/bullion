@@ -3,29 +3,28 @@
 
 <div class="container my-5">
   <!-- Organization Info -->
-  <div class="row justify-content-center mb-4">
+  <div class="row justify-content-center mb-5">
     <div class="col-md-10 text-center text-white">
-      <h2>Contact Information</h2>
-      <p><strong>Bullion Beperk Primary Co-operative Ltd</strong> | Reg no. 2023 / 005086 / 24</p>
-      <p>10 Swart Street, Tergniet, Western Cape, South Africa, 6525</p>
-      <p>Email: <a href="mailto:info@bullionlimited.co.za" class="text-white">info&#64;bullionlimited.co.za</a> |
-         Web: <a href="https://www.bullionlimited-co.co.za" target="_blank" class="text-white">www.bullionlimited.co.za</a>
-      </p>
-      <p><strong>Admin Queries:</strong> Willem - 083 375 9003 | Anneke - 082 297 3542</p>
-      <p><strong>Other Info:</strong> Johan Keyser - 083 627 0670 | Steven Volschenk - 082 508 0564</p>
+      <h2 class="display-4 font-weight-bold mb-4 text-primary">Contact Information</h2>
+      <p class="lead"><strong>Bullion Beperk Primary Co-operative Ltd</strong> | Reg no. 2023 / 005086 / 24</p>
+      <p class="mb-2"><i class="pi pi-map-marker-alt"></i> 10 Swart Street, Tergniet, Western Cape, South Africa, 6525</p>
+      <p class="mb-2"><i class="pi pi-envelope"></i> Email: <a href="mailto:info@bullionlimited.co.za" class="text-white">info&#64;bullionlimited.co.za</a></p>
+      <p class="mb-2"><i class="pi pi-globe"></i> Web: <a href="https://www.bullionlimited-co.co.za" target="_blank" class="text-white">www.bullionlimited.co.za</a></p>
+      <p class="mb-2 p-1"><i class="pi pi-phone"></i> <strong> Admin Queries:</strong> Willem - 083 375 9003 | Anneke - 082 297 3542</p>
+      <p><i class="pi pi-user"></i> <strong> Other Info:</strong> Johan Keyser - 083 627 0670 | Steven Volschenk - 082 508 0564</p>
     </div>
   </div>
 
   <!-- Contact Form -->
-  <div class="row justify-content-center">
+  <!-- <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-      <p-card header="Send Us a Message">
+      <p-card header="Send Us a Message" styleClass="shadow-lg">
         <div class="d-flex justify-content-center mb-3">
           <i class="pi pi-envelope" style="font-size: 2rem; color: #007bff;"></i>
         </div>
         <form (ngSubmit)="onSubmit()">
           <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">Full Name</label>
             <input
               id="name"
               type="text"
@@ -38,7 +37,7 @@
           </div>
 
           <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
+            <label for="email" class="form-label">Email Address</label>
             <input
               id="email"
               type="email"
@@ -59,7 +58,7 @@
               [(ngModel)]="message"
               name="message"
               class="form-control"
-              placeholder="Type your message here"
+              placeholder="Write your message here"
             ></textarea>
           </div>
 
@@ -73,4 +72,4 @@
       </p-card>
     </div>
   </div>
-</div>
+</div> -->
