@@ -12,7 +12,6 @@ import { MaterialModule } from '../material.services';
 export class HomepageComponent implements AfterViewInit {
 
   ngAfterViewInit() {
-    // Load external Lordicon script
     const script = document.createElement('script');
     script.src = 'https://cdn.lordicon.com/lordicon.js';
     script.async = true;
@@ -22,18 +21,17 @@ export class HomepageComponent implements AfterViewInit {
     const hasShown = localStorage.getItem('headerShown');
 
     if (header && !hasShown) {
-      // Ensure opacity is 0 first
+      // Ensure it's hidden initially
       header.style.opacity = '0';
 
-      // Delay until next animation frame to trigger transition
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          header.classList.add('visible');
-          localStorage.setItem('headerShown', 'true');
-        });
-      });
+      // Defer animation until DOM is really ready (delay > render + asset load)
+      setTimeout(() => {
+        header.classList.add('visible');
+        localStorage.setItem('headerShown', 'true');
+      }, 100); // slight delay ensures image is there
     } else if (header) {
-      header.style.opacity = '1'; // Make sure it's visible
+      header.style.opacity = '1';
     }
   }
+
 }
