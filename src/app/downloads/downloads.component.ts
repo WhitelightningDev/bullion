@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PdfViewerPopupComponent } from '../popups/pdf-viewer-popup/pdf-viewer-popup.component';
-import { RegisterModalComponent } from "../popups/register-modal/register-modal.component";
+import { RegisterModalComponent } from '../popups/register-modal/register-modal.component';
 
 @Component({
   selector: 'app-downloads',
@@ -11,10 +11,22 @@ import { RegisterModalComponent } from "../popups/register-modal/register-modal.
 })
 export class DownloadsComponent {
   showModal: boolean = false;
-  pdfPath = 'assets/downloads/bullion-cipc-document.pdf';
+  pdfPath: string = '';
 
-  openModal(): void {
+  // Generic method
+  openModal(filePath: string): void {
+    this.pdfPath = filePath;
     this.showModal = true;
+  }
+
+  // Specific to CIPC document
+  openCipcDocument(): void {
+    this.openModal('assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf');
+  }
+
+  // Specific to Constitution document
+  openConstitutionDocument(): void {
+    this.openModal('assets/downloads/BULLIONFINANCIALCO-OPCONSTITUTION.pdf');
   }
 
   closeModal(): void {

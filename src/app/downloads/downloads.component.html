@@ -7,28 +7,20 @@
   </div>
 </section>
 
-<!-- Content Section -->
+<!-- First Document Section -->
 <section class="container py-5">
   <div class="row align-items-center g-5">
-
-    <!-- Image -->
     <div class="col-md-6">
       <img src="bullion-beperk-image.png" alt="Bullion Co-op" class="img-fluid rounded shadow-sm mx-auto d-block"
         style="max-width: 300px;" loading="lazy">
     </div>
-
-    <!-- Text + Buttons -->
     <div class="col-md-6 text-md-start text-center">
-      <h1 class="text-dark fw-bold mb-3 text-white">Bullion CIPC Document</h1>
+      <h1 class="fw-bold mb-3 text-white">Bullion CIPC Document</h1>
       <p class="mb-4 text-white">Access and download the official documents for the Bullion Co-operative below.</p>
-
       <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-        <!-- View Button -->
-        <button type="button" class="btn btn-primary btn-lg px-4" (click)="openModal()">
+        <button type="button" class="btn btn-primary btn-lg px-4" (click)="openCipcDocument()">
           <i class="bi bi-eye me-2"></i>View
         </button>
-
-        <!-- Download Button -->
         <a href="assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf" download class="btn btn-outline-secondary btn-lg px-4">
           <i class="bi bi-download me-2"></i>Download PDF
         </a>
@@ -37,11 +29,37 @@
   </div>
 </section>
 
-<!-- PDF Viewer Modal Component -->
-<app-pdf-viewer-popup [show]="showModal" [pdfSrc]="'assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf'">
-</app-pdf-viewer-popup>
+<!-- Constitution Section -->
+<section class="bg-dark text-white text-center py-5">
+  <div class="container">
+    <i class="bi bi-cloud-download-fill fs-1 mb-3"></i>
+    <h2 class="display-6">Bullion Constitution</h2>
+    <p class="lead">Here you can download all the documents relevant to this Co-op.</p>
+  </div>
+</section>
 
-<!-- Registration Guide Hero Section -->
+<section class="container py-5">
+  <div class="row align-items-center g-5">
+    <div class="col-md-6">
+      <img src="constitution.png" alt="Bullion Co-op" class="img-fluid rounded shadow-sm mx-auto d-block"
+        style="max-width: 300px;" loading="lazy">
+    </div>
+    <div class="col-md-6 text-md-start text-center">
+      <h1 class="fw-bold mb-3 text-white">Bullion Constitution</h1>
+      <p class="mb-4 text-white">Access and download the constitution for the Bullion Co-operative below.</p>
+      <div class="d-grid gap-3 d-md-flex justify-content-md-start">
+        <button type="button" class="btn btn-primary btn-lg px-4" (click)="openConstitutionDocument()">
+          <i class="bi bi-eye me-2"></i>View
+        </button>
+        <a href="assets/downloads/BULLIONFINANCIALCO-OPCONSTITUTION.pdf" download class="btn btn-outline-secondary btn-lg px-4">
+          <i class="bi bi-download me-2"></i>Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Registration Section -->
 <section class="bg-dark text-white text-center py-5">
   <div class="container">
     <i class="bi bi-pencil-square fs-1 mb-3"></i>
@@ -50,28 +68,19 @@
   </div>
 </section>
 
-<!-- Registration Guide Content -->
 <section class="container py-5" id="registration-guide">
   <div class="row align-items-center g-5">
-
-    <!-- Image -->
     <div class="col-md-6">
       <img src="registration-guide-image.png" alt="Registration Guide" class="img-fluid rounded shadow-sm mx-auto d-block"
         style="max-width: 300px;" loading="lazy">
     </div>
-
-    <!-- Text + Buttons -->
     <div class="col-md-6 text-md-start text-center">
-      <h1 class="text-dark fw-bold mb-3 text-white">Join the Co-op</h1>
+      <h1 class="fw-bold mb-3 text-white">Join the Co-op</h1>
       <p class="mb-4 text-white">Click below to open the step-by-step registration guide for becoming a member of Bullion Beperk.</p>
-
       <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-        <!-- Trigger Modal Instead of Direct Link -->
         <button type="button" class="btn btn-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#registerModal">
           <i class="bi bi-box-arrow-up-right me-2"></i>Register
         </button>
-
-        <!-- Download Button -->
         <a href="assets/downloads/RegistrationGuideonMyCoop.pdf" download class="btn btn-outline-secondary btn-lg px-4">
           <i class="bi bi-download me-2"></i>Download PDF
         </a>
@@ -80,7 +89,15 @@
   </div>
 </section>
 
+<!-- Reusable PDF Viewer Modal Component (one instance only) -->
+<!-- Your existing sections -->
 
+<!-- Reusable PDF Viewer Modal Component (one instance only) -->
+<app-pdf-viewer-popup
+  [show]="showModal"
+  [pdfSrc]="pdfPath"
+  (closeRequested)="closeModal()">
+</app-pdf-viewer-popup>
 
-<!-- app.component.html -->
+<!-- Registration Modal -->
 <app-register-modal></app-register-modal>
