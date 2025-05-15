@@ -7,14 +7,15 @@
     </a>
 
     <!-- Toggler -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <!-- Navbar Links -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" #navbarCollapse>
+
       <!-- Left Nav Links -->
       <ul class="navbar-nav ms-5 me-4 mb-2 mb-lg-0 gap-lg-3">
         <li class="nav-item">
@@ -41,20 +42,14 @@
       <!-- Right Side - Auth Links -->
       <ul class="navbar-nav ms-auto gap-2 align-items-center">
         <li class="nav-item">
-          <button
-            type="button"
-            class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2"
-            data-bs-toggle="modal"
-            data-bs-target="#registerGuideModal"
-          >
+          <button type="button" class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2"
+            data-bs-toggle="modal" data-bs-target="#registerGuideModal">
             <i class="bi bi-person-plus-fill"></i> Register
           </button>
         </li>
         <li class="nav-item">
-          <a
-            class="btn btn-primary rounded-pill px-3 d-flex align-items-center gap-2 text-white"
-            href="https://system.mycoop.co.za/account/login"
-          >
+          <a class="btn btn-primary rounded-pill px-3 d-flex align-items-center gap-2 text-white"
+            href="https://system.mycoop.co.za/account/login">
             <i class="bi bi-box-arrow-in-right"></i> User Login
           </a>
         </li>
