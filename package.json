@@ -27,6 +27,7 @@
     "bootstrap": "^5.3.5",
     "bootstrap-icons": "^1.11.3",
     "chart.js": "^4.4.9",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "intro.js": "^7.2.0",
     "ng2-pdf-viewer": "^10.4.0",
     "primeicons": "^7.0.0",
