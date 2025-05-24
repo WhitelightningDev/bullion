@@ -1,11 +1,19 @@
-import { Component, ElementRef, HostListener, ViewChild, Renderer2, AfterViewInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+  Renderer2,
+  AfterViewInit
+} from '@angular/core';
 import { RouterModule } from "@angular/router";
 import { RegisterpopupComponent } from "../../popups/registerpopup/registerpopup.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, RegisterpopupComponent],
+  imports: [RouterModule, RegisterpopupComponent, CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -15,7 +23,7 @@ export class NavbarComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit(): void {
-    // Close navbar on navigation link click
+    // Close navbar on nav-link click
     const navLinks = this.navbarCollapse.nativeElement.querySelectorAll('.nav-link');
     navLinks.forEach((link: HTMLElement) => {
       this.renderer.listen(link, 'click', () => this.closeNavbar());
@@ -24,11 +32,10 @@ export class NavbarComponent implements AfterViewInit {
 
   @HostListener('document:click', ['$event'])
   handleDocumentClick(event: Event) {
-    if (
-      this.navbarCollapse &&
-      this.navbarCollapse.nativeElement.classList.contains('show') &&
-      !this.navbarCollapse.nativeElement.contains(event.target)
-    ) {
+    const clickedInside = this.navbarCollapse.nativeElement.contains(event.target);
+    const isExpanded = this.navbarCollapse.nativeElement.classList.contains('show');
+
+    if (isExpanded && !clickedInside) {
       this.closeNavbar();
     }
   }
@@ -40,4 +47,21 @@ export class NavbarComponent implements AfterViewInit {
       collapse.hide();
     }
   }
+
+    showFloatingRegister = false;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    this.showFloatingRegister = scrollTop > 150; // Adjust as needed based on navbar height
+  }
+
+  openRegisterPopup() {
+    // Logic to open your popup/modal
+    const popup = document.querySelector('app-registerpopup') as any;
+    if (popup?.open) {
+      popup.open(); // Replace with whatever method triggers your popup
+    }
+  }
+
 }

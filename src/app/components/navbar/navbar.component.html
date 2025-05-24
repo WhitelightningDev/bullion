@@ -2,7 +2,7 @@
   <div class="container-fluid px-4">
     <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
-      <img src="bullion-logo.png" width="45" height="45" class="rounded-circle" alt="Logo">
+      <img src="bullion-logo.png" width="45" height="45" class="rounded-circle" alt="Bullion Co-Op Logo">
       <span class="fw-bold fs-5 text-dark">Bullion Co-Op</span>
     </a>
 
@@ -13,39 +13,51 @@
     </button>
 
     <!-- Navbar Links -->
-    <!-- Navbar Links -->
     <div class="collapse navbar-collapse" id="navbarNavDropdown" #navbarCollapse>
 
       <!-- Left Nav Links -->
       <ul class="navbar-nav ms-5 me-4 mb-2 mb-lg-0 gap-lg-3">
         <li class="nav-item">
           <a class="nav-link fw-semibold text-dark" routerLink="/" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            [routerLinkActiveOptions]="{ exact: true }">
+            Home
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold text-dark" routerLink="/poolfeatures" routerLinkActive="active">Pools</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/poolfeatures" routerLinkActive="active">
+            Pools
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold text-dark" routerLink="/fees" routerLinkActive="active">Fees</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/fees" routerLinkActive="active">
+            Fees
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold text-dark" routerLink="/downloads" routerLinkActive="active">Downloads</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/downloads" routerLinkActive="active">
+            Downloads
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold text-dark" routerLink="/faq" routerLinkActive="active">FAQ's</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/faq" routerLinkActive="active">
+            FAQ's
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-semibold text-dark" routerLink="/contact-us" routerLinkActive="active">Contact</a>
+          <a class="nav-link fw-semibold text-dark" routerLink="/contact-us" routerLinkActive="active">
+            Contact
+          </a>
         </li>
       </ul>
 
       <!-- Right Side - Auth Links -->
       <ul class="navbar-nav ms-auto gap-2 align-items-center">
         <li class="nav-item">
-          <button type="button" class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2"
-            data-bs-toggle="modal" data-bs-target="#registerGuideModal">
-            <i class="bi bi-person-plus-fill"></i> Register
-          </button>
+          <a href="https://system.mycoop.co.za/account/register" target="_blank">
+            <button type="button" class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2">
+              <i class="bi bi-person-plus-fill"></i> Register
+            </button>
+          </a>
         </li>
         <li class="nav-item">
           <a class="btn btn-primary rounded-pill px-3 d-flex align-items-center gap-2 text-white"
@@ -54,8 +66,19 @@
           </a>
         </li>
       </ul>
+
     </div>
   </div>
 </nav>
+<!-- Floating Register Button -->
+<a href="https://system.mycoop.co.za/account/register" target="_blank" rel="noopener noreferrer"><button
+    *ngIf="showFloatingRegister"
+    class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2 shadow floating-register-btn"
+    (click)="openRegisterPopup()">
+    <i class="bi bi-person-plus-fill"></i> Register
+  </button></a>
 
+
+
+<!-- Register Popup Component -->
 <app-registerpopup></app-registerpopup>
