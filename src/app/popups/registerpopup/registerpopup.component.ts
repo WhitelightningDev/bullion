@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class RegisterpopupComponent {
 
   goToRegister() {
-    window.location.href = 'https://system.mycoop.co.za/account/register';
+    window.location.href = 'https://bullion.mycoop.co.za/account/register';
   }
 
   goToDownloads() {
