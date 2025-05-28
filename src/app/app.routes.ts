@@ -5,6 +5,8 @@ import { FeesComponent } from './fees/fees.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { FaqComponent } from './faq/faq.component';
+import { LearnComponent } from './learn/learn.component';
+import { animate } from '@angular/animations';
 
 export const routes: Routes = [
   { path: "", component: HomepageComponent, data: { animation: 'Home' } },
@@ -13,4 +15,5 @@ export const routes: Routes = [
   { path: "downloads", component: DownloadsComponent, data: { animation: 'Downloads' } },
   { path: "contact-us", component: ContactusComponent, data: { animation: 'Contact' } },
   { path: "faq", component: FaqComponent, data: { animation: 'FAQ ' } },
+  {path: "learn", component: LearnComponent, data: {animate: 'Learn'} }
 ];
