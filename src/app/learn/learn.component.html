@@ -36,6 +36,9 @@
       </div>
 
 
+         <!-- Modal Component -->
+      <app-comment-dialog #commentDialog [comments]="comments"
+        (newCommentAdded)="onNewComment($event)"></app-comment-dialog>
       <!-- Comment Section -->
       <!-- <div class="mt-4 text-start">
         <h5 class="text-white">Comments</h5>
