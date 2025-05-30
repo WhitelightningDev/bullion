@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 <main [@routeAnimations]="prepareRoute(outlet)">
+  <app-cookie-consent></app-cookie-consent>
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
 <app-footer></app-footer>
