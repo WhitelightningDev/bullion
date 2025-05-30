@@ -1,0 +1,4 @@
+/* Optional: Ensure the banner has high visibility */
+.alert {
+  z-index: 1050;
+}
