@@ -1,0 +1,40 @@
+<!-- Trigger Link (styled like a button or elegant link) -->
+<a href="#"
+   class="text-info text-decoration-underline small"
+   data-bs-toggle="modal"
+   data-bs-target="#cookieSettingsModal">
+   Cookie Preferences
+</a>
+
+<!-- Modal -->
+<div class="modal fade" id="cookieSettingsModal" tabindex="-1" aria-labelledby="cookieSettingsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+
+      <!-- Header -->
+      <div class="modal-header bg-dark text-light border-0 rounded-top-4">
+        <h5 class="modal-title" id="cookieSettingsLabel">Manage Cookie Preferences</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+        <p class="mb-2">
+          <strong>Current preference:</strong>
+          <span class="badge bg-secondary ms-1">{{ currentStatus || 'Not set' }}</span>
+        </p>
+        <p class="text-muted small">
+          You can choose whether to accept or decline cookies used to enhance your experience. Resetting will remove your current choice and ask again on your next visit.
+        </p>
+      </div>
+
+      <!-- Footer -->
+      <div class="modal-footer border-0 pt-0">
+        <button class="btn btn-success px-4" (click)="acceptCookies()">Accept</button>
+        <button class="btn btn-danger px-4" (click)="declineCookies()">Decline</button>
+        <button class="btn btn-outline-secondary px-4" (click)="resetCookies()">Reset</button>
+      </div>
+
+    </div>
+  </div>
+</div>
