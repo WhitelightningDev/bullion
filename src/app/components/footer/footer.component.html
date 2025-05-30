@@ -1,42 +1,51 @@
-<footer class="bg-dark text-light py-5 mt-5 border-top">
+<footer class="bg-dark text-light py-5 mt-5 border-top border-secondary">
   <div class="container">
     <div class="row gy-4">
 
       <!-- Logo & Description -->
-      <div class="col-md-4 d-flex flex-column align-items-start">
+      <div class="col-md-4">
         <div class="d-flex align-items-center mb-3">
-          <img src="bullion-logo.png" alt="Bullion Logo" width="60" height="60" class="me-3">
-          <h5 class="mb-0 fw-bold text-white">Bullion Beperk</h5>
+          <img src="bullion-logo.png" alt="Bullion Logo" width="60" height="60" class="me-3 rounded shadow-sm bg-white p-1">
+          <h5 class="fw-bold mb-0 text-white">Bullion Beperk</h5>
         </div>
-        <p class="small text-muted">Empowering individuals through cooperative investment solutions with transparency, growth, and sustainability.</p>
-        <p class="small mb-0 text-muted">&copy; 2025 Bullion Beperk. All rights reserved.</p>
+        <p class="text-muted small">
+          Empowering individuals through cooperative investment solutions with transparency, growth, and sustainability.
+        </p>
+        <p class="text-muted small mb-0">&copy; 2025 Bullion Beperk. All rights reserved.</p>
       </div>
 
       <!-- Navigation Links -->
       <div class="col-md-4">
-        <h6 class="text-uppercase fw-semibold mb-3">Quick Links</h6>
+        <h6 class="text-uppercase fw-semibold text-white mb-3">Quick Links</h6>
         <ul class="list-unstyled">
           <li class="mb-2"><a href="/" class="text-light text-decoration-none">Home</a></li>
           <li class="mb-2"><a href="/poolfeatures" class="text-light text-decoration-none">Pool Features</a></li>
           <li class="mb-2"><a href="/fees" class="text-light text-decoration-none">Fees</a></li>
           <li class="mb-2"><a href="/downloads" class="text-light text-decoration-none">Downloads</a></li>
-          <li><a href="/contact-us" class="text-light text-decoration-none">Contact Us</a></li>
+          <li class="mb-2"><a href="/contact-us" class="text-light text-decoration-none">Contact Us</a></li>
           <li><a href="/learn" class="text-light text-decoration-none">Learn</a></li>
         </ul>
       </div>
 
       <!-- Contact & Social -->
       <div class="col-md-4">
-        <h6 class="text-uppercase fw-semibold mb-3">Connect With Us</h6>
-        <p class="small mb-1"><i class="pi pi-envelope me-2"></i> info&#64;bullionlimited.co.za</p>
-        <p class="small mb-3"><i class="pi pi-map-marker me-2"></i> Tergniet, Western Cape, South Africa</p>
-        <!-- <div class="d-flex gap-3">
-          <a href="#" target="_blank" class="text-light"><i class="pi pi-facebook" style="font-size: 1.25rem;"></i></a>
-          <a href="#" target="_blank" class="text-light"><i class="pi pi-twitter" style="font-size: 1.25rem;"></i></a>
-          <a href="#" target="_blank" class="text-light"><i class="pi pi-linkedin" style="font-size: 1.25rem;"></i></a>
-        </div> -->
+        <h6 class="text-uppercase fw-semibold text-white mb-3">Connect With Us</h6>
+        <p class="small mb-2">
+          <i class="pi pi-envelope me-2 text-info"></i>
+          <a href="mailto:info@bullionlimited.co.za" class="text-light text-decoration-none">info&#64;bullionlimited.co.za</a>
+        </p>
+        <p class="small mb-3">
+          <i class="pi pi-map-marker me-2 text-info"></i>
+          Tergniet, Western Cape, South Africa
+        </p>
+        <p class="small">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#cookieSettingsModal" class="text-info text-decoration-underline"> <app-cookie-settings></app-cookie-settings></a>
+        </p>
       </div>
 
     </div>
   </div>
+
+  <!-- Include cookie settings modal component -->
+
 </footer>
