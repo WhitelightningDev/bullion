@@ -132,3 +132,22 @@ video {
 }
 
 
+ .feature-card {
+    background: linear-gradient(to bottom right, #0b1740, #0a1f2f);
+    border: 1px solid #1764ff;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .feature-card .icon {
+    font-size: 2.5rem;
+    color: #4da6ff;
+  }
+
+  .feature-card .arrow {
+    font-size: 1.25rem;
+    color: #6cc2ff;
+  }
