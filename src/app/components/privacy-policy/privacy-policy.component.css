@@ -1,0 +1,37 @@
+body {
+  background-color: #020d2d;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+  color: #4da6ff;
+}
+
+.section-title {
+  border-left: 4px solid #4da6ff;
+  padding-left: 0.75rem;
+  margin-top: 2rem;
+}
+
+.privacy-section {
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid #1c3c7c;
+}
+
+a {
+  color: #6cc2ff;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.footer-note {
+  font-size: 0.9rem;
+  color: #aaa;
+}

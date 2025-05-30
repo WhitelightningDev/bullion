@@ -8,6 +8,9 @@ import { FaqComponent } from './faq/faq.component';
 import { LearnComponent } from './learn/learn.component';
 import { animate } from '@angular/animations';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+
+
 
 export const routes: Routes = [
   { path: '', component: HomepageComponent, data: { animation: 'Home' } },
@@ -34,4 +37,7 @@ export const routes: Routes = [
     component: TermsAndConditionsComponent,
     data: { animate: 'Terms And Conditions' },
   },
+  {
+    path: 'privacy', component: PrivacyPolicyComponent, data: {animate: 'Privacy Policy'}
+  }
 ];
