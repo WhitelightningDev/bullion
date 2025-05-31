@@ -30,9 +30,7 @@
                 "output": "assets"
               }
             ],
-
             "styles": [
-
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
@@ -52,8 +50,16 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "serviceWorker": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
             },
+
             "development": {
               "optimization": false,
               "extractLicenses": false,
