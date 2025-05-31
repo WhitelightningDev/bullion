@@ -11,6 +11,5 @@ const updatedAppConfig = {
     ...(appConfig.providers ?? []),
   ]
 };
-
 bootstrapApplication(AppComponent, updatedAppConfig)
   .catch((err) => console.error(err));
