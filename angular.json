@@ -51,7 +51,6 @@
                 }
               ],
               "outputHashing": "all",
-              "serviceWorker": true,
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
