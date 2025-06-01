@@ -1,0 +1,38 @@
+.install-pwa-banner {
+  position: fixed;
+  width: 450px;
+  top: 13%;
+  left: 64%;
+  border-radius: 10px;
+  right: 0;
+  background: #1976d2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  z-index: 1050;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.install-btn {
+  background: white;
+  color: #1976d2;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.dismiss-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  margin-left: 1rem;
+}

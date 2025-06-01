@@ -7,6 +7,9 @@ import Aura from '@primeng/themes/aura';
 import { routes } from './app.routes';
 import { provideServiceWorker } from '@angular/service-worker';
 
+// Import your PwaInstallService
+import { PwaInstallService } from './services/pwa-install.service';
+
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
@@ -21,9 +24,11 @@ export const appConfig: ApplicationConfig = {
           cssLayer: false
         }
       }
-    }), provideServiceWorker('ngsw-worker.js', {
-            enabled: !isDevMode(),
-            registrationStrategy: 'registerWhenStable:30000'
-          })
+    }),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),  // enable in production, disable in dev
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
+    PwaInstallService // add your PWA service here
   ]
 };
