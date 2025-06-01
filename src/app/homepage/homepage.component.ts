@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [FormsModule, MaterialModule, CommentDialogComponent, CommonModule],
+  imports: [FormsModule, MaterialModule, CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
