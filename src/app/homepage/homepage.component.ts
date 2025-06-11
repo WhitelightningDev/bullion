@@ -9,11 +9,13 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.services';
 import { CommentDialogComponent, CommentEntry } from '../components/comment-dialog-component/comment-dialog-component.component';
 import { CommonModule } from '@angular/common';
+import { MetalsChartComponent } from '../components/metals-chart/metals-chart.component';
+
 
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [FormsModule, MaterialModule, CommonModule],
+  imports: [FormsModule, MaterialModule, CommonModule, MetalsChartComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']

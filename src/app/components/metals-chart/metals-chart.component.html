@@ -1,0 +1,27 @@
+<div class="metal-container">
+  <h2>Live Metal Prices</h2>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="goldPrice !== null && silverPrice !== null; else loading">
+    <div class="metal-card gold">
+      <h3>Gold (XAU)</h3>
+      <p>{{ goldPrice | number:'1.2-2' }} ZAR/toz</p>
+    </div>
+
+    <div class="metal-card silver">
+      <h3>Silver (XAG)</h3>
+      <p>{{ silverPrice | number:'1.2-2' }} ZAR/toz</p>
+    </div>
+
+    <div class="timestamp">
+      <small>Last updated: {{ lastUpdated }}</small>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <p>Loading metal prices...</p>
+  </ng-template>
+</div>
