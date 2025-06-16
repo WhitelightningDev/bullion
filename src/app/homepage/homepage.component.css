@@ -151,3 +151,68 @@ video {
     font-size: 1.25rem;
     color: #6cc2ff;
   }
+
+
+  .gold-widget {
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 240px;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 auto;
+  }
+  .gold-header {
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  .gold-header a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .gold-price {
+    padding: 15px;
+    text-align: center;
+  }
+  @media (max-width: 300px) {
+    .gold-widget {width: 100%;}
+    .gold-header {font-size: 16px; padding: 8px;}
+    .gold-price {padding: 12px;}
+  }
+
+
+
+    .silver-widget {
+    border: 1px solid #333;
+    width: 100%;
+    max-width: 240px;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  .silver-header {
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  .silver-header a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .silver-price {
+    padding: 15px;
+    text-align: center;
+  }
+  @media (max-width: 300px) {
+    .silver-widget { width: 100%; }
+    .silver-header { font-size: 16px; padding: 8px; }
+    .silver-price { padding: 12px; }
+  }
