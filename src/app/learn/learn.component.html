@@ -50,22 +50,4 @@
         </button>
       </div>
     </div>
-
-    <!-- Like & Comment Actions -->
-    <div class="col-12 mt-3 d-flex justify-content-center align-items-center gap-4">
-      <button mat-icon-button [color]="videoLiked ? 'warn' : undefined" (click)="likeVideo()">
-        <mat-icon>{{ videoLiked ? 'favorite' : 'favorite_border' }}</mat-icon>
-      </button>
-      <span class="text-white">{{ likeCount }}</span>
-
-      <button mat-icon-button color="accent" (click)="openCommentsDialog()">
-        <mat-icon>chat_bubble_outline</mat-icon>
-      </button>
-      <span class="text-white">{{ comments.length }}</span>
-    </div>
-
-    <!-- Comments Modal -->
-    <app-comment-dialog #commentDialog [comments]="comments"
-      (newCommentAdded)="onNewComment($event)"></app-comment-dialog>
-  </div>
 </div>
