@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './metals-chart.component.html',
-  styleUrls: ['./metals-chart.component.css']
+  styleUrls: ['./metals-chart.component.css'],
 })
 export class MetalsChartComponent implements OnInit {
   goldPrice: number | null = null;
@@ -21,29 +21,31 @@ export class MetalsChartComponent implements OnInit {
   }
 
   async fetchMetalRates(): Promise<void> {
-    const url = 'https://api.metals.dev/v1/latest?api_key=UCFQEU9TIZMZWRCYJRAY203CYJRAY&currency=ZAR&unit=toz';
+  const url = 'https://api.polygon.io/v3/reference/dividends?apiKey=bG0E2pivkqp1BuyiNB4lBcd24Y_DNVvo';
 
-    try {
-      const response = await fetch(url, {
-        headers: { Accept: 'application/json' }
-      });
+  try {
+    const response = await fetch(url, {
+      headers: {
+        Accept: 'application/json',
+      },
+    });
 
-      const result = await response.json();
+    const result = await response.json();
+    console.log('API Response:', result); // ✅ Logs the API response
 
-      this.zone.run(() => {
-        this.goldPrice = result.metals?.gold ?? null;
-        this.silverPrice = result.metals?.silver ?? null;
-        this.lastUpdated = new Date(result.timestamps?.metal).toLocaleString();
-        this.errorMessage = null;
-      });
-    } catch (error) {
-      this.zone.run(() => {
-        console.error('Error fetching metal rates:', error);
-        this.errorMessage = 'Unable to fetch metal prices at the moment.';
-      });
-    }
+    this.zone.run(() => {
+      // Note: There are no "gold" or "silver" fields in this API
+      this.goldPrice = null;
+      this.silverPrice = null;
+      this.lastUpdated = new Date().toLocaleString();
+      this.errorMessage = null;
+    });
+  } catch (error) {
+    this.zone.run(() => {
+      console.error('Error fetching data from Polygon:', error);
+      this.errorMessage = 'Unable to fetch data at the moment.';
+    });
   }
 }
 
-
-// https://metals.dev/dashboard
+}
