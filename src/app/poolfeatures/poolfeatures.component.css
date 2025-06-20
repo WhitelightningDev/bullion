@@ -1,5 +1,37 @@
-.poolsimage{
-    position: relative;
+.poolsimage {
+  position: relative;
+  left: 30%;
+  top: 30px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Large desktops (≥1200px) */
+@media (min-width: 1200px) {
+  .poolsimage {
     left: 30%;
-    top: 20px;
+  }
+}
+
+/* Medium screens (≥992px and <1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .poolsimage {
+    left: 25%;
+  }
+}
+
+/* Small tablets (≥768px and <992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .poolsimage {
+    left: 15%;
+  }
+}
+
+/* Extra small devices (<768px) */
+@media (max-width: 767.98px) {
+  .poolsimage {
+    left: 0;
+    display: block;
+    margin: 20px auto 0 auto; /* centers the image horizontally */
+  }
 }
