@@ -15,7 +15,7 @@ import { MetalsChartComponent } from '../components/metals-chart/metals-chart.co
 @Component({
   selector: 'app-homepage',
   standalone: true,
-  imports: [FormsModule, MaterialModule, CommonModule, MetalsChartComponent],
+  imports: [FormsModule, MaterialModule, CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
@@ -30,24 +30,23 @@ export class HomepageComponent implements AfterViewInit {
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
 
   ngAfterViewInit() {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.lordicon.com/lordicon.js';
-    script.async = true;
-    document.body.appendChild(script);
 
-    const header = document.getElementById('welcome-header');
-    const hasShown = localStorage.getItem('headerShown');
 
-    if (header && !hasShown) {
-      header.style.opacity = '0';
-      setTimeout(() => {
-        header.classList.add('visible');
-        localStorage.setItem('headerShown', 'true');
-      }, 100);
-    } else if (header) {
-      header.style.opacity = '1';
-    }
+  // Handle welcome header animation
+  const header = document.getElementById('welcome-header');
+  const hasShown = localStorage.getItem('headerShown');
+
+  if (header && !hasShown) {
+    header.style.opacity = '0';
+    setTimeout(() => {
+      header.classList.add('visible');
+      localStorage.setItem('headerShown', 'true');
+    }, 100);
+  } else if (header) {
+    header.style.opacity = '1';
   }
+}
+
 
   togglePlayPause() {
     const video = this.videoPlayerRef?.nativeElement;

@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-learn',
-   imports: [FormsModule, MaterialModule, CommentDialogComponent, CommonModule],
+   imports: [FormsModule, MaterialModule, CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './learn.component.html',
   styleUrl: './learn.component.css'
