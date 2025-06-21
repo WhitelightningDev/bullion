@@ -35,3 +35,23 @@
     margin: 20px auto 0 auto; /* centers the image horizontally */
   }
 }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.card-title img {
+  vertical-align: middle;
+}
+
+.card {
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+}
+
+.text-secondary {
+  color: #adb5bd !important;
+}
