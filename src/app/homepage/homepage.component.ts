@@ -1,3 +1,4 @@
+
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
@@ -25,6 +26,7 @@ export class HomepageComponent implements AfterViewInit {
   videoLiked = false;
   comments: (CommentEntry & { liked?: boolean; likesCount?: number })[] = [];
   isPlaying = false;
+  storyVideoLoaded = false;
 
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;

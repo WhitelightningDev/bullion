@@ -27,6 +27,31 @@
   </div>
 </section>
 
+<section class="py-5 text-center text-white">
+  <h2 class="fw-semibold mb-4">The Bullion Story – Freedom Awaits!</h2>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-lg-8 col-md-10 col-12 p-4">
+      <!-- Skeleton Loader While Video Loads -->
+      <div *ngIf="!storyVideoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div>
+
+      <!-- YouTube Video Embed -->
+      <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!storyVideoLoaded">
+        <iframe
+          src="https://www.youtube.com/embed/bHxUF92a8lo"
+          title="The Bullion Story"
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          class="rounded-4 border border-secondary"
+          (load)="storyVideoLoaded = true">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- How It Works Section -->
 <section class="text-white py-5">
   <div class="container">
@@ -57,11 +82,14 @@
   </div>
 </section>
 
+
 <!-- The Future Section -->
 <section class="py-5">
+  
   <div class="container text-center">
-    <p class="text-primary text-uppercase fw-medium mb-2 small letter-spacing">Looking Ahead</p>
-    <a href="/learn" class="text-info small text-decoration-none">For more info click here &gt;</a>
+    <a href="/poolfeatures#video-section" class="text-info small text-decoration-none">For more info click here &gt;</a>
+
+    <p class="text-primary text-uppercase fw-medium mb-2 small mt-5 letter-spacing">Looking Ahead</p>
     <h2 class="fw-semibold mt-3 text-light">The Future of Financial Convenience</h2>
     <p class="text-light mx-auto mb-4" style="max-width: 680px;">
       We’re integrating card payment systems to bring your Co-op access everywhere—transforming Bullion into your one-stop financial center.

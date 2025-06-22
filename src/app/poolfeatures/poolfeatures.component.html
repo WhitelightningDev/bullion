@@ -1,3 +1,4 @@
+
 <div class="container py-5 text-white">
 
   <!-- Header -->
@@ -76,8 +77,37 @@
     </div>
   </div>
 
+  <hr class="mt-5">
+
+  <section id="video-section" class="py-5 text-center text-white border-bottom">
+  <h2 class="fw-semibold mb-4">Bullion Deposit Process</h2>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-lg-8 col-md-10 col-12 p-4">
+      <!-- Skeleton Placeholder -->
+      <div *ngIf="!videoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div>
+
+      <!-- Actual Video -->
+      <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!videoLoaded">
+        <iframe
+          src="https://www.youtube.com/embed/0uOaGmvSSjs"
+          title="Bullion Deposit Process"
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          class="rounded-4 border border-secondary"
+          (load)="videoLoaded = true">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
   <!-- Centered Image -->
   <div class="text-center mt-5">
+    <h2 class="fw-semibold mb-4">Current Available Pools</h2>
     <img src="poolsimage.jpeg" alt="Investment Pools" class="img-fluid rounded shadow-lg" style="max-width: 500px;" />
   </div>
 </div>
