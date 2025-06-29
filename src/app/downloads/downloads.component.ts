@@ -29,6 +29,12 @@ export class DownloadsComponent {
     this.openModal('assets/downloads/BULLIONFINANCIALCO-OPCONSTITUTION.pdf');
   }
 
+  openBullionProfileDocument() {
+  this.pdfPath = 'assets/downloads/BULLIONPROFILE-V2.pdf';
+  this.showModal = true;
+}
+
+
   closeModal(): void {
     this.showModal = false;
   }
