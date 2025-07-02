@@ -10,21 +10,19 @@
       </h2>
     </div>
 
-    <div class="col-12 my-4">
-      <div class="position-relative rounded overflow-hidden shadow video-wrapper" (click)="togglePlayPause()">
-        <video #videoPlayer class="w-100 video-border rounded" preload="metadata" poster="/BullionRegistrationTutorial.png"
-          (play)="isPlaying = true" (pause)="isPlaying = false">
-          <source src="/BullionRegistrationTutorial.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
 
-        <button *ngIf="!isPlaying"
-          class="custom-play-button position-absolute top-50 start-50 translate-middle btn btn-light btn-lg rounded-circle shadow"
-          aria-label="Play video" type="button" (click)="$event.stopPropagation(); togglePlayPause()">
-          ▶
-        </button>
-      </div>
-    </div>
+<div class="col-12 my-4">
+  <div class="ratio ratio-16x9 rounded shadow overflow-hidden">
+    <iframe
+      src="https://www.youtube.com/embed/Ae87M9hHE_Y"
+      title="Bullion Registration Tutorial"
+      allowfullscreen
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      frameborder="0"
+      class="rounded"
+    ></iframe>
+  </div>
+</div>
 
     <!-- Section Title: My Co-op Deposit Process -->
     <div class="col-12 mb-4 mt-5">
