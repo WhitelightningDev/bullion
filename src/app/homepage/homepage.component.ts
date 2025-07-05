@@ -37,15 +37,18 @@ export class HomepageComponent implements AfterViewInit {
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
 
   constructor(private translate: TranslateService) {
-    // Add available languages
-    this.translate.addLangs(['en', 'af']);
-    // Set default language
-    this.translate.setDefaultLang('en');
+  // Add available languages
+  this.translate.addLangs(['en', 'af']);
+  this.translate.setDefaultLang('en');
 
-    // Optionally detect browser language
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang?.match(/en|af/) ? browserLang : 'en');
-  }
+  // ✅ Use saved language from localStorage or fallback to browser language
+  const savedLang = localStorage.getItem('lang');
+  const browserLang = this.translate.getBrowserLang();
+  const activeLang = savedLang || (browserLang?.match(/en|af/) ? browserLang : 'en');
+
+  this.translate.use(activeLang);
+}
+
 
   ngAfterViewInit(): void {
     // Handle welcome header animation
