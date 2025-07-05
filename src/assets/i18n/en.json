@@ -1,0 +1,66 @@
+{
+  "HERO": {
+    "TITLE": "Welcome to Bullion Beperk",
+    "SUBTITLE": "Empowering you through modern, collective wealth creation"
+  },
+  "INTRO": {
+    "TITLE": "A Co-op for the Future",
+    "BODY": "With our unique cooperative model, Bullion Beperk helps you build wealth through collective investments in gold, silver, and other assets.",
+    "POINTS": {
+      "1": "Empowering community investment",
+      "2": "Transparent, member-led decision making",
+      "3": "Secure access and member-only pools"
+    }
+  },
+  "STORY": {
+    "TITLE": "The Bullion Story – Freedom Awaits!"
+  },
+  "HOW": {
+    "TITLE": "How It Works",
+    "SUB": "A smarter way to grow and secure your future wealth",
+    "POOL": "Unitized Investment Pools",
+    "POOL_DESC": "Investments are pooled and unitized, enabling flexible entry and exit through your own member units.",
+    "OWNED": "Member-Owned System",
+    "OWNED_DESC": "You own the units. The Co-op manages them transparently, with full access via secure login.",
+    "REDEEM": "Flexible Redemption",
+    "REDEEM_DESC": "Redeem units in the pools for cash or precious metals with ease."
+  },
+  "FUTURE": {
+    "MORE_INFO": "For more info click here >",
+    "TITLE": "Stay ahead of the curve…a move to modern financing!",
+    "BODY": "Bullion has partnered with Fractal Global Payment Solutions to provide you with access to your very own global transactional account. Once your membership with Bullion is approved, you will receive an onboarding link to open your account—enabling seamless transactions both within South Africa and internationally.",
+    "LINK": "Downloads",
+    "CTA": "Become a member today for just",
+    "JOIN": "Join Now"
+  },
+   "VIDEOS": {
+    "START_HERE": "Start Here",
+    "TUTORIAL_TITLE_PART1": "Bullion",
+    "TUTORIAL_TITLE_PART2": "Registration Tutorial",
+    "LEARN_MORE": "Learn More",
+    "COOP_TITLE_PART1": "My Co-op",
+    "COOP_TITLE_PART2": "Deposit Process",
+    "ACCOUNT_TITLE_PART1": "Registered Members",
+    "ACCOUNT_TITLE_PART2": "Account Walkthrough"
+  },
+
+  "NAV": {
+    "BRAND": "Bullion Co-Op",
+    "HOME": "Home",
+    "POOLS": "Pools",
+    "FEES": "Fees",
+    "DOWNLOADS": "Downloads",
+    "FAQ": "FAQ’s",
+    "CONTACT": "Contact",
+    "LEARN": "Learn",
+    "REGISTER": "Register",
+    "LOGIN": "Login",
+    "LANGUAGE": "Language"
+
+  }
+
+
+
+}
+
+

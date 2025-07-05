@@ -1,0 +1,60 @@
+{
+  "HERO": {
+    "TITLE": "Welkom by Bullion Beperk",
+    "SUBTITLE": "Bemagtig jouself deur moderne, kollektiewe welvaart-skepping"
+  },
+  "INTRO": {
+    "TITLE": "'n Koöperasie vir die Toekoms",
+    "BODY": "Met ons unieke koöperatiewe model help Bullion Beperk jou om welvaart te bou deur kollektiewe beleggings in goud, silwer en ander bates.",
+    "POINTS": {
+      "1": "Bemagtiging van gemeenskapsbeleggings",
+      "2": "Deursigtige, lede-gedrewe besluitneming",
+      "3": "Veilige toegang en lede beleggingspoele"
+    }
+  },
+  "STORY": {
+    "TITLE": "Die Bullion Storie – Vryheid Wag!"
+  },
+  "HOW": {
+    "TITLE": "Hoe Dit Werk",
+    "SUB": "'n Slimmer manier om jou toekoms te bou en te beveilig",
+    "POOL": "Geunitiseerde Beleggingsdamme",
+    "POOL_DESC": "Beleggings word geunitiseer en in damme geplaas, sodat jy maklik kan inkom of onttrek met jou eie eenhede.",
+    "OWNED": "Lid-besit Stelsel",
+    "OWNED_DESC": "Jy besit die eenhede. Die Koöperasie bestuur dit deursigtig, met volle toegang via veilige aanmelding.",
+    "REDEEM": "Buigsame Ontrekking",
+    "REDEEM_DESC": "Onttrek eenhede vir kontant of edelmetale met gemak."
+  },
+  "FUTURE": {
+    "MORE_INFO": "Vir meer inligting, klik hier >",
+    "TITLE": "Bly voor die kurwe… ‘n skuif na moderne finansiering!",
+    "BODY": "Bullion het met Fractal Global Payment Solutions saamgewerk om jou toegang te gee tot jou eie wêreldwye transaksionele rekening. Nadat jou lidmaatskap goedgekeur is, sal jy 'n onboarding-skakel ontvang om jou rekening oop te maak—wat naatlose transaksies in Suid-Afrika en internasionaal moontlik maak.",
+    "LINK": "Aflaaie",
+    "CTA": "Word vandag 'n lid vir net",
+    "JOIN": "Sluit Nou Aan"
+  },
+  "VIDEOS": {
+    "START_HERE": "Begin Hier",
+    "TUTORIAL_TITLE_PART1": "Bullion",
+    "TUTORIAL_TITLE_PART2": "Registrasie Gids",
+    "LEARN_MORE": "Leer Meer",
+    "COOP_TITLE_PART1": "My Koöperasie",
+    "COOP_TITLE_PART2": "Deposito Proses",
+    "ACCOUNT_TITLE_PART1": "Geregistreerde Lede",
+    "ACCOUNT_TITLE_PART2": "Rekening Gids"
+  },
+  "NAV": {
+    "BRAND": "Bullion Koöperatief",
+    "HOME": "Tuis",
+    "POOLS": "Poole",
+    "FEES": "Fooie",
+    "DOWNLOADS": "Aflaaie",
+    "FAQ": "Vrae",
+    "CONTACT": "Kontak",
+    "LEARN": "Leer",
+    "REGISTER": "Registreer",
+    "LOGIN": "Teken In",
+    "LANGUAGE": "Taal"
+
+  }
+}

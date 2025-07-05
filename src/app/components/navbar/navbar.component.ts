@@ -4,26 +4,45 @@ import {
   HostListener,
   ViewChild,
   Renderer2,
-  AfterViewInit
+  AfterViewInit,
+  OnInit
 } from '@angular/core';
-import { RouterModule } from "@angular/router";
-import { RegisterpopupComponent } from "../../popups/registerpopup/registerpopup.component";
+import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RegisterpopupComponent } from '../../popups/registerpopup/registerpopup.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, RegisterpopupComponent, CommonModule],
+  imports: [RouterModule, RegisterpopupComponent, CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnInit {
   @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  showFloatingRegister = false;
+  currentLang: 'en' | 'af' = 'en';
+
+  flagMap = {
+    en: 'https://flagcdn.com/16x12/gb.png',
+    af: 'https://flagcdn.com/16x12/za.png'
+  };
+
+  constructor(
+    private renderer: Renderer2,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit() {
+    // Initialize language from saved or default
+    const savedLang = localStorage.getItem('preferredLang') as 'en' | 'af' | null;
+    this.currentLang = savedLang ?? 'en';
+    this.translate.use(this.currentLang);
+  }
 
   ngAfterViewInit(): void {
-    // Close navbar on nav-link click
     const navLinks = this.navbarCollapse.nativeElement.querySelectorAll('.nav-link');
     navLinks.forEach((link: HTMLElement) => {
       this.renderer.listen(link, 'click', () => this.closeNavbar());
@@ -48,20 +67,22 @@ export class NavbarComponent implements AfterViewInit {
     }
   }
 
-    showFloatingRegister = false;
-
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.showFloatingRegister = scrollTop > 150; // Adjust as needed based on navbar height
+    this.showFloatingRegister = scrollTop > 150;
   }
 
   openRegisterPopup() {
-    // Logic to open your popup/modal
     const popup = document.querySelector('app-registerpopup') as any;
     if (popup?.open) {
-      popup.open(); // Replace with whatever method triggers your popup
+      popup.open();
     }
   }
 
+  switchLang(lang: 'en' | 'af') {
+    this.currentLang = lang;
+    this.translate.use(lang);
+    localStorage.setItem('preferredLang', lang);
+  }
 }

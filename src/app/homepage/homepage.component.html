@@ -1,9 +1,10 @@
 <!-- Hero Section -->
+
 <section class="text-white py-5 text-center">
   <div class="container">
     <img src="bullion-logo.png" alt="Bullion Logo" class="img-fluid mb-4" style="max-width: 140px;" loading="lazy">
-    <h1 class="display-5 fw-semibold mb-2">Welcome to Bullion Beperk</h1>
-    <p class="lead text-secondary mb-0">Empowering you through modern, collective wealth creation</p>
+    <h1 class="display-5 fw-semibold mb-2">{{ 'HERO.TITLE' | translate }}</h1>
+    <p class="lead text-secondary mb-0">{{ 'HERO.SUBTITLE' | translate }}</p>
   </div>
 </section>
 
@@ -12,27 +13,33 @@
   <div class="container">
     <div class="row align-items-center g-5">
       <div class="col-md-6 text-center">
-        <img src="Bullion-phone.jpeg" alt="Bullion App" class="img-fluid rounded-4 shadow" style="max-height: 360px;"
-          loading="lazy">
+        <img src="Bullion-phone.jpeg" alt="Bullion App" class="img-fluid rounded-4 shadow" style="max-height: 360px;" loading="lazy">
       </div>
       <div class="col-md-6">
-        <h2 class="fw-semibold text-light mb-3">A Co-op for the Future</h2>
-        <p class="text-light mb-4">With our unique cooperative model, Bullion Beperk helps you build wealth through
-          collective investments in gold, silver, and other assets.</p>
+        <h2 class="fw-semibold text-light mb-3">{{ 'INTRO.TITLE' | translate }}</h2>
+        <p class="text-light mb-4">{{ 'INTRO.BODY' | translate }}</p>
         <ul class="list-unstyled text-light fs-6">
-          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Empowering community investment
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            {{ 'INTRO.POINTS.1' | translate }}
           </li>
-          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Transparent, member-led decision
-            making</li>
-          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Secure access and member-only pools</li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            {{ 'INTRO.POINTS.2' | translate }}
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            {{ 'INTRO.POINTS.3' | translate }}
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Story Section -->
 <section class="py-5 text-center text-white">
-  <h2 class="fw-semibold mb-4">The Bullion Story – Freedom Awaits!</h2>
+  <h2 class="fw-semibold mb-4">{{ 'STORY.TITLE' | translate }}</h2>
 
   <div class="d-flex justify-content-center">
     <div class="col-lg-8 col-md-10 col-12 p-4">
@@ -41,71 +48,68 @@
 
       <!-- YouTube Video Embed -->
       <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!storyVideoLoaded">
-        <iframe src="https://www.youtube.com/embed/bHxUF92a8lo" title="The Bullion Story" allowfullscreen
+        <iframe
+          src="https://www.youtube.com/embed/bHxUF92a8lo"
+          title="The Bullion Story"
+          allowfullscreen
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          class="rounded-4 border border-secondary" (load)="storyVideoLoaded = true">
-        </iframe>
+          class="rounded-4 border border-secondary"
+          (load)="storyVideoLoaded = true"
+        ></iframe>
       </div>
     </div>
   </div>
 </section>
-
-
 
 <!-- How It Works Section -->
 <section class="text-white py-5">
   <div class="container">
     <div class="text-center mb-5">
-      <h2 class="fw-semibold">How It Works</h2>
-      <p class="text-secondary">A smarter way to grow and secure your future wealth</p>
+      <h2 class="fw-semibold">{{ 'HOW.TITLE' | translate }}</h2>
+      <p class="text-secondary">{{ 'HOW.SUB' | translate }}</p>
     </div>
     <div class="row g-4">
       <div class="col-md-4">
         <div class="p-4 rounded-4 border border-secondary bg-black h-100">
-          <h5 class="text-warning mb-2">Unitized Investment Pools</h5>
-          <p class="text-light mb-0">Investments are pooled and unitized, enabling flexible entry and exit through your
-            own member units.</p>
+          <h5 class="text-warning mb-2">{{ 'HOW.POOL' | translate }}</h5>
+          <p class="text-light mb-0">{{ 'HOW.POOL_DESC' | translate }}</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="p-4 rounded-4 border border-secondary bg-black h-100">
-          <h5 class="text-warning mb-2">Member-Owned System</h5>
-          <p class="text-light mb-0">You own the units. The Co-op manages them transparently, with full access via
-            secure login.</p>
+          <h5 class="text-warning mb-2">{{ 'HOW.OWNED' | translate }}</h5>
+          <p class="text-light mb-0">{{ 'HOW.OWNED_DESC' | translate }}</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="p-4 rounded-4 border border-secondary bg-black h-100">
-          <h5 class="text-warning mb-2">Flexible Redemption</h5>
-          <p class="text-light mb-0">Redeem units in the pools for cash or precious metals with ease.</p>
+          <h5 class="text-warning mb-2">{{ 'HOW.REDEEM' | translate }}</h5>
+          <p class="text-light mb-0">{{ 'HOW.REDEEM_DESC' | translate }}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
 <!-- The Future Section -->
 <section class="py-5">
-
   <div class="container text-center">
-    <h3><a href="/poolfeatures#video-section" class="text-info small text-decoration-none">For more info click here
-        &gt;</a></h3>
+    <h3>
+      <a href="/poolfeatures#video-section" class="text-info small text-decoration-none">
+        {{ 'FUTURE.MORE_INFO' | translate }}
+      </a>
+    </h3>
 
-    <h2 class="fw-semibold mt-5 text-light">Stay ahead of the curve…a move to modern financing!</h2>
+    <h2 class="fw-semibold mt-5 text-light">{{ 'FUTURE.TITLE' | translate }}</h2>
     <p class="text-light mx-auto mb-4" style="max-width: 680px;">
-      Bullion has partnered with Fractal Global Payment Solutions to provide you with access to your very own global
-      transactional account.
-
-      Once your membership with Bullion is approved, you will receive an onboarding link to open your account—enabling
-      seamless transactions both within South Africa and internationally.
-
-      For more information, please refer to the resources available in the <a href="/downloads">Downloads</a> section of our website.
+      {{ 'FUTURE.BODY' | translate }}
+      <a href="/downloads">{{ 'FUTURE.LINK' | translate }}</a>.
     </p>
     <p class="h5 fw-semibold text-light mb-3">
-      Become a member today for just <span class="text-warning">R350</span> and grow with your Co-op.
+      {{ 'FUTURE.CTA' | translate }} <span class="text-warning">R350</span> {{ 'INTRO.BODY' | translate }}
     </p>
-    <a href="https://bullion.mycoop.co.za/account/register" target="_blank"
-      class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm">Join Now</a>
+    <a href="https://bullion.mycoop.co.za/account/register" target="_blank" class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm">
+      {{ 'FUTURE.JOIN' | translate }}
+    </a>
   </div>
 </section>
