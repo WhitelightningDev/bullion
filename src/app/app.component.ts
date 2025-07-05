@@ -19,6 +19,7 @@ export class AppComponent implements OnInit {
   title = 'bullion';
   deferredPrompt: any = null;
   showInstallBanner = false;
+    maintenanceMode = environment.maintenanceMode;
 
   prepareRoute = (outlet: RouterOutlet) => outlet?.activatedRouteData?.['animation'];
 
