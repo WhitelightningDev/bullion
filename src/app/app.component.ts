@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
 import { FooterComponent } from "./components/footer/footer.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -6,7 +6,7 @@ import { CookieConsentComponent } from "./components/cookie-consent/cookie-conse
 import { CommonModule } from '@angular/common';
 import { LanguageService } from './services/language.service';
 import { environment } from '../environments/environment.prod';
-
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,8 @@ export class AppComponent implements OnInit {
   title = 'bullion';
   deferredPrompt: any = null;
   showInstallBanner = false;
-    maintenanceMode = environment.maintenanceMode;
+  maintenanceMode = environment.maintenanceMode;
+  private updates = inject(SwUpdate);
 
   prepareRoute = (outlet: RouterOutlet) => outlet?.activatedRouteData?.['animation'];
 
@@ -27,7 +28,7 @@ export class AppComponent implements OnInit {
     private languageService: LanguageService,
     private router: Router
   ) {
-    // Handle PWA install prompt
+    // Handle install prompt
     window.addEventListener('beforeinstallprompt', (event: Event) => {
       event.preventDefault();
       this.deferredPrompt = event;
@@ -37,26 +38,37 @@ export class AppComponent implements OnInit {
       }
     });
 
-    // Handle PWA installed event
+    // Mark app as installed
     window.addEventListener('appinstalled', () => {
       localStorage.setItem('pwaInstalled', 'true');
     });
   }
 
   ngOnInit(): void {
-    // 🔁 Redirect if site is in maintenance mode
-    if (environment.maintenanceMode && this.router.url !== '/maintenance') {
+    // ✅ Maintenance mode redirect (for PWA installs or direct hits)
+    if (this.maintenanceMode && this.router.url !== '/maintenance') {
       this.router.navigate(['/maintenance']);
       return;
     }
 
-    // 🌐 Persisted language preference
+    // ✅ PWA version update prompt
+    if (this.updates.isEnabled) {
+      this.updates.versionUpdates.subscribe(event => {
+        if (event.type === 'VERSION_READY') {
+          if (confirm('🔄 A new version is available. Reload to update?')) {
+            this.updates.activateUpdate().then(() => document.location.reload());
+          }
+        }
+      });
+    }
+
+    // 🌐 Load preferred language
     const lang = localStorage.getItem('lang');
     if (lang) {
       this.languageService.useLanguage(lang);
     }
 
-    // Clean up stale install flag
+    // 🧹 Clean old install flag if app is no longer installed
     if (!this.isAppInstalled() && localStorage.getItem('pwaInstalled') === 'true') {
       localStorage.removeItem('pwaInstalled');
     }
