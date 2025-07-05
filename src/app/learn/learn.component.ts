@@ -38,11 +38,15 @@ export class LearnComponent implements AfterViewInit {
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
 
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['en', 'af']);
-    this.translate.setDefaultLang('en');
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang?.match(/en|af/) ? browserLang : 'en');
-  }
+  this.translate.addLangs(['en', 'af']);
+  this.translate.setDefaultLang('en');
+
+  const storedLang = localStorage.getItem('lang');
+  const langToUse = storedLang ?? this.translate.getBrowserLang()?.match(/en|af/)?.[0] ?? 'en';
+
+  this.translate.use(langToUse);
+}
+
 
   ngAfterViewInit() {
     const script = document.createElement('script');
