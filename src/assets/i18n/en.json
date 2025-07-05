@@ -57,6 +57,24 @@
     "LOGIN": "Login",
     "LANGUAGE": "Language"
 
+  },
+   "POOLS": {
+    "INVESTMENT_POOLS": "Investment Pools",
+    "KRUGER_RAND_ALT": "Kruger Rand",
+    "DESCRIPTION": "Explore the benefits and features of our precious metal investment pools.",
+    "HOW_POOLS_WORK_TITLE": "How the Pools Work",
+    "HOW_POOLS_WORK_DESC": "Members' funds are used to buy units in pools they select. These pools are primarily invested in precious metals (95% or more), including Krugerrands (1Oz, 1/10Oz Gold, and 1Oz Silver). These assets are globally recognized and highly liquid. Note: Gold Krugerrands do not incur VAT.",
+    "VALUATION_FLEXIBILITY_TITLE": "Valuation & Flexibility",
+    "VALUATION_FLEXIBILITY_DESC": "Pools are valued daily. Members may buy or redeem units at the current unit price and can customize deposit allocation across available pools.",
+    "OWNERSHIP_CONTROL_TITLE": "Ownership & Control",
+    "OWNERSHIP_CONTROL_DESC": "While the Co-op manages the pools, members own them via units. Units can be redeemed for cash or metals, and members can transfer or switch between pools with appropriate notice.",
+    "MEMBERSHIP_REQUIREMENT_TITLE": "Membership Requirement",
+    "MEMBERSHIP_REQUIREMENT_DESC": "Only members of Bullion Beperk Co-operative Limited can invest. Personal data and holdings are confidential. Members access personalized data and unit values via secure login.",
+    "MEMBER_OPTIONS_TITLE": "Member Options After Investing",
+    "MEMBER_OPTIONS_DESC": "Members may withdraw units for cash and/or metals with notice. Physical collection is available in Pretoria or Johannesburg, or delivery via secure courier.",
+    "DEPOSIT_PROCESS_TITLE": "Bullion Deposit Process",
+    "CURRENT_POOLS_TITLE": "Current Available Pools",
+    "CURRENT_POOLS_ALT": "Investment Pools"
   }
 
 

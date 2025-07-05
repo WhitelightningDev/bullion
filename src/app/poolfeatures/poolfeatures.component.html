@@ -1,77 +1,24 @@
-
 <div class="container py-5 text-white">
 
   <!-- Header -->
   <div class="text-center mb-5">
     <h1 class="display-5 fw-semibold">
-      Investment Pools <img src="kruger-rand.png" alt="Kruger Rand" style="width: 90px;" />
+      {{ 'POOLS.INVESTMENT_POOLS' | translate }}
+      <img src="kruger-rand.png" alt="{{ 'POOLS.KRUGER_RAND_ALT' | translate }}" style="width: 90px;" />
     </h1>
-    <p class="lead mt-3 text-secondary">Explore the benefits and features of our precious metal investment pools.</p>
+    <p class="lead mt-3 text-secondary">{{ 'POOLS.DESCRIPTION' | translate }}</p>
   </div>
 
   <!-- Info Cards -->
   <div class="row g-4">
-    <!-- How Pools Work -->
-    <div class="col-12">
+    <div class="col-12" *ngFor="let card of infoCards">
       <div class="card bg-dark border-light text-white shadow rounded-4">
         <div class="card-body">
           <h2 class="h5 fw-semibold d-flex align-items-center">
-            <img src="/undraw_segment-analysis_cl30.svg" class="me-3" style="width: 60px;" alt="Analysis" />
-            How the Pools Work
+            <img [src]="card.icon" class="me-3" style="width: 60px;" [alt]="card.iconAlt | translate" />
+            {{ card.title | translate }}
           </h2>
-          <p class="mt-3">Members' funds are used to buy units in pools they select. These pools are primarily invested in precious metals (95% or more), including Krugerrands (1Oz, 1/10Oz Gold, and 1Oz Silver). These assets are globally recognized and highly liquid. Note: Gold Krugerrands do not incur VAT.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Valuation & Flexibility -->
-    <div class="col-12">
-      <div class="card bg-dark border-light text-white shadow rounded-4">
-        <div class="card-body">
-          <h2 class="h5 fw-semibold d-flex align-items-center">
-            <img src="/undraw_journey_brk8.svg" class="me-3" style="width: 60px;" alt="Valuation" />
-            Valuation & Flexibility
-          </h2>
-          <p class="mt-3">Pools are valued daily. Members may buy or redeem units at the current unit price and can customize deposit allocation across available pools.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Ownership & Control -->
-    <div class="col-12">
-      <div class="card bg-dark border-light text-white shadow rounded-4">
-        <div class="card-body">
-          <h2 class="h5 fw-semibold d-flex align-items-center">
-            <img src="/undraw_control-panel_j1wf.svg" class="me-3" style="width: 60px;" alt="Control" />
-            Ownership & Control
-          </h2>
-          <p class="mt-3">While the Co-op manages the pools, members own them via units. Units can be redeemed for cash or metals, and members can transfer or switch between pools with appropriate notice.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Membership Requirement -->
-    <div class="col-12">
-      <div class="card bg-dark border-light text-white shadow rounded-4">
-        <div class="card-body">
-          <h2 class="h5 fw-semibold d-flex align-items-center">
-            <img src="/undraw_contract_upwc.svg" class="me-3" style="width: 60px;" alt="Contract" />
-            Membership Requirement
-          </h2>
-          <p class="mt-3">Only members of Bullion Beperk Co-operative Limited can invest. Personal data and holdings are confidential. Members access personalized data and unit values via secure login.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Member Options -->
-    <div class="col-12">
-      <div class="card bg-dark border-light text-white shadow rounded-4">
-        <div class="card-body">
-          <h2 class="h5 fw-semibold d-flex align-items-center">
-            <img src="/undraw_check-boxes_ewf2.svg" class="me-3" style="width: 60px;" alt="Options" />
-            Member Options After Investing
-          </h2>
-          <p class="mt-3">Members may withdraw units for cash and/or metals with notice. Physical collection is available in Pretoria or Johannesburg, or delivery via secure courier.</p>
+          <p class="mt-3">{{ card.description | translate }}</p>
         </div>
       </div>
     </div>
@@ -79,43 +26,41 @@
 
   <hr class="mt-5">
 
+  <!-- Video Section -->
   <section id="video-section" class="py-5 text-center text-white border-bottom">
-  <h2 class="fw-semibold mb-4">Bullion Deposit Process</h2>
+    <h2 class="fw-semibold mb-4">{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}</h2>
 
-  <div class="d-flex justify-content-center">
-    <div class="col-lg-8 col-md-10 col-12 p-4">
-      <!-- Skeleton Placeholder -->
-      <div *ngIf="!videoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div>
+    <div class="d-flex justify-content-center">
+      <div class="col-lg-8 col-md-10 col-12 p-4">
+        <!-- Skeleton Placeholder -->
+        <div *ngIf="!videoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div>
 
-      <!-- Actual Video -->
-      <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!videoLoaded">
-        <iframe
-          src="https://www.youtube.com/embed/0uOaGmvSSjs"
-          title="Bullion Deposit Process"
-          allowfullscreen
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          class="rounded-4 border border-secondary"
-          (load)="videoLoaded = true">
-        </iframe>
+        <!-- Actual Video -->
+        <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!videoLoaded">
+          <iframe
+            src="https://www.youtube.com/embed/0uOaGmvSSjs"
+            title="{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}"
+            allowfullscreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            class="rounded-4 border border-secondary"
+            (load)="onVideoLoad()">
+          </iframe>
+        </div>
       </div>
     </div>
+  </section>
+
+  <!-- Responsive Centered Image Section -->
+  <div class="container my-5">
+    <div class="text-center">
+      <h2 class="fw-semibold mb-4">{{ 'POOLS.CURRENT_POOLS_TITLE' | translate }}</h2>
+      <img
+        src="poolsimage.jpeg"
+        alt="{{ 'POOLS.CURRENT_POOLS_ALT' | translate }}"
+        class="img-fluid rounded shadow-lg mx-auto d-block"
+        style="max-width: 100%; height: auto;"
+      />
+    </div>
   </div>
-</section>
-
-
-
-
-<!-- Responsive Centered Image Section -->
-<div class="container my-5">
-  <div class="text-center">
-    <h2 class="fw-semibold mb-4">Current Available Pools</h2>
-    <img 
-      src="poolsimage.jpeg" 
-      alt="Investment Pools" 
-      class="img-fluid rounded shadow-lg mx-auto d-block" 
-      style="max-width: 100%; height: auto;"
-    />
-  </div>
-</div>
 
 </div>

@@ -55,6 +55,23 @@
     "REGISTER": "Registreer",
     "LOGIN": "Teken In",
     "LANGUAGE": "Taal"
-
+  },
+   "POOLS": {
+    "INVESTMENT_POOLS": "Beleggingspoele",
+    "KRUGER_RAND_ALT": "Kruger Rand",
+    "DESCRIPTION": "Verken die voordele en kenmerke van ons edelmetaal-beleggingspoele.",
+    "HOW_POOLS_WORK_TITLE": "Hoe die Poele Werk",
+    "HOW_POOLS_WORK_DESC": "Lede se fondse word gebruik om eenhede in poele te koop wat hulle kies. Hierdie poele word hoofsaaklik in edelmetale belê (95% of meer), insluitend Krugerrande (1Oz, 1/10Oz Goud, en 1Oz Silwer). Hierdie bates word wêreldwyd erken en is hoogs likwid. Nota: Goud Krugerrande is nie onderhewig aan BTW nie.",
+    "VALUATION_FLEXIBILITY_TITLE": "Waardasie & Buigsaamheid",
+    "VALUATION_FLEXIBILITY_DESC": "Poele word daagliks gewaardeer. Lede kan eenhede koop of inlos teen die huidige eenheidsprys en kan deposito-toewysing aanpas oor beskikbare poele.",
+    "OWNERSHIP_CONTROL_TITLE": "Eienaarskap & Beheer",
+    "OWNERSHIP_CONTROL_DESC": "Terwyl die Koöperatief die poele bestuur, besit lede dit deur eenhede. Eenhede kan vir kontant of metale ingewissel word, en lede kan met toepaslike kennisgewing tussen poele oorskakel of oordra.",
+    "MEMBERSHIP_REQUIREMENT_TITLE": "Lidmaatskapvereiste",
+    "MEMBERSHIP_REQUIREMENT_DESC": "Slegs lede van Bullion Beperk Koöperatief Beperk mag belê. Persoonlike data en besittings is vertroulik. Lede kry toegang tot persoonlike data en eenheidswaardes via veilige aanmelding.",
+    "MEMBER_OPTIONS_TITLE": "Lidopsies Na Belegging",
+    "MEMBER_OPTIONS_DESC": "Lede kan eenhede vir kontant en/of metale onttrek met kennisgewing. Fisiese afhaling is beskikbaar in Pretoria of Johannesburg, of aflewering deur veilige koerier.",
+    "DEPOSIT_PROCESS_TITLE": "Bullion Deposito-proses",
+    "CURRENT_POOLS_TITLE": "Huidige Beskikbare Poele",
+    "CURRENT_POOLS_ALT": "Beleggingspoele"
   }
 }
