@@ -1,85 +1,20 @@
-.card1{
-background: #979b2aad;
-background: linear-gradient(45deg, rgba(151, 155, 42, 0.623) 0%, rgb(29, 40, 122) 50%, rgb(36, 34, 133) 100%);
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
-.button-bg{
-    background: #00b7ff;
-background: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(0, 106, 255, 1) 25%, rgba(9, 9, 121, 1) 84%);
+.skeleton-loader {
+  background: linear-gradient(90deg, #444 25%, #555 37%, #444 63%);
+  background-size: 400% 100%;
+  animation: skeleton 1.4s ease infinite;
+  border: 1px solid #444;
 }
 
-.phones{
-width: 900px;
-}
-
-.hero-section {
-    position: relative;
-  
- 
+@keyframes skeleton {
+  0% {
+    background-position: 100% 0;
+    
   }
-
-  .hero-image {
-    position: absolute;
-    top: 0;
-    left: 60%;
-    rotate: 20deg;
-    width: 30%;
-    object-fit: contain;
-    opacity: 0.2; /* Adjust visibility of image behind text */
-    z-index: 1;
+  100% {
+    background-position: -100% 0;
   }
-
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-
-  .umbrell{
-    width: 250px;
-  }
-
-  .list-align {
-    display: flex;
-    flex-direction: column;
-
-    height: 100%; /* Match the image height */
 }
-
-.image-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-height {
-    height: 300px; /* Set a consistent height for alignment */
-    object-fit: contain;
-}
-
-.list-align li {
-    margin-bottom: 3rem; /* Adjust spacing as needed */
-}
-
- .step-line {
-    width: 90px;
-    height: 2px;
-
-    background-color: #fff;
-    align-self: center;
-  }
-
-  @media (max-width: 767.98px) {
-    .stepper-wrapper {
-      flex-direction: column;
-    }
-
-    .step-line {
-      width: 2px;
-      height: 30px;
-      margin: 10px auto;
-    }
-
-    .d-none.d-md-block.step-line {
-      display: block !important;
-    }
-  }

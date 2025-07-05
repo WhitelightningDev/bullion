@@ -1,18 +1,115 @@
-<div class="container col-xxl-8 px-4 py-5">
-  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <div class="col-10 col-sm-8 col-lg-4">
-      <img src="Group2.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500"
-        loading="lazy">
-    </div>
-    <div class="col-lg-8">
-      <p class=" text-primary lh-1 mb-3">STAY AHEAD OF THE CURVE</p>
-      <h1 class="text-white">The Move To <strong class="text-warning"> Modern Financing</strong></h1>
-      <p class="text-white">With our unique co-op model, you have the power to create and grow your own wealth. Together
-        , we can achieve financial success and build a brighter future for everyone involved. Let's work together to
-        become wealth creators and set our people free from financial slavery!</p>
-        <p class="text-white">Bullion Beperk Primary Co-operative Limited (registration number 2023/005086/24) is a Co-operative acting as a wealth creating platform that allows its members to individually utilize the collective power of unity to buy gold , silver and other fixed assets to stabilize their financial portfolio with the long term aim of self sustainability.
-        </p>
+<!-- Hero Section -->
+
+<section class="text-white py-5 text-center">
+  <div class="container">
+    <img src="bullion-logo.png" alt="Bullion Logo" class="img-fluid mb-4" style="max-width: 140px;" loading="lazy">
+    <h1 class="display-5 fw-semibold mb-2">{{ 'HERO.TITLE' | translate }}</h1>
+    <p class="lead text-secondary mb-0">{{ 'HERO.SUBTITLE' | translate }}</p>
+  </div>
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 text-center">
+        <img src="Bullion-phone.jpeg" alt="Bullion App" class="img-fluid rounded-4 shadow" style="max-height: 360px;" loading="lazy">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-semibold text-light mb-3">{{ 'INTRO.TITLE' | translate }}</h2>
+        <p class="text-light mb-4">{{ 'INTRO.BODY' | translate }}</p>
+        <ul class="list-unstyled text-light fs-6">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            {{ 'INTRO.POINTS.1' | translate }}
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            {{ 'INTRO.POINTS.2' | translate }}
+          </li>
+          <li>
+            <i class="bi bi-check-circle-fill text-success me-2"></i>
+            {{ 'INTRO.POINTS.3' | translate }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
+<!-- Story Section -->
+<section class="py-5 text-center text-white">
+  <h2 class="fw-semibold mb-4">{{ 'STORY.TITLE' | translate }}</h2>
+
+  <div class="d-flex justify-content-center">
+    <div class="col-lg-8 col-md-10 col-12 p-4">
+      <!-- Skeleton Loader While Video Loads -->
+      <div *ngIf="!storyVideoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div>
+
+      <!-- YouTube Video Embed -->
+      <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!storyVideoLoaded">
+        <iframe
+          src="https://www.youtube.com/embed/bHxUF92a8lo"
+          title="The Bullion Story"
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          class="rounded-4 border border-secondary"
+          (load)="storyVideoLoaded = true"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="text-white py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-semibold">{{ 'HOW.TITLE' | translate }}</h2>
+      <p class="text-secondary">{{ 'HOW.SUB' | translate }}</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 border border-secondary bg-black h-100">
+          <h5 class="text-warning mb-2">{{ 'HOW.POOL' | translate }}</h5>
+          <p class="text-light mb-0">{{ 'HOW.POOL_DESC' | translate }}</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 border border-secondary bg-black h-100">
+          <h5 class="text-warning mb-2">{{ 'HOW.OWNED' | translate }}</h5>
+          <p class="text-light mb-0">{{ 'HOW.OWNED_DESC' | translate }}</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 rounded-4 border border-secondary bg-black h-100">
+          <h5 class="text-warning mb-2">{{ 'HOW.REDEEM' | translate }}</h5>
+          <p class="text-light mb-0">{{ 'HOW.REDEEM_DESC' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- The Future Section -->
+<section class="py-5">
+  <div class="container text-center">
+    <h3>
+      <a href="/poolfeatures#video-section" class="text-info small text-decoration-none">
+        {{ 'FUTURE.MORE_INFO' | translate }}
+      </a>
+    </h3>
+
+    <h2 class="fw-semibold mt-5 text-light">{{ 'FUTURE.TITLE' | translate }}</h2>
+    <p class="text-light mx-auto mb-4" style="max-width: 680px;">
+      {{ 'FUTURE.BODY' | translate }}
+      <a href="/downloads">{{ 'FUTURE.LINK' | translate }}</a>.
+    </p>
+    <p class="h5 fw-semibold text-light mb-3">
+      {{ 'FUTURE.CTA' | translate }} <span class="text-warning">R350</span> {{ 'INTRO.BODY' | translate }}
+    </p>
+    <a href="https://bullion.mycoop.co.za/account/register" target="_blank" class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm">
+      {{ 'FUTURE.JOIN' | translate }}
+    </a>
+  </div>
+</section>

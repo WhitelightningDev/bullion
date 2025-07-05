@@ -1,11 +1,57 @@
+<!-- Toast for notifications -->
 <p-toast></p-toast>
 
 <div class="container my-5">
+  <!-- Contact Information Section -->
   <div class="row justify-content-center">
+    <div class="col-md-10 text-white text-center p-4 border border-light rounded-4 shadow-lg bg-dark bg-opacity-75">
+
+      <h2 class="mb-4 text-warning fw-bold">{{ 'CONTACT.TITLE' | translate }}</h2>
+
+      <p class="mb-1"><strong>{{ 'CONTACT.COMPANY_NAME' | translate }}</strong></p>
+      <p class="mb-2">{{ 'CONTACT.REGISTRATION' | translate }}</p>
+
+      <p class="mb-2">
+        <i class="bi bi-geo-alt-fill me-2"></i>{{ 'CONTACT.ADDRESS' | translate }}
+      </p>
+
+      <p class="mb-2">
+        <i class="bi bi-envelope-fill me-2"></i>
+        <a href="mailto:{{ 'CONTACT.EMAIL' | translate }}" class="text-white text-decoration-underline">
+          {{ 'CONTACT.EMAIL' | translate }}
+        </a>
+      </p>
+
+      <p class="mb-3">
+        <i class="bi bi-globe2 me-2"></i>
+        <a href="https://www.bullionlimited-co.co.za" target="_blank" class="text-white text-decoration-underline">
+          {{ 'CONTACT.WEBSITE' | translate }}
+        </a>
+      </p>
+
+      <div class="text-start">
+        <p class="mb-1"><strong>{{ 'CONTACT.ADMIN_QUERIES' | translate }}</strong></p>
+        <ul class="list-unstyled ps-3">
+          <li><i class="bi bi-person-fill me-1"></i>Willem – 083 375 9003</li>
+          <li><i class="bi bi-person-fill me-1"></i>Anneke – 082 297 3542</li>
+        </ul>
+
+        <p class="mt-3 mb-1"><strong>{{ 'CONTACT.OTHER_INFO' | translate }}</strong></p>
+        <ul class="list-unstyled ps-3">
+          <li><i class="bi bi-person-fill me-1"></i>Johan Keyser – 083 627 0670</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <!-- Contact Form -->
+  <!-- <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6">
-      <p-card header="Contact Us">
+      <p-card header="Send Us a Message">
         <div class="d-flex justify-content-center mb-3">
-          <i class="pi pi-envelope" style="font-size: 2rem; color: #007bff;"></i> <!-- Icon added here -->
+          <i class="pi pi-envelope" style="font-size: 2rem; color: #007bff;"></i>
         </div>
         <form (ngSubmit)="onSubmit()">
           <div class="mb-3">
@@ -57,4 +103,4 @@
       </p-card>
     </div>
   </div>
-</div>
+</div> -->

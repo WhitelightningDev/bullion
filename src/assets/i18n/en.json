@@ -1,0 +1,240 @@
+{
+  "HERO": {
+    "TITLE": "Welcome to Bullion Beperk",
+    "SUBTITLE": "Empowering you through modern, collective wealth creation"
+  },
+  "INTRO": {
+    "TITLE": "A Co-op for the Future",
+    "BODY": "With our unique cooperative model, Bullion Beperk helps you build wealth through collective investments in gold, silver, and other assets.",
+    "POINTS": {
+      "1": "Empowering community investment",
+      "2": "Transparent, member-led decision making",
+      "3": "Secure access and member-only pools"
+    }
+  },
+  "STORY": {
+    "TITLE": "The Bullion Story – Freedom Awaits!"
+  },
+  "HOW": {
+    "TITLE": "How It Works",
+    "SUB": "A smarter way to grow and secure your future wealth",
+    "POOL": "Unitized Investment Pools",
+    "POOL_DESC": "Investments are pooled and unitized, enabling flexible entry and exit through your own member units.",
+    "OWNED": "Member-Owned System",
+    "OWNED_DESC": "You own the units. The Co-op manages them transparently, with full access via secure login.",
+    "REDEEM": "Flexible Redemption",
+    "REDEEM_DESC": "Redeem units in the pools for cash or precious metals with ease."
+  },
+  "FUTURE": {
+    "MORE_INFO": "For more info click here >",
+    "TITLE": "Stay ahead of the curve…a move to modern financing!",
+    "BODY": "Bullion has partnered with Fractal Global Payment Solutions to provide you with access to your very own global transactional account. Once your membership with Bullion is approved, you will receive an onboarding link to open your account—enabling seamless transactions both within South Africa and internationally.",
+    "LINK": "Downloads",
+    "CTA": "Become a member today for just",
+    "JOIN": "Join Now"
+  },
+  "VIDEOS": {
+    "START_HERE": "Start Here",
+    "TUTORIAL_TITLE_PART1": "Bullion",
+    "TUTORIAL_TITLE_PART2": "Registration Tutorial",
+    "LEARN_MORE": "Learn More",
+    "COOP_TITLE_PART1": "My Co-op",
+    "COOP_TITLE_PART2": "Deposit Process",
+    "ACCOUNT_TITLE_PART1": "Registered Members",
+    "ACCOUNT_TITLE_PART2": "Account Walkthrough"
+  },
+
+  "NAV": {
+    "BRAND": "Bullion Co-Op",
+    "HOME": "Home",
+    "POOLS": "Pools",
+    "FEES": "Fees",
+    "DOWNLOADS": "Downloads",
+    "FAQ": "FAQ’s",
+    "CONTACT": "Contact",
+    "LEARN": "Learn",
+    "REGISTER": "Register",
+    "LOGIN": "Login",
+    "LANGUAGE": "Language"
+  },
+  "POOLS": {
+    "INVESTMENT_POOLS": "Investment Pools",
+    "KRUGER_RAND_ALT": "Kruger Rand",
+    "DESCRIPTION": "Explore the benefits and features of our precious metal investment pools.",
+    "HOW_POOLS_WORK_TITLE": "How the Pools Work",
+    "HOW_POOLS_WORK_DESC": "Members' funds are used to buy units in pools they select. These pools are primarily invested in precious metals (95% or more), including Krugerrands (1Oz, 1/10Oz Gold, and 1Oz Silver). These assets are globally recognized and highly liquid. Note: Gold Krugerrands do not incur VAT.",
+    "VALUATION_FLEXIBILITY_TITLE": "Valuation & Flexibility",
+    "VALUATION_FLEXIBILITY_DESC": "Pools are valued daily. Members may buy or redeem units at the current unit price and can customize deposit allocation across available pools.",
+    "OWNERSHIP_CONTROL_TITLE": "Ownership & Control",
+    "OWNERSHIP_CONTROL_DESC": "While the Co-op manages the pools, members own them via units. Units can be redeemed for cash or metals, and members can transfer or switch between pools with appropriate notice.",
+    "MEMBERSHIP_REQUIREMENT_TITLE": "Membership Requirement",
+    "MEMBERSHIP_REQUIREMENT_DESC": "Only members of Bullion Beperk Co-operative Limited can invest. Personal data and holdings are confidential. Members access personalized data and unit values via secure login.",
+    "MEMBER_OPTIONS_TITLE": "Member Options After Investing",
+    "MEMBER_OPTIONS_DESC": "Members may withdraw units for cash and/or metals with notice. Physical collection is available in Pretoria or Johannesburg, or delivery via secure courier.",
+    "DEPOSIT_PROCESS_TITLE": "Bullion Deposit Process",
+    "CURRENT_POOLS_TITLE": "Current Available Pools",
+    "CURRENT_POOLS_ALT": "Investment Pools"
+  },
+  "FEES": {
+    "TITLE": "Costs and Fees",
+    "DESCRIPTION": "Fees recouped from the pools are used for paying costs associated with administration, insurance, and safekeeping of assets.",
+    "OVERVIEW_TITLE": "Fees Overview",
+    "OVERVIEW_TEXT": "Stock is bought at wholesale prices, and NO margin is added. All costs are fully transparent. The fee structure below may change with thirty days' notice, and any changes will be updated on our website. All fees are subject to VAT.",
+    "STRUCTURE_TITLE": "Fee Structure",
+    "STRUCTURE_NOTE": "All fees exclude VAT unless otherwise stated.",
+    "TABLE_HEADER_TYPE": "Fee Type",
+    "TABLE_HEADER_PERCENT": "Fee %",
+    "ADMIN_FEE": "Administration Fee (applied on deposits)",
+    "COMMISSION": "Commission (referrer-agreed)",
+    "VARIABLE": "Variable",
+    "SWITCHING_FEE": "Switching Fee",
+    "WITHDRAWAL_FEE": "Withdrawal Fee",
+    "COURIER_FEE": "Courier Fee",
+    "COLLECTION_FEE": "Collection Fee",
+    "ONGOING_GOLD": "Ongoing (Gold)",
+    "ONGOING_SILVER": "Ongoing (Silver)",
+    "SWITCHING_BETWEEN_POOLS": "Switching between pools (move between funds)",
+    "TRANSFER_BETWEEN_MEMBERS": "Transfer between members",
+    "WITHDRAWALS": "Withdrawals (cash-outs)",
+    "COURIER_CHARGES": "Courier Charges (metal delivery)",
+    "TO_BE_CONFIRMED": "To Be Confirmed",
+    "ONGOING_FEES": "Ongoing Fees (annual safekeeping and administration)",
+    "FEE_PERCENT": "Fee (%)"
+  },
+  "DOWNLOADS": {
+    "TITLE": "Download Documents",
+    "DESCRIPTION": "Here you can download all the documents relevant to this Co-op.",
+    "CIPC_TITLE": "Bullion CIPC Document",
+    "CIPC_DESCRIPTION": "Access and download the official documents for the Bullion Co-operative below.",
+    "CONSTITUTION_TITLE": "Bullion Constitution",
+    "CONSTITUTION_DESCRIPTION": "Access and download the constitution for the Bullion Co-operative below.",
+    "FRACTAL_TITLE": "Fractal Global Payment Solutions",
+    "FRACTAL_DESCRIPTION": "Download detailed information about our partnership with Fractal Global and how you can benefit.",
+    "FRACTAL_CARD_TITLE": "Fractal Global Payment partner info",
+    "FRACTAL_CARD_DESCRIPTION": "Learn how Bullion members can access global financial tools through our partnership with Fractal Global Payment Solutions. Download the profile below for more information on how to activate and use your international transactional account.",
+    "VIEW_BUTTON": "View",
+    "DOWNLOAD_BUTTON": "Download PDF"
+  },
+  "FAQ": {
+    "TITLE": "Frequently Asked Questions",
+    "Q1": "What makes Bullion's pricing and structure unique?",
+    "A1": {
+      "INTRO": "Gold, Silver, or Platinum pools (i.e. the unit prices) are valued at the daily wholesale price (which is priced around a 5% premium over the London PM Fix). A member buys in and sells at this price. The admin fee and commission are added when buying in.",
+      "POINTS": [
+        "Buying elsewhere may cost 10% or more over the London PM Fix. Selling may yield less.",
+        "The unitized system ensures members rarely sell for less than wholesale (London PM Fix +5%).",
+        "Trade cost is reduced to ~0.15%, significantly lower than competitors.",
+        "Bullion offers full transparency and low pricing for members.",
+        "Traditional unit trusts cannot hold physical precious metals due to FAIS restrictions. Bullion fills that gap."
+      ],
+      "REDEMPTION": "Redemption: Members can redeem units for cash, gold, silver, platinum — or any combination."
+    },
+    "Q2": "How safe are my holdings with Bullion?",
+    "A2": {
+      "INTRO": "Most gold, silver, and platinum is stored securely at",
+      "POINTS": [
+        "Vault access is protected by eye-recognition technology and must be pre-arranged.",
+        "Stock insurance is underwritten by Zurich, approved by Bullion members at general meetings.",
+        "Visits allowed only for: Adding precious metals, Withdrawing precious metals, Auditing vault contents.",
+        "Every vault visit is accompanied by a Bullion Board member and an auditor representative.",
+        "Formal stock audits are performed at least once a year."
+      ]
+    },
+    "Q3": "What are the investment requirements?",
+    "A3": {
+      "INTRO1": "This is a very secure business vehicle for holding a member's precious metal assets.",
+      "INTRO2": "The Co-operative has the right of possession, while members share ownership of the pools according to the number of units allocated to them.",
+      "INTRO3": "The Co-operative has no creditors apart from the bank for bank charges and the auditors. Its only liability is to the members for their units.",
+      "REQUIREMENTS": [
+        "Minimum lump sum tranches of R5000 (initial or additional amounts).",
+        "Minimum debit order of R500 per month.",
+        "There is no maximum investment limit."
+      ]
+    },
+    "Q4": "Why unitized pools instead of direct holdings in precious metals?",
+    "A4": {
+      "BENEFITS": [
+        "Reduces entry/exit costs from over 5% to as low as ~0.15% per trade.",
+        "Accommodates round amounts without precise metal pricing (e.g. R100,000).",
+        "Allows smaller investments (e.g. R500 debit order) that still gain exposure to metals.",
+        "Enables flexible cash withdrawals (e.g. redeem R4,500 from R545,678.98 value).",
+        "Insurance, admin, and safekeeping costs are paid by the pool, not the member.",
+        "Enables seamless switching between pools at wholesale pricing (~0.25% cost).",
+        "Avoids typical commissions and price reductions associated with metal sales."
+      ],
+      "NOTE": "Note: Unitizing avoids cross-subsidizing — each deposit/withdrawal occurs at the unit price of the day."
+    },
+    "Q5": "How does unitizing work?",
+    "A5": {
+      "INTRO": "Unitizing is a method used to accurately record each investor's share in a pool of assets. It ensures pro-rata cost distribution.",
+      "EXAMPLE": "Example",
+      "DAY1": "Day 1",
+      "DAY2": "Day 2",
+      "NOTE": "Each member's share is now calculated accordingly based on units held and unit price."
+    },
+    "Q6": "What will affect a member's composition of coins or bars in the pool?",
+    "A6": {
+      "POINTS": [
+        "Monthly cost deductions: Costs for insurance, vaults, and administration are deducted monthly or as they occur. This slightly reduces metal holdings unless topped up.",
+        "Cash reserve effect: Holding a portion in cash buffers metal price fluctuations but may affect unit price sensitivity."
+      ]
+    },
+    "Q7": "Is it important for a member to keep his composition of coins and bars at the same level?",
+    "A7": "Not really. Members primarily seek capital growth. If the unit price increases, value increases even if the coin/bar mix changes.",
+    "Q8": "What are the tax implications?",
+    "A8": {
+      "INCOME": "Income Tax: None. No interest = no income tax.",
+      "CGT": "Capital Gains Tax (CGT): Applies only when units are sold for cash or metals are sold thereafter.",
+      "VAT": "VAT: Not applicable to Krugerrands. Applies to silver/platinum. Bullion reclaims INPUT VAT and reinvests it."
+    },
+    "Q9": "What happens if Bullion sells or delivers silver/platinum?",
+    "A9": "VAT OUTPUT tax must be paid to SARS. Members may reclaim it if VAT registered."
+  },
+  "CONTACT": {
+    "TITLE": "Contact Information",
+    "COMPANY_NAME": "Bullion Beperk Primary Co-operative Ltd",
+    "REGISTRATION": "Reg No. 2023 / 005086 / 24",
+    "ADDRESS": "Swart Street, Tergniet, Western Cape, South Africa, 6525",
+    "EMAIL": "info@bullionlimited.co.za",
+    "WEBSITE": "www.bullionlimited.co.za",
+    "ADMIN_QUERIES": "Admin Queries:",
+    "TOAST": {
+      "SUCCESS_SUMMARY": "Message Sent",
+      "SUCCESS_DETAIL": "Thank you, {{name}}! We'll get back to you shortly.",
+      "ERROR_SUMMARY": "Incomplete Form",
+      "ERROR_DETAIL": "Please fill out all fields."
+    },
+    "ADMIN_CONTACTS": ["Willem – 083 375 9003", "Anneke – 082 297 3542"],
+    "OTHER_INFO": "Other Info:",
+    "OTHER_CONTACTS": ["Johan Keyser – 083 627 0670"]
+  },
+  "LEARN": {
+    "START_HERE": "Start Here",
+    "BULLION_REGISTRATION_TUTORIAL": "Bullion Registration Tutorial",
+    "LEARN_MORE": "Learn More",
+    "MY_COOP_DEPOSIT_PROCESS": "My Co-op Deposit Process",
+    "REGISTERED_MEMBERS_ACCOUNT_WALKTHROUGH": "Registered Members Account Walkthrough",
+    "PLAY_VIDEO": "Play video"
+  }, "FOOTER": {
+    "COMPANY_NAME": "Bullion Beperk",
+    "DESCRIPTION": "Accountants / Auditors\nHisWay Professional Bookkeeping Services (PTY) Ltd",
+    "REG_NO": "Reg No: 2010/002990/07",
+    "ADDRESS": "Plot B44 R560, Skeerpoort 0232",
+    "REPRESENTED_BY": "Represented by: Dr Dennis Casper Kotze",
+    "PHONE": "Tel: +27 84 795 3225",
+    "RIGHTS": "All rights reserved.",
+    "QUICK_LINKS": "Quick Links",
+    "CONNECT": "Connect",
+    "LOCATION": "Tergniet, Western Cape, South Africa"
+  },
+  "NAVFOOTER": {
+    "HOME": "Home",
+    "POOL_FEATURES": "Pool Features",
+    "FEES": "Fees",
+    "DOWNLOADS": "Downloads",
+    "CONTACT": "Contact Us",
+    "LEARN": "Learn",
+    "TERMS": "Terms & Conditions",
+    "PRIVACY": "Privacy Policy"
+  }
+}

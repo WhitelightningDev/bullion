@@ -1,0 +1,26 @@
+.accordion-button {
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #0d6efd;
+  background-color: #e7f1ff;
+}
+
+.accordion-body ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.accordion-body ul ul {
+  list-style-type: circle;
+  margin-left: 1rem;
+}
+
+.accordion-item {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  border: 1px solid #dee2e6;
+}

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
 
@@ -13,7 +13,9 @@ export class PdfViewerPopupComponent {
   @Input() show = false;
   @Input() pdfSrc = '';
 
-  close() {
-    this.show = false;
-  }
+  @Output() closeRequested = new EventEmitter<void>();
+close() {
+  this.closeRequested.emit();
+}
+
 }

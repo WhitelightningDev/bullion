@@ -1,5 +1,12 @@
 <app-navbar></app-navbar>
 <main [@routeAnimations]="prepareRoute(outlet)">
+  <app-cookie-consent></app-cookie-consent>
   <router-outlet #outlet="outlet"></router-outlet>
 </main>
+<!-- PWA Install Banner -->
+<div *ngIf="showInstallBanner" class="install-pwa-banner">
+  <span>Install this app for a better experience!</span>
+  <button (click)="installPWA()" class="install-btn">Install</button>
+  <button (click)="dismissInstallBanner()" class="dismiss-btn" aria-label="Dismiss install prompt">×</button>
+</div>
 <app-footer></app-footer>

@@ -1,0 +1,171 @@
+<div class="container my-5 py-4">
+  <h1 class="text-center text-primary mb-4 fw-bold">
+    {{ 'FAQ.TITLE' | translate }}
+  </h1>
+
+  <div class="accordion shadow-sm rounded-4" id="faqAccordion">
+
+    <!-- FAQ 1 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+          {{ 'FAQ.Q1' | translate }}
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>{{ 'FAQ.A1.INTRO' | translate }}</p>
+          <ul>
+            <li *ngFor="let point of ('FAQ.A1.POINTS' | translate:undefined)">{{ point }}</li>
+          </ul>
+          <p><strong>{{ 'FAQ.A1.REDEMPTION' | translate }}</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 2 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+          {{ 'FAQ.Q2' | translate }}
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>{{ 'FAQ.A2.INTRO' | translate }} <a href="https://knox.co.za/" target="_blank">Knox Vault</a>.</p>
+          <ul>
+            <li *ngFor="let point of ('FAQ.A2.POINTS' | translate:undefined)">{{ point }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 3 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+          {{ 'FAQ.Q3' | translate }}
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>{{ 'FAQ.A3.INTRO1' | translate }}</p>
+          <p>{{ 'FAQ.A3.INTRO2' | translate }}</p>
+          <p>{{ 'FAQ.A3.INTRO3' | translate }}</p>
+          <ul>
+            <li *ngFor="let req of ('FAQ.A3.REQUIREMENTS' | translate:undefined)">{{ req }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 4 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+          {{ 'FAQ.Q4' | translate }}
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <ul>
+            <li *ngFor="let benefit of ('FAQ.A4.BENEFITS' | translate:undefined)">{{ benefit }}</li>
+          </ul>
+          <p><strong>{{ 'FAQ.A4.NOTE' | translate }}</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 5 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseFive">
+          {{ 'FAQ.Q5' | translate }}
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>{{ 'FAQ.A5.INTRO' | translate }}</p>
+          <!-- Example, Day1, Day2, and Note could be elaborated with your content as needed -->
+          <p><strong>{{ 'FAQ.A5.EXAMPLE' | translate }}</strong></p>
+          <p>{{ 'FAQ.A5.DAY1' | translate }}</p>
+          <p>{{ 'FAQ.A5.DAY2' | translate }}</p>
+          <p><em>{{ 'FAQ.A5.NOTE' | translate }}</em></p>
+          <div class="text-center mt-4">
+            <img src="faqpiechart.png" alt="How Does Unitizing Work Diagram" class="img-fluid rounded shadow" style="max-width: 600px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 6 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                aria-expanded="false" aria-controls="collapseSix">
+          {{ 'FAQ.Q6' | translate }}
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <ol class="ps-3">
+            <li *ngFor="let point of ('FAQ.A6.POINTS' | translate:undefined)">{{ point }}</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 7 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSeven">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                aria-expanded="false" aria-controls="collapseSeven">
+          {{ 'FAQ.Q7' | translate }}
+        </button>
+      </h2>
+      <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>{{ 'FAQ.A7' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 8 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingEight">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                aria-expanded="false" aria-controls="collapseEight">
+          {{ 'FAQ.Q8' | translate }}
+        </button>
+      </h2>
+      <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p><strong>{{ 'FAQ.A8.INCOME' | translate }}</strong></p>
+          <p><strong>{{ 'FAQ.A8.CGT' | translate }}</strong></p>
+          <p><strong>{{ 'FAQ.A8.VAT' | translate }}</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ 9 -->
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingNine">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                aria-expanded="false" aria-controls="collapseNine">
+          {{ 'FAQ.Q9' | translate }}
+        </button>
+      </h2>
+      <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          <p>{{ 'FAQ.A9' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

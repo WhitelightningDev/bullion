@@ -1,0 +1,64 @@
+<div class="container col-xxl-8 px-4 py-5">
+  <div class="row justify-content-center text-center">
+
+    <div class="col-12 mb-4">
+      <p class="text-primary fs-5 mb-2">{{ 'LEARN.START_HERE' | translate }}</p>
+      <h2 class="text-white display-6 border-bottom pb-2">
+        {{ 'LEARN.BULLION_REGISTRATION_TUTORIAL' | translate }}
+      </h2>
+    </div>
+
+    <div class="col-12 my-4">
+      <div class="ratio ratio-16x9 rounded shadow overflow-hidden">
+        <iframe src="https://www.youtube.com/embed/Ae87M9hHE_Y"
+          title="{{ 'LEARN.BULLION_REGISTRATION_TUTORIAL' | translate }}" allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          frameborder="0" class="rounded"></iframe>
+      </div>
+    </div>
+
+    <div class="col-12 mb-4 mt-5">
+      <p class="text-primary fs-5 mb-2">{{ 'LEARN.LEARN_MORE' | translate }}</p>
+      <h2 class="text-white display-6 border-bottom pb-2">
+        {{ 'LEARN.MY_COOP_DEPOSIT_PROCESS' | translate }}
+      </h2>
+    </div>
+
+    <div class="col-12 my-4">
+      <div class="position-relative rounded overflow-hidden shadow video-wrapper" (click)="togglePlayPause(1)">
+        <video #videoPlayer1 class="w-100 video-border rounded" preload="metadata" poster="Memberdepositprocess.png"
+          (play)="onPlay(1)" (pause)="onPause(1)">
+          <source src="/MyCo-opDepositProcess.mp4" type="video/mp4" />
+          {{ 'LEARN.PLAY_VIDEO' | translate }}
+        </video>
+
+        <!-- <button *ngIf="!isPlaying[1]" class="custom-play-button ..." [attr.aria-label]="'LEARN.PLAY_VIDEO' | translate"
+          type="button" (click)="$event.stopPropagation(); togglePlayPause(1)">
+          ▶
+        </button> -->
+      </div>
+    </div>
+
+    <div class="col-12 mt-5 mb-4">
+      <h2 class="text-white display-6 border-bottom pb-2">
+        {{ 'LEARN.REGISTERED_MEMBERS_ACCOUNT_WALKTHROUGH' | translate }}
+      </h2>
+    </div>
+
+    <div class="col-12 my-4">
+      <div class="position-relative rounded overflow-hidden shadow video-wrapper" (click)="togglePlayPause(2)">
+        <video #videoPlayer2 class="w-100 video-border rounded" preload="metadata" poster="ExsitingMembers.png"
+          (play)="onPlay(2)" (pause)="onPause(2)">
+          <source src="/bullion-web-video.mp4" type="video/mp4" />
+          {{ 'LEARN.PLAY_VIDEO' | translate }}
+        </video>
+
+        <!-- <button *ngIf="!isPlaying[2]" class="custom-play-button ..." [attr.aria-label]="'LEARN.PLAY_VIDEO' | translate"
+          type="button" (click)="$event.stopPropagation(); togglePlayPause(2)">
+          ▶
+        </button> -->
+      </div>
+    </div>
+
+  </div>
+</div>
