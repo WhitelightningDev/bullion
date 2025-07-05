@@ -215,5 +215,26 @@
     "MY_COOP_DEPOSIT_PROCESS": "My Co-op Deposit Process",
     "REGISTERED_MEMBERS_ACCOUNT_WALKTHROUGH": "Registered Members Account Walkthrough",
     "PLAY_VIDEO": "Play video"
+  }, "FOOTER": {
+    "COMPANY_NAME": "Bullion Beperk",
+    "DESCRIPTION": "Accountants / Auditors\nHisWay Professional Bookkeeping Services (PTY) Ltd",
+    "REG_NO": "Reg No: 2010/002990/07",
+    "ADDRESS": "Plot B44 R560, Skeerpoort 0232",
+    "REPRESENTED_BY": "Represented by: Dr Dennis Casper Kotze",
+    "PHONE": "Tel: +27 84 795 3225",
+    "RIGHTS": "All rights reserved.",
+    "QUICK_LINKS": "Quick Links",
+    "CONNECT": "Connect",
+    "LOCATION": "Tergniet, Western Cape, South Africa"
+  },
+  "NAVFOOTER": {
+    "HOME": "Home",
+    "POOL_FEATURES": "Pool Features",
+    "FEES": "Fees",
+    "DOWNLOADS": "Downloads",
+    "CONTACT": "Contact Us",
+    "LEARN": "Learn",
+    "TERMS": "Terms & Conditions",
+    "PRIVACY": "Privacy Policy"
   }
 }

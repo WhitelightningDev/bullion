@@ -221,5 +221,26 @@
     "MY_COOP_DEPOSIT_PROCESS": "My Koöperasie Deposito Proses",
     "REGISTERED_MEMBERS_ACCOUNT_WALKTHROUGH": "Geregistreerde Lede Rekening Rondleiding",
     "PLAY_VIDEO": "Speel video"
+  }, "FOOTER": {
+    "COMPANY_NAME": "Bullion Beperk",
+    "DESCRIPTION": "Rekenmeesters / Ouditeure\nHisWay Professionele Boekhou Dienste (PTY) Ltd",
+    "REG_NO": "Reg Nr: 2010/002990/07",
+    "ADDRESS": "Plot B44 R560, Skeerpoort 0232",
+    "REPRESENTED_BY": "Verteenwoordig deur: Dr Dennis Casper Kotze",
+    "PHONE": "Tel: +27 84 795 3225",
+    "RIGHTS": "Alle regte voorbehou.",
+    "QUICK_LINKS": "Vinnige Skakels",
+    "CONNECT": "Verbind",
+    "LOCATION": "Tergniet, Wes-Kaap, Suid-Afrika"
+  },
+  "NAVFOOTER": {
+    "HOME": "Tuis",
+    "POOL_FEATURES": "Swembadkenmerke",
+    "FEES": "Fooie",
+    "DOWNLOADS": "Aflaaie",
+    "CONTACT": "Kontak Ons",
+    "LEARN": "Leer",
+    "TERMS": "Bepalings & Voorwaardes",
+    "PRIVACY": "Privaatheidsbeleid"
   }
 }
