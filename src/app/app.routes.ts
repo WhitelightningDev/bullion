@@ -14,7 +14,10 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 export const routes: Routes = [
 
- { path: 'maintenance', component: MaintenanceComponent },
+{
+  path: 'maintenance',
+  loadComponent: () => import('./maintenance/maintenance.component').then(m => m.MaintenanceComponent),
+},
 
 
   { path: '', component: HomepageComponent, data: { animation: 'Home' } },
