@@ -4,4 +4,4 @@ import { AppComponent } from './app/app.component';
 import 'zone.js';
 
 bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+  .catch((err) => console.error('Bootstrap error:', err));
