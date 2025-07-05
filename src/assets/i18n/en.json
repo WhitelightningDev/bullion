@@ -75,10 +75,33 @@
     "DEPOSIT_PROCESS_TITLE": "Bullion Deposit Process",
     "CURRENT_POOLS_TITLE": "Current Available Pools",
     "CURRENT_POOLS_ALT": "Investment Pools"
+  },
+  "FEES": {
+    "TITLE": "Costs and Fees",
+    "DESCRIPTION": "Fees recouped from the pools are used for paying costs associated with administration, insurance, and safekeeping of assets.",
+    "OVERVIEW_TITLE": "Fees Overview",
+    "OVERVIEW_TEXT": "Stock is bought at wholesale prices, and NO margin is added. All costs are fully transparent. The fee structure below may change with thirty days' notice, and any changes will be updated on our website. All fees are subject to VAT.",
+    "STRUCTURE_TITLE": "Fee Structure",
+    "STRUCTURE_NOTE": "All fees exclude VAT unless otherwise stated.",
+    "TABLE_HEADER_TYPE": "Fee Type",
+    "TABLE_HEADER_PERCENT": "Fee %",
+    "ADMIN_FEE": "Administration Fee (applied on deposits)",
+    "COMMISSION": "Commission (referrer-agreed)",
+    "VARIABLE": "Variable",
+    "SWITCHING_FEE": "Switching Fee",
+    "WITHDRAWAL_FEE": "Withdrawal Fee",
+    "COURIER_FEE": "Courier Fee",
+    "COLLECTION_FEE": "Collection Fee",
+    "ONGOING_GOLD": "Ongoing (Gold)",
+    "ONGOING_SILVER": "Ongoing (Silver)",
+    "SWITCHING_BETWEEN_POOLS": "Switching between pools (move between funds)",
+    "TRANSFER_BETWEEN_MEMBERS": "Transfer between members",
+    "WITHDRAWALS": "Withdrawals (cash-outs)",
+    "COURIER_CHARGES": "Courier Charges (metal delivery)",
+    "TO_BE_CONFIRMED": "To Be Confirmed",
+    "ONGOING_FEES": "Ongoing Fees (annual safekeeping and administration)",
+    "FEE_PERCENT": "Fee (%)"
   }
-
-
-
 }
 
 

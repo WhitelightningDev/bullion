@@ -73,5 +73,42 @@
     "DEPOSIT_PROCESS_TITLE": "Bullion Deposito-proses",
     "CURRENT_POOLS_TITLE": "Huidige Beskikbare Poele",
     "CURRENT_POOLS_ALT": "Beleggingspoele"
-  }
+  },
+ "FEES": {
+  "TITLE": "Koste en Fooie",
+  "DESCRIPTION": "Fooie wat van die swembaddens verhaal word, word gebruik om koste soos administrasie, versekering en veilige bewaring van bates te dek.",
+  "OVERVIEW_TITLE": "Oorsig van Fooie",
+  "OVERVIEW_TEXT": "Voorraad word teen groothandelspryse gekoop sonder enige winsmarge. Alle koste is volledig deursigtig. Die fooi-struktuur hieronder kan met dertig dae kennisgewing verander word, en enige veranderinge sal op ons webwerf gepubliseer word. Alle fooie is onderhewig aan BTW.",
+  "STRUCTURE_TITLE": "Fooi-struktuur",
+  "STRUCTURE_NOTE": "Alle fooie is uitgesluit van BTW, tensy anders vermeld.",
+  "TABLE_HEADER_TYPE": "Tipe Fooi",
+  "TABLE_HEADER_PERCENT": "Persentasie",
+  "ADMIN_FEE": "Administrasiefooi (van toepassing op deposito's)",
+  "COMMISSION": "Kommissie (soos met verwysingspersoon ooreengekom)",
+  "VARIABLE": "Veranderlik",
+  "SWITCHING_FEE": "Oorskakelingsfooi",
+  "WITHDRAWAL_FEE": "Onttrekkingsfooi",
+  "COURIER_FEE": "Koerierfooi",
+  "COLLECTION_FEE": "Afhaalfooi",
+  "ONGOING_GOLD": "Voortgesette Fooie (Goud)",
+  "ONGOING_SILVER": "Voortgesette Fooie (Silwer)",
+  "SWITCHING_BETWEEN_POOLS": "Oorskakeling tussen poele (verskuiwing van fondse)",
+  "TRANSFER_BETWEEN_MEMBERS": "Oordrag tussen lede",
+  "WITHDRAWALS": "Onttrekkings (kontant-uitbetalings)",
+  "COURIER_CHARGES": "Koerierkoste (aflewering van metaal)",
+  "TO_BE_CONFIRMED": "Word Bevestig",
+  "ONGOING_FEES": "Voortgesette fooie (jaarlikse bewaring en administrasie)",
+  "FEE_PERCENT": "Fooi (%)",
+
+
+  "PIE_TITLE": "Uiteensetting van Fooie (Voortgeset & Transaksioneel)",
+  "PIE_SWITCHING": "Oorskakeling",
+  "PIE_WITHDRAWAL": "Onttrekking",
+  "PIE_COURIER": "Koerier",
+  "PIE_COLLECTION": "Afhaal",
+  "PIE_GOLD": "Goud (Voortgeset)",
+  "PIE_SILVER": "Silwer (Voortgeset)"
+}
+
+
 }

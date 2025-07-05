@@ -1,37 +1,60 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import Chart from 'chart.js/auto';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-fees',
+  standalone: true,
+  imports: [TranslateModule],
   templateUrl: './fees.component.html',
   styleUrls: ['./fees.component.css']
 })
-export class FeesComponent implements OnInit {
+export class FeesComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang('en');
+  }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
     this.createFeesChart();
   }
 
-  createFeesChart() {
-    Chart.register(ChartDataLabels); // Register the plugin
+ createFeesChart() {
+  Chart.register(ChartDataLabels);
 
-    const ctx = document.getElementById('feesChart') as HTMLCanvasElement;
-    new Chart(ctx.getContext('2d')!, {
+  const canvas = document.getElementById('feesChart') as HTMLCanvasElement;
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  // Use async translation loading
+  this.translate.get([
+    'FEES.SWITCHING_FEE',
+    'FEES.WITHDRAWAL_FEE',
+    'FEES.COURIER_FEE',
+    'FEES.COLLECTION_FEE',
+    'FEES.ONGOING_GOLD',
+    'FEES.ONGOING_SILVER',
+    'FEES.FEE_PERCENT',
+    'FEES.TITLE'
+  ]).subscribe(translations => {
+    new Chart(ctx, {
       type: 'pie',
       data: {
         labels: [
-          'Switching Fee',
-          'Withdrawal Fee',
-          'Courier Fee',
-          'Collection Fee',
-          'Ongoing (Gold)',
-          'Ongoing (Silver)'
+          translations['FEES.SWITCHING_FEE'],
+          translations['FEES.WITHDRAWAL_FEE'],
+          translations['FEES.COURIER_FEE'],
+          translations['FEES.COLLECTION_FEE'],
+          translations['FEES.ONGOING_GOLD'],
+          translations['FEES.ONGOING_SILVER'],
         ],
         datasets: [{
-          label: 'Fee (%)',
+          label: translations['FEES.FEE_PERCENT'],
           data: [0.25, 0.15, 0.4, 0.15, 1.0, 0.8],
           backgroundColor: [
             'rgba(40, 167, 69, 0.7)',
@@ -50,36 +73,30 @@ export class FeesComponent implements OnInit {
         plugins: {
           datalabels: {
             color: 'white',
-            font: {
-              weight: 'bold'
-            },
-            formatter: (value: number, context: any) => `${value}%`
+            font: { weight: 'bold' },
+            formatter: (value: number) => `${value}%`
           },
           legend: {
             position: 'right',
-            labels: {
-              color: 'white'
-            }
+            labels: { color: 'white' }
           },
           title: {
             display: true,
-            text: 'Fees Breakdown (Ongoing & Transactional)',
+            text: translations['FEES.TITLE'],
             color: 'white',
-            font: {
-              size: 18,
-              weight: 'bold'
-            }
+            font: { size: 18, weight: 'bold' }
           },
           tooltip: {
             callbacks: {
-              label: function (tooltipItem) {
-                return `${tooltipItem.label}: ${tooltipItem.raw}%`;
-              }
+              label: (tooltipItem: any) =>
+                `${tooltipItem.label}: ${tooltipItem.raw}%`
             }
           }
         }
       },
       plugins: [ChartDataLabels]
     });
-  }
+  });
+}
+
 }
