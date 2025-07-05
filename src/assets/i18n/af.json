@@ -214,5 +214,12 @@
     "ADMIN_CONTACTS": ["Willem – 083 375 9003", "Anneke – 082 297 3542"],
     "OTHER_INFO": "Ander Inligting:",
     "OTHER_CONTACTS": ["Johan Keyser – 083 627 0670"]
+  },  "LEARN": {
+    "START_HERE": "Begin Hier",
+    "BULLION_REGISTRATION_TUTORIAL": "Bullion Registrasie Handleiding",
+    "LEARN_MORE": "Leer Meer",
+    "MY_COOP_DEPOSIT_PROCESS": "My Koöperasie Deposito Proses",
+    "REGISTERED_MEMBERS_ACCOUNT_WALKTHROUGH": "Geregistreerde Lede Rekening Rondleiding",
+    "PLAY_VIDEO": "Speel video"
   }
 }
