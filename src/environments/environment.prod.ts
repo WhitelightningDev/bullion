@@ -1,4 +1,5 @@
+// src/environments/environment.prod.ts
 export const environment = {
   production: true,
-  maintenanceMode: true // Live: Show maintenance screen
+  maintenanceMode: false  // ← set this to false to disable maintenance mode
 };
