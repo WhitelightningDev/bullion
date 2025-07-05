@@ -115,7 +115,82 @@
   "FRACTAL_CARD_DESCRIPTION": "Learn how Bullion members can access global financial tools through our partnership with Fractal Global Payment Solutions. Download the profile below for more information on how to activate and use your international transactional account.",
   "VIEW_BUTTON": "View",
   "DOWNLOAD_BUTTON": "Download PDF"
-}
+},
+  "FAQ": {
+    "TITLE": "Frequently Asked Questions",
+    "Q1": "What makes Bullion's pricing and structure unique?",
+    "A1": {
+      "INTRO": "Gold, Silver, or Platinum pools (i.e. the unit prices) are valued at the daily wholesale price (which is priced around a 5% premium over the London PM Fix). A member buys in and sells at this price. The admin fee and commission are added when buying in.",
+      "POINTS": [
+        "Buying elsewhere may cost 10% or more over the London PM Fix. Selling may yield less.",
+        "The unitized system ensures members rarely sell for less than wholesale (London PM Fix +5%).",
+        "Trade cost is reduced to ~0.15%, significantly lower than competitors.",
+        "Bullion offers full transparency and low pricing for members.",
+        "Traditional unit trusts cannot hold physical precious metals due to FAIS restrictions. Bullion fills that gap."
+      ],
+      "REDEMPTION": "Redemption: Members can redeem units for cash, gold, silver, platinum — or any combination."
+    },
+    "Q2": "How safe are my holdings with Bullion?",
+    "A2": {
+      "INTRO": "Most gold, silver, and platinum is stored securely at",
+      "POINTS": [
+        "Vault access is protected by eye-recognition technology and must be pre-arranged.",
+        "Stock insurance is underwritten by Zurich, approved by Bullion members at general meetings.",
+        "Visits allowed only for: Adding precious metals, Withdrawing precious metals, Auditing vault contents.",
+        "Every vault visit is accompanied by a Bullion Board member and an auditor representative.",
+        "Formal stock audits are performed at least once a year."
+      ]
+    },
+    "Q3": "What are the investment requirements?",
+    "A3": {
+      "INTRO1": "This is a very secure business vehicle for holding a member's precious metal assets.",
+      "INTRO2": "The Co-operative has the right of possession, while members share ownership of the pools according to the number of units allocated to them.",
+      "INTRO3": "The Co-operative has no creditors apart from the bank for bank charges and the auditors. Its only liability is to the members for their units.",
+      "REQUIREMENTS": [
+        "Minimum lump sum tranches of R5000 (initial or additional amounts).",
+        "Minimum debit order of R500 per month.",
+        "There is no maximum investment limit."
+      ]
+    },
+    "Q4": "Why unitized pools instead of direct holdings in precious metals?",
+    "A4": {
+      "BENEFITS": [
+        "Reduces entry/exit costs from over 5% to as low as ~0.15% per trade.",
+        "Accommodates round amounts without precise metal pricing (e.g. R100,000).",
+        "Allows smaller investments (e.g. R500 debit order) that still gain exposure to metals.",
+        "Enables flexible cash withdrawals (e.g. redeem R4,500 from R545,678.98 value).",
+        "Insurance, admin, and safekeeping costs are paid by the pool, not the member.",
+        "Enables seamless switching between pools at wholesale pricing (~0.25% cost).",
+        "Avoids typical commissions and price reductions associated with metal sales."
+      ],
+      "NOTE": "Note: Unitizing avoids cross-subsidizing — each deposit/withdrawal occurs at the unit price of the day."
+    },
+    "Q5": "How does unitizing work?",
+    "A5": {
+      "INTRO": "Unitizing is a method used to accurately record each investor's share in a pool of assets. It ensures pro-rata cost distribution.",
+      "EXAMPLE": "Example",
+      "DAY1": "Day 1",
+      "DAY2": "Day 2",
+      "NOTE": "Each member's share is now calculated accordingly based on units held and unit price."
+    },
+    "Q6": "What will affect a member's composition of coins or bars in the pool?",
+    "A6": {
+      "POINTS": [
+        "Monthly cost deductions: Costs for insurance, vaults, and administration are deducted monthly or as they occur. This slightly reduces metal holdings unless topped up.",
+        "Cash reserve effect: Holding a portion in cash buffers metal price fluctuations but may affect unit price sensitivity."
+      ]
+    },
+    "Q7": "Is it important for a member to keep his composition of coins and bars at the same level?",
+    "A7": "Not really. Members primarily seek capital growth. If the unit price increases, value increases even if the coin/bar mix changes.",
+    "Q8": "What are the tax implications?",
+    "A8": {
+      "INCOME": "Income Tax: None. No interest = no income tax.",
+      "CGT": "Capital Gains Tax (CGT): Applies only when units are sold for cash or metals are sold thereafter.",
+      "VAT": "VAT: Not applicable to Krugerrands. Applies to silver/platinum. Bullion reclaims INPUT VAT and reinvests it."
+    },
+    "Q9": "What happens if Bullion sells or delivers silver/platinum?",
+    "A9": "VAT OUTPUT tax must be paid to SARS. Members may reclaim it if VAT registered."
+  }
 
 }
 

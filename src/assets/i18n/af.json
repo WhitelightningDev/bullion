@@ -122,8 +122,82 @@
   "FRACTAL_CARD_DESCRIPTION": "Leer hoe Bullion-lede toegang kan kry tot globale finansiële hulpmiddels via ons vennootskap met Fractal Global Betaaloplossings. Laai die profiel hieronder af vir meer inligting oor hoe om jou internasionale transaksionele rekening te aktiveer en te gebruik.",
   "VIEW_BUTTON": "Besigtig",
   "DOWNLOAD_BUTTON": "Laai PDF Af"
-}
-
+},
+ "FAQ": {
+    "TITLE": "Gereelde Vrae",
+    "Q1": "Wat maak Bullion se pryse en struktuur uniek?",
+    "A1": {
+      "INTRO": "Goud-, silwer- en platinumpoele word gewaardeer teen die daaglikse groothandelsprys (+/- 5% premie bo die London PM Fix). Lede koop en verkoop teen hierdie prys. Administrasiefooi en kommissie word by aankoop gehef.",
+      "POINTS": [
+        "Ander plekke vra dalk 10% of meer bo die London PM Fix. Verkoop lewer dalk minder op.",
+        "Die eenheidstelsel verseker dat lede selde teen minder as groothandel verkoop.",
+        "Transaksiekoste is sowat 0.15% — baie laer as die markgemiddeld.",
+        "Bullion bied volle deursigtigheid en lae pryse aan lede.",
+        "Tradisionele eenheidstrusts mag nie fisiese edelmetale hou nie — Bullion vul daardie gaping."
+      ],
+      "REDEMPTION": "Verlossing: Lede kan hul eenhede in kontant, goud, silwer of platinum omskep — of enige kombinasie daarvan."
+    },
+    "Q2": "Hoe veilig is my bates by Bullion?",
+    "A2": {
+      "INTRO": "Meeste edelmetale word veilig by",
+      "POINTS": [
+        "Toegang is biometries en vooraf gereël.",
+        "Verseker deur Zurich; goedgekeur tydens ledevergaderings.",
+        "Toegang slegs vir: Byvoeging, onttrekking of ouditering.",
+        "Elke besoek word deur 'n Raadslid en ouditeur vergesel.",
+        "Jaarlikse formele oudits word uitgevoer."
+      ]
+    },
+    "Q3": "Wat is die beleggingsvereistes?",
+    "A3": {
+      "INTRO1": "‘n Veilige struktuur vir die hou van edelmetale.",
+      "INTRO2": "Die Koöperasie besit die bates; lede besit 'n aandeel ooreenkomstig eenhede.",
+      "INTRO3": "Geen skulde, behalwe vir bankkoste en ouditeurs. Slegs aanspreeklik teenoor lede.",
+      "REQUIREMENTS": [
+        "Minimum eenmalige belegging: R5000.",
+        "Minimum debietorder: R500 per maand.",
+        "Geen maksimum beleggingsperk nie."
+      ]
+    },
+    "Q4": "Hoekom gebruik Bullion eenheidspoele in plaas van regstreekse metaalbesit?",
+    "A4": {
+      "BENEFITS": [
+        "Verminder koste van >5% na ±0.15% per transaksie.",
+        "Laat afgeronde bedrae toe sonder presiese metaalpryse.",
+        "Laat kleiner beleggings toe met vol metaalblootstelling.",
+        "Geldonttrekkings is buigsaam.",
+        "Pool dra koste — nie die lid nie.",
+        "Maklike oorskakeling tussen poele teen ±0.25%.",
+        "Geen kommissies of prysverlagings soos elders nie."
+      ],
+      "NOTE": "Let wel: Eenheidstelsel voorkom kruisubsidies — elke transaksie teen die dag se prys."
+    },
+    "Q5": "Hoe werk eenheidmaking?",
+    "A5": {
+      "INTRO": "‘n Akkurate manier om elke belegger se aandele in 'n poel te rekords.",
+      "EXAMPLE": "Voorbeeld",
+      "DAY1": "Dag 1",
+      "DAY2": "Dag 2",
+      "NOTE": "Elke lid se aandeel word gebaseer op eenhede besit en daaglikse prys."
+    },
+    "Q6": "Wat beïnvloed ‘n lid se samestelling van munte of stawe?",
+    "A6": {
+      "POINTS": [
+        "Maandelikse koste: Onkoste verminder metaaldeel — tensy kontant bygevoeg word.",
+        "Kontantreserwe-effek: Kontant buffeer metaalprysskommelings."
+      ]
+    },
+    "Q7": "Moet ek my metaal-samestelling konstant hou?",
+    "A7": "Nie werklik nie. Fokus is op kapitaalgroei. Veranderinge in samestelling is minder belangrik as netto waarde.",
+    "Q8": "Wat is die belastingimplikasies?",
+    "A8": {
+      "INCOME": "Inkomstebelasting: Geen. Geen rente verdien nie.",
+      "CGT": "Kapitaalwinsbelasting: Slegs betaalbaar indien verkoop vir kontant.",
+      "VAT": "BTW: Nie van toepassing op Krugerrande nie. Van toepassing op silwer/platinum. Bullion eis BTW terug en belê dit weer."
+    },
+    "Q9": "Wat gebeur as silwer/platinum verkoop of afgelewer word?",
+    "A9": "BTW-uitsetbelasting betaalbaar aan SARS. Lid kan dit terug eis indien BTW-geregistreer."
+  }
 
 
 }
