@@ -56,7 +56,7 @@
     "LOGIN": "Teken In",
     "LANGUAGE": "Taal"
   },
-   "POOLS": {
+  "POOLS": {
     "INVESTMENT_POOLS": "Beleggingspoele",
     "KRUGER_RAND_ALT": "Kruger Rand",
     "DESCRIPTION": "Verken die voordele en kenmerke van ons edelmetaal-beleggingspoele.",
@@ -74,56 +74,55 @@
     "CURRENT_POOLS_TITLE": "Huidige Beskikbare Poele",
     "CURRENT_POOLS_ALT": "Beleggingspoele"
   },
- "FEES": {
-  "TITLE": "Koste en Fooie",
-  "DESCRIPTION": "Fooie wat van die swembaddens verhaal word, word gebruik om koste soos administrasie, versekering en veilige bewaring van bates te dek.",
-  "OVERVIEW_TITLE": "Oorsig van Fooie",
-  "OVERVIEW_TEXT": "Voorraad word teen groothandelspryse gekoop sonder enige winsmarge. Alle koste is volledig deursigtig. Die fooi-struktuur hieronder kan met dertig dae kennisgewing verander word, en enige veranderinge sal op ons webwerf gepubliseer word. Alle fooie is onderhewig aan BTW.",
-  "STRUCTURE_TITLE": "Fooi-struktuur",
-  "STRUCTURE_NOTE": "Alle fooie is uitgesluit van BTW, tensy anders vermeld.",
-  "TABLE_HEADER_TYPE": "Tipe Fooi",
-  "TABLE_HEADER_PERCENT": "Persentasie",
-  "ADMIN_FEE": "Administrasiefooi (van toepassing op deposito's)",
-  "COMMISSION": "Kommissie (soos met verwysingspersoon ooreengekom)",
-  "VARIABLE": "Veranderlik",
-  "SWITCHING_FEE": "Oorskakelingsfooi",
-  "WITHDRAWAL_FEE": "Onttrekkingsfooi",
-  "COURIER_FEE": "Koerierfooi",
-  "COLLECTION_FEE": "Afhaalfooi",
-  "ONGOING_GOLD": "Voortgesette Fooie (Goud)",
-  "ONGOING_SILVER": "Voortgesette Fooie (Silwer)",
-  "SWITCHING_BETWEEN_POOLS": "Oorskakeling tussen poele (verskuiwing van fondse)",
-  "TRANSFER_BETWEEN_MEMBERS": "Oordrag tussen lede",
-  "WITHDRAWALS": "Onttrekkings (kontant-uitbetalings)",
-  "COURIER_CHARGES": "Koerierkoste (aflewering van metaal)",
-  "TO_BE_CONFIRMED": "Word Bevestig",
-  "ONGOING_FEES": "Voortgesette fooie (jaarlikse bewaring en administrasie)",
-  "FEE_PERCENT": "Fooi (%)",
+  "FEES": {
+    "TITLE": "Koste en Fooie",
+    "DESCRIPTION": "Fooie wat van die swembaddens verhaal word, word gebruik om koste soos administrasie, versekering en veilige bewaring van bates te dek.",
+    "OVERVIEW_TITLE": "Oorsig van Fooie",
+    "OVERVIEW_TEXT": "Voorraad word teen groothandelspryse gekoop sonder enige winsmarge. Alle koste is volledig deursigtig. Die fooi-struktuur hieronder kan met dertig dae kennisgewing verander word, en enige veranderinge sal op ons webwerf gepubliseer word. Alle fooie is onderhewig aan BTW.",
+    "STRUCTURE_TITLE": "Fooi-struktuur",
+    "STRUCTURE_NOTE": "Alle fooie is uitgesluit van BTW, tensy anders vermeld.",
+    "TABLE_HEADER_TYPE": "Tipe Fooi",
+    "TABLE_HEADER_PERCENT": "Persentasie",
+    "ADMIN_FEE": "Administrasiefooi (van toepassing op deposito's)",
+    "COMMISSION": "Kommissie (soos met verwysingspersoon ooreengekom)",
+    "VARIABLE": "Veranderlik",
+    "SWITCHING_FEE": "Oorskakelingsfooi",
+    "WITHDRAWAL_FEE": "Onttrekkingsfooi",
+    "COURIER_FEE": "Koerierfooi",
+    "COLLECTION_FEE": "Afhaalfooi",
+    "ONGOING_GOLD": "Voortgesette Fooie (Goud)",
+    "ONGOING_SILVER": "Voortgesette Fooie (Silwer)",
+    "SWITCHING_BETWEEN_POOLS": "Oorskakeling tussen poele (verskuiwing van fondse)",
+    "TRANSFER_BETWEEN_MEMBERS": "Oordrag tussen lede",
+    "WITHDRAWALS": "Onttrekkings (kontant-uitbetalings)",
+    "COURIER_CHARGES": "Koerierkoste (aflewering van metaal)",
+    "TO_BE_CONFIRMED": "Word Bevestig",
+    "ONGOING_FEES": "Voortgesette fooie (jaarlikse bewaring en administrasie)",
+    "FEE_PERCENT": "Fooi (%)",
 
-
-  "PIE_TITLE": "Uiteensetting van Fooie (Voortgeset & Transaksioneel)",
-  "PIE_SWITCHING": "Oorskakeling",
-  "PIE_WITHDRAWAL": "Onttrekking",
-  "PIE_COURIER": "Koerier",
-  "PIE_COLLECTION": "Afhaal",
-  "PIE_GOLD": "Goud (Voortgeset)",
-  "PIE_SILVER": "Silwer (Voortgeset)"
-},
-"DOWNLOADS": {
-  "TITLE": "Laai Dokumente Af",
-  "DESCRIPTION": "Hier kan jy alle dokumente wat relevant is tot hierdie Koöperasie aflaai.",
-  "CIPC_TITLE": "Bullion CIPC Dokument",
-  "CIPC_DESCRIPTION": "Toegang en aflaai van die amptelike dokumente vir die Bullion Koöperasie hieronder.",
-  "CONSTITUTION_TITLE": "Bullion Grondwet",
-  "CONSTITUTION_DESCRIPTION": "Toegang en aflaai van die grondwet vir die Bullion Koöperasie hieronder.",
-  "FRACTAL_TITLE": "Fractal Global Betaaloplossings",
-  "FRACTAL_DESCRIPTION": "Laai volledige inligting af oor ons vennootskap met Fractal Global en hoe jy daarby kan baat.",
-  "FRACTAL_CARD_TITLE": "Fractal Global Betaalvennoot-inligting",
-  "FRACTAL_CARD_DESCRIPTION": "Leer hoe Bullion-lede toegang kan kry tot globale finansiële hulpmiddels via ons vennootskap met Fractal Global Betaaloplossings. Laai die profiel hieronder af vir meer inligting oor hoe om jou internasionale transaksionele rekening te aktiveer en te gebruik.",
-  "VIEW_BUTTON": "Besigtig",
-  "DOWNLOAD_BUTTON": "Laai PDF Af"
-},
- "FAQ": {
+    "PIE_TITLE": "Uiteensetting van Fooie (Voortgeset & Transaksioneel)",
+    "PIE_SWITCHING": "Oorskakeling",
+    "PIE_WITHDRAWAL": "Onttrekking",
+    "PIE_COURIER": "Koerier",
+    "PIE_COLLECTION": "Afhaal",
+    "PIE_GOLD": "Goud (Voortgeset)",
+    "PIE_SILVER": "Silwer (Voortgeset)"
+  },
+  "DOWNLOADS": {
+    "TITLE": "Laai Dokumente Af",
+    "DESCRIPTION": "Hier kan jy alle dokumente wat relevant is tot hierdie Koöperasie aflaai.",
+    "CIPC_TITLE": "Bullion CIPC Dokument",
+    "CIPC_DESCRIPTION": "Toegang en aflaai van die amptelike dokumente vir die Bullion Koöperasie hieronder.",
+    "CONSTITUTION_TITLE": "Bullion Grondwet",
+    "CONSTITUTION_DESCRIPTION": "Toegang en aflaai van die grondwet vir die Bullion Koöperasie hieronder.",
+    "FRACTAL_TITLE": "Fractal Global Betaaloplossings",
+    "FRACTAL_DESCRIPTION": "Laai volledige inligting af oor ons vennootskap met Fractal Global en hoe jy daarby kan baat.",
+    "FRACTAL_CARD_TITLE": "Fractal Global Betaalvennoot-inligting",
+    "FRACTAL_CARD_DESCRIPTION": "Leer hoe Bullion-lede toegang kan kry tot globale finansiële hulpmiddels via ons vennootskap met Fractal Global Betaaloplossings. Laai die profiel hieronder af vir meer inligting oor hoe om jou internasionale transaksionele rekening te aktiveer en te gebruik.",
+    "VIEW_BUTTON": "Besigtig",
+    "DOWNLOAD_BUTTON": "Laai PDF Af"
+  },
+  "FAQ": {
     "TITLE": "Gereelde Vrae",
     "Q1": "Wat maak Bullion se pryse en struktuur uniek?",
     "A1": {
@@ -197,7 +196,23 @@
     },
     "Q9": "Wat gebeur as silwer/platinum verkoop of afgelewer word?",
     "A9": "BTW-uitsetbelasting betaalbaar aan SARS. Lid kan dit terug eis indien BTW-geregistreer."
+  },
+  "CONTACT": {
+    "TITLE": "Kontakinligting",
+    "COMPANY_NAME": "Bullion Beperk Primêre Koöperasie Ltd",
+    "REGISTRATION": "Regsno. 2023 / 005086 / 24",
+    "ADDRESS": "Swartstraat, Tergniet, Wes-Kaap, Suid-Afrika, 6525",
+    "EMAIL": "info@bullionlimited.co.za",
+    "WEBSITE": "www.bullionlimited.co.za",
+    "ADMIN_QUERIES": "Administrasie Navrae:",
+    "TOAST": {
+      "SUCCESS_SUMMARY": "Boodskap Gestuur",
+      "SUCCESS_DETAIL": "Dankie, {{name}}! Ons sal binnekort by jou terugkom.",
+      "ERROR_SUMMARY": "Onvolledige Vorm",
+      "ERROR_DETAIL": "Vul asseblief al die velde in."
+    },
+    "ADMIN_CONTACTS": ["Willem – 083 375 9003", "Anneke – 082 297 3542"],
+    "OTHER_INFO": "Ander Inligting:",
+    "OTHER_CONTACTS": ["Johan Keyser – 083 627 0670"]
   }
-
-
 }
