@@ -5,7 +5,7 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { CookieConsentComponent } from "./components/cookie-consent/cookie-consent.component";
 import { CommonModule } from '@angular/common';
 import { LanguageService } from './services/language.service';
-import { environment } from './environments/environment';
+import { environment } from '../environments/environment.prod';
 
 
 @Component({
