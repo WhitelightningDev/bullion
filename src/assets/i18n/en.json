@@ -101,7 +101,22 @@
     "TO_BE_CONFIRMED": "To Be Confirmed",
     "ONGOING_FEES": "Ongoing Fees (annual safekeeping and administration)",
     "FEE_PERCENT": "Fee (%)"
-  }
+  },
+  "DOWNLOADS": {
+  "TITLE": "Download Documents",
+  "DESCRIPTION": "Here you can download all the documents relevant to this Co-op.",
+  "CIPC_TITLE": "Bullion CIPC Document",
+  "CIPC_DESCRIPTION": "Access and download the official documents for the Bullion Co-operative below.",
+  "CONSTITUTION_TITLE": "Bullion Constitution",
+  "CONSTITUTION_DESCRIPTION": "Access and download the constitution for the Bullion Co-operative below.",
+  "FRACTAL_TITLE": "Fractal Global Payment Solutions",
+  "FRACTAL_DESCRIPTION": "Download detailed information about our partnership with Fractal Global and how you can benefit.",
+  "FRACTAL_CARD_TITLE": "Fractal Global Payment partner info",
+  "FRACTAL_CARD_DESCRIPTION": "Learn how Bullion members can access global financial tools through our partnership with Fractal Global Payment Solutions. Download the profile below for more information on how to activate and use your international transactional account.",
+  "VIEW_BUTTON": "View",
+  "DOWNLOAD_BUTTON": "Download PDF"
+}
+
 }
 
 

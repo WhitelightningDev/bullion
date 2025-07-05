@@ -2,8 +2,8 @@
 <section class="bg-dark text-white text-center py-5">
   <div class="container">
     <i class="bi bi-cloud-download-fill fs-1 mb-3"></i>
-    <h2 class="display-6">Download Documents</h2>
-    <p class="lead">Here you can download all the documents relevant to this Co-op.</p>
+    <h2 class="display-6">{{ 'DOWNLOADS.TITLE' | translate }}</h2>
+    <p class="lead">{{ 'DOWNLOADS.DESCRIPTION' | translate }}</p>
   </div>
 </section>
 
@@ -15,14 +15,14 @@
         style="max-width: 300px;" loading="lazy">
     </div>
     <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">Bullion CIPC Document</h1>
-      <p class="mb-4 text-white">Access and download the official documents for the Bullion Co-operative below.</p>
+      <h1 class="fw-bold mb-3 text-white">{{ 'DOWNLOADS.CIPC_TITLE' | translate }}</h1>
+      <p class="mb-4 text-white">{{ 'DOWNLOADS.CIPC_DESCRIPTION' | translate }}</p>
       <div class="d-grid gap-3 d-md-flex justify-content-md-start">
         <button type="button" class="btn btn-primary btn-lg px-4" (click)="openCipcDocument()">
-          <i class="bi bi-eye me-2"></i>View
+          <i class="bi bi-eye me-2"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
         </button>
         <a href="assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>Download PDF
+          <i class="bi bi-download me-2"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
         </a>
       </div>
     </div>
@@ -33,8 +33,8 @@
 <section class="bg-dark text-white text-center py-5">
   <div class="container">
     <i class="bi bi-cloud-download-fill fs-1 mb-3"></i>
-    <h2 class="display-6">Bullion Constitution</h2>
-    <p class="lead">Here you can download all the documents relevant to this Co-op.</p>
+    <h2 class="display-6">{{ 'DOWNLOADS.CONSTITUTION_TITLE' | translate }}</h2>
+    <p class="lead">{{ 'DOWNLOADS.CONSTITUTION_DESCRIPTION' | translate }}</p>
   </div>
 </section>
 
@@ -45,26 +45,26 @@
         style="max-width: 300px;" loading="lazy">
     </div>
     <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">Bullion Constitution</h1>
-      <p class="mb-4 text-white">Access and download the constitution for the Bullion Co-operative below.</p>
+      <h1 class="fw-bold mb-3 text-white">{{ 'DOWNLOADS.CONSTITUTION_TITLE' | translate }}</h1>
+      <p class="mb-4 text-white">{{ 'DOWNLOADS.CONSTITUTION_DESCRIPTION' | translate }}</p>
       <div class="d-grid gap-3 d-md-flex justify-content-md-start">
         <button type="button" class="btn btn-primary btn-lg px-4" (click)="openConstitutionDocument()">
-          <i class="bi bi-eye me-2"></i>View
+          <i class="bi bi-eye me-2"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
         </button>
         <a href="assets/downloads/BULLIONFINANCIALCO-OPCONSTITUTION.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>Download PDF
+          <i class="bi bi-download me-2"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Bullion Profile Section -->
+<!-- Fractal Global Profile Section -->
 <section class="bg-dark text-white text-center py-5">
   <div class="container">
     <i class="bi bi-file-earmark-text-fill fs-1 mb-3"></i>
-    <h2 class="display-6">Fractal Global Payment Solutions</h2>
-    <p class="lead">Download detailed information about our partnership with Fractal Global and how you can benefit.</p>
+    <h2 class="display-6">{{ 'DOWNLOADS.FRACTAL_TITLE' | translate }}</h2>
+    <p class="lead">{{ 'DOWNLOADS.FRACTAL_DESCRIPTION' | translate }}</p>
   </div>
 </section>
 
@@ -75,56 +75,21 @@
         style="max-width: 300px;" loading="lazy">
     </div>
     <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">Fractal Global Payment partner info</h1>
-      <p class="mb-4 text-white">Learn how Bullion members can access global financial tools through our partnership with Fractal Global Payment Solutions.
-        Download the profile below for more information on how to activate and use your international transactional account.</p>
+      <h1 class="fw-bold mb-3 text-white">{{ 'DOWNLOADS.FRACTAL_CARD_TITLE' | translate }}</h1>
+      <p class="mb-4 text-white">{{ 'DOWNLOADS.FRACTAL_CARD_DESCRIPTION' | translate }}</p>
       <div class="d-grid gap-3 d-md-flex justify-content-md-start">
         <button type="button" class="btn btn-primary btn-lg px-4" (click)="openBullionProfileDocument()">
-          <i class="bi bi-eye me-2"></i>View
+          <i class="bi bi-eye me-2"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
         </button>
         <a href="assets/downloads/BULLIONPROFILE-V2.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>Download PDF
+          <i class="bi bi-download me-2"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
         </a>
       </div>
     </div>
   </div>
 </section>
 
-
-<!-- Registration Section
-<section class="bg-dark text-white text-center py-5">
-  <div class="container">
-    <i class="bi bi-pencil-square fs-1 mb-3"></i>
-    <h2 class="display-6">Registration Guide</h2>
-    <p class="lead">Learn how to become a part of the Bullion Co-operative.</p>
-  </div>
-</section> -->
-
-<!-- <section class="container py-5" id="registration-guide">
-  <div class="row align-items-center g-5">
-    <div class="col-md-6">
-      <img src="registration-guide-image.png" alt="Registration Guide" class="img-fluid rounded shadow-sm mx-auto d-block"
-        style="max-width: 300px;" loading="lazy">
-    </div>
-    <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">Join the Co-op</h1>
-      <p class="mb-4 text-white">Click below to open the step-by-step registration guide for becoming a member of Bullion Beperk.</p>
-      <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4" data-bs-toggle="modal" data-bs-target="#registerModal">
-          <i class="bi bi-box-arrow-up-right me-2"></i>Register
-        </button>
-        <a href="assets/downloads/RegistrationGuideonMyCoop.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>Download PDF
-        </a>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-<!-- Reusable PDF Viewer Modal Component (one instance only) -->
-<!-- Your existing sections -->
-
-<!-- Reusable PDF Viewer Modal Component (one instance only) -->
+<!-- PDF Viewer Modal -->
 <app-pdf-viewer-popup
   [show]="showModal"
   [pdfSrc]="pdfPath"

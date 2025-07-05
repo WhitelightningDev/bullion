@@ -108,7 +108,22 @@
   "PIE_COLLECTION": "Afhaal",
   "PIE_GOLD": "Goud (Voortgeset)",
   "PIE_SILVER": "Silwer (Voortgeset)"
+},
+"DOWNLOADS": {
+  "TITLE": "Laai Dokumente Af",
+  "DESCRIPTION": "Hier kan jy alle dokumente wat relevant is tot hierdie Koöperasie aflaai.",
+  "CIPC_TITLE": "Bullion CIPC Dokument",
+  "CIPC_DESCRIPTION": "Toegang en aflaai van die amptelike dokumente vir die Bullion Koöperasie hieronder.",
+  "CONSTITUTION_TITLE": "Bullion Grondwet",
+  "CONSTITUTION_DESCRIPTION": "Toegang en aflaai van die grondwet vir die Bullion Koöperasie hieronder.",
+  "FRACTAL_TITLE": "Fractal Global Betaaloplossings",
+  "FRACTAL_DESCRIPTION": "Laai volledige inligting af oor ons vennootskap met Fractal Global en hoe jy daarby kan baat.",
+  "FRACTAL_CARD_TITLE": "Fractal Global Betaalvennoot-inligting",
+  "FRACTAL_CARD_DESCRIPTION": "Leer hoe Bullion-lede toegang kan kry tot globale finansiële hulpmiddels via ons vennootskap met Fractal Global Betaaloplossings. Laai die profiel hieronder af vir meer inligting oor hoe om jou internasionale transaksionele rekening te aktiveer en te gebruik.",
+  "VIEW_BUTTON": "Besigtig",
+  "DOWNLOAD_BUTTON": "Laai PDF Af"
 }
+
 
 
 }
