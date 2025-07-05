@@ -4,6 +4,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { CookieConsentComponent } from "./components/cookie-consent/cookie-consent.component";
 import { CommonModule } from '@angular/common';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +15,13 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   title = 'bullion';
-
-  deferredPrompt: any = null; // store the beforeinstallprompt event
-  showInstallBanner = false;  // show/hide the install banner
+  deferredPrompt: any = null;
+  showInstallBanner = false;
 
   prepareRoute = (outlet: RouterOutlet) => outlet?.activatedRouteData?.['animation'];
 
-  constructor() {
-    // Listen for install prompt
+  constructor(private languageService: LanguageService) {
+    // Handle PWA install events
     window.addEventListener('beforeinstallprompt', (event: Event) => {
       event.preventDefault();
       this.deferredPrompt = event;
@@ -31,15 +31,19 @@ export class AppComponent implements OnInit {
       }
     });
 
-    // If app is installed, update localStorage
     window.addEventListener('appinstalled', () => {
-      console.log('PWA installed');
       localStorage.setItem('pwaInstalled', 'true');
     });
   }
 
   ngOnInit(): void {
-    // On load, check if the app is no longer installed but localStorage says it is
+    // Load persisted language
+    const lang = localStorage.getItem('lang');
+    if (lang) {
+      this.languageService.useLanguage(lang);
+    }
+
+    // Clean up stale PWA flag
     if (!this.isAppInstalled() && localStorage.getItem('pwaInstalled') === 'true') {
       localStorage.removeItem('pwaInstalled');
     }
@@ -51,19 +55,15 @@ export class AppComponent implements OnInit {
     this.deferredPrompt.prompt();
     this.deferredPrompt.userChoice.then((choiceResult: any) => {
       if (choiceResult.outcome === 'accepted') {
-        console.log('User accepted the install prompt');
         localStorage.setItem('pwaInstalled', 'true');
         this.showInstallBanner = false;
-      } else {
-        console.log('User dismissed the install prompt');
-        // Still show banner if user dismisses
       }
       this.deferredPrompt = null;
     });
   }
 
   dismissInstallBanner() {
-    this.showInstallBanner = false; // User manually dismissed the banner
+    this.showInstallBanner = false;
   }
 
   private isAppInstalled(): boolean {

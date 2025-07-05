@@ -1,74 +1,82 @@
 <div class="container py-5 text-white">
+
   <!-- Header Section -->
   <div class="text-center mb-4">
-    <h1 class="display-5 fw-bold">Costs and Fees <i class="bi bi-cash-coin"></i></h1>
-    <p class="lead">Fees recouped from the pools are used for paying costs associated with administration, insurance, and safekeeping of assets.</p>
+    <h1 class="display-5 fw-bold">
+      {{ 'FEES.TITLE' | translate }} <i class="bi bi-cash-coin"></i>
+    </h1>
+    <p class="lead">{{ 'FEES.DESCRIPTION' | translate }}</p>
   </div>
 
   <!-- Overview Card -->
   <div class="card bg-dark border-light text-white mb-4 shadow-sm">
     <div class="card-body">
-      <h2 class="h5">Fees Overview</h2>
-      <p class="card-text">
-        Stock is bought at wholesale prices, and <strong>NO margin</strong> is added. All costs are fully transparent. The fee structure below may change with thirty days' notice, and any changes will be updated on our website. All fees are subject to VAT.
-      </p>
+      <h2 class="h5">{{ 'FEES.OVERVIEW_TITLE' | translate }}</h2>
+      <p class="card-text">{{ 'FEES.OVERVIEW_TEXT' | translate }}</p>
     </div>
   </div>
 
   <!-- Fee Table Card -->
-<div class="card bg-dark border-light text-white mb-4 shadow-sm">
-  <div class="card-body">
-    <h2 class="h5">Fee Structure</h2>
-    <p class="mb-3">All fees exclude VAT unless otherwise stated.</p>
-    <div class="table-responsive">
-      <table class="table table-dark table-bordered align-middle">
-        <thead>
-          <tr>
-            <th scope="col">Fee Type</th>
-            <th scope="col">Fee %</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Administration Fee (applied on deposits)</td>
-            <td>
-              <ul class="mb-0 ps-3 list-unstyled">
-                <li>&lt; R100,000: 1.50%</li>
-                <li>&ge; R100,000: 1.25%</li>
-                <li>&ge; R500,000: 0.75%</li>
-                <li>&ge; R1,000,000: 0.50%</li>
-                <li>&ge; R2,500,000: 0.25%</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>Commission (referrer-agreed)</td>
-            <td>Variable</td>
-          </tr>
-          <tr>
-            <td>Switching between pools (move between funds)</td>
-            <td>0.25%</td>
-          </tr>
-          <tr>
-            <td>Transfer between members</td>
-            <td>0.25%</td>
-          </tr>
-          <tr>
-            <td>Withdrawals (cash-outs)</td>
-            <td>0.25%</td>
-          </tr>
-          <tr>
-            <td>Courier Charges (metal delivery)</td>
-            <td>To Be Confirmed</td>
-          </tr>
-          <tr>
-            <td>Ongoing Fees (annual safekeeping and administration)</td>
-            <td>1% p.a. (Gold) / 0.8% p.a. (Silver)</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="card bg-dark border-light text-white mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h5">{{ 'FEES.STRUCTURE_TITLE' | translate }}</h2>
+      <p class="mb-3">{{ 'FEES.STRUCTURE_NOTE' | translate }}</p>
+      <div class="table-responsive">
+        <table class="table table-dark table-bordered align-middle">
+          <thead>
+            <tr>
+              <th scope="col">{{ 'FEES.TABLE_HEADER_TYPE' | translate }}</th>
+              <th scope="col">{{ 'FEES.TABLE_HEADER_PERCENT' | translate }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ 'FEES.ADMIN_FEE' | translate }}</td>
+              <td>
+                <ul class="mb-0 ps-3 list-unstyled">
+                  <li>{{ '< R100,000: 1.50%' }}</li>
+                  <li>{{ '≥ R100,000: 1.25%' }}</li>
+                  <li>{{ '≥ R500,000: 0.75%' }}</li>
+                  <li>{{ '≥ R1,000,000: 0.50%' }}</li>
+                  <li>{{ '≥ R2,500,000: 0.25%' }}</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td>{{ 'FEES.COMMISSION' | translate }}</td>
+              <td>{{ 'FEES.VARIABLE' | translate }}</td>
+            </tr>
+            <tr>
+              <td>{{ 'FEES.SWITCHING_BETWEEN_POOLS' | translate }}</td>
+              <td>0.25%</td>
+            </tr>
+            <tr>
+              <td>{{ 'FEES.TRANSFER_BETWEEN_MEMBERS' | translate }}</td>
+              <td>0.25%</td>
+            </tr>
+            <tr>
+              <td>{{ 'FEES.WITHDRAWALS' | translate }}</td>
+              <td>0.25%</td>
+            </tr>
+            <tr>
+              <td>{{ 'FEES.COURIER_CHARGES' | translate }}</td>
+              <td>{{ 'FEES.TO_BE_CONFIRMED' | translate }}</td>
+            </tr>
+            <tr>
+              <td>{{ 'FEES.ONGOING_FEES' | translate }}</td>
+              <td>1% p.a. (Gold) / 0.8% p.a. (Silver)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
+
+  <!-- Chart Section -->
+  <div class="card bg-dark border-light text-white shadow-sm">
+    <div class="card-body">
+      <canvas id="feesChart"></canvas>
+    </div>
+  </div>
 
 </div>
