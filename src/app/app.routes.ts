@@ -9,15 +9,11 @@ import { LearnComponent } from './learn/learn.component';
 import { animate } from '@angular/animations';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 
 export const routes: Routes = [
 
-{
-  path: 'maintenance',
-  loadComponent: () => import('./maintenance/maintenance.component').then(m => m.MaintenanceComponent),
-},
+
 
 
   { path: '', component: HomepageComponent, data: { animation: 'Home' } },
