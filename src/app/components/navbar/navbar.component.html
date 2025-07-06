@@ -1,111 +1,79 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 rounded-4 border border-light-subtle">
-  <div class="container-fluid px-4">
+  <div class="container-fluid px-3 px-lg-4">
 
     <!-- Logo & Brand -->
-    <a class="navbar-brand d-flex align-items-center " routerLink="/">
-      <img src="bullion-logo.png" width="42" height="42" class="rounded-circle border border-1"
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="bullion-logo.png" width="42" height="42" class="rounded-circle border border-1 me-2"
         alt="Bullion Co-Op Logo" />
       <span class="fw-semibold fs-5 text-dark">{{ 'NAV.BRAND' | translate }}</span>
     </a>
 
     <!-- Toggler -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Nav Items -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown" #navbarCollapse>
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse mt-3 mt-lg-0" id="navbarNavDropdown" #navbarCollapse>
 
-      <!-- Main Navigation -->
-      <ul class="navbar-nav ms-5 me-4 mb-2 mb-lg-0 gap-lg-3">
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/" routerLinkActive="active"
+      <!-- Main Nav -->
+      <ul class="navbar-nav me-auto mb-3 mb-lg-0 gap-lg-3">
+        <li class="nav-item" *ngFor="let link of [
+          { route: '/', label: 'NAV.HOME' },
+          { route: '/poolfeatures', label: 'NAV.POOLS' },
+          { route: '/fees', label: 'NAV.FEES' },
+          { route: '/downloads', label: 'NAV.DOWNLOADS' },
+          { route: '/faq', label: 'NAV.FAQ' },
+          { route: '/contact-us', label: 'NAV.CONTACT' },
+          { route: '/learn', label: 'NAV.LEARN' }
+        ]">
+          <a class="nav-link fw-medium text-dark" [routerLink]="link.route" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
-            {{ 'NAV.HOME' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/poolfeatures" routerLinkActive="active">
-            {{ 'NAV.POOLS' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/fees" routerLinkActive="active">
-            {{ 'NAV.FEES' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/downloads" routerLinkActive="active">
-            {{ 'NAV.DOWNLOADS' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/faq" routerLinkActive="active">
-            {{ 'NAV.FAQ' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/contact-us" routerLinkActive="active">
-            {{ 'NAV.CONTACT' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/learn" routerLinkActive="active">
-            {{ 'NAV.LEARN' | translate }}
+            {{ link.label | translate }}
           </a>
         </li>
       </ul>
 
-      <!-- Language Switcher Dropdown -->
-      <ul class="navbar-nav ms-3">
-        <li class="nav-item dropdown">
-          <button class="btn btn-sm btn-outline-light border-0 dropdown-toggle d-flex align-items-center gap-2"
-            id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <img [src]="flagMap[currentLang]" width="16" height="12"
-              [alt]="currentLang === 'en' ? 'English' : 'Afrikaans'" />
-            <span class="d-none d-md-inline text-dark">{{ 'NAV.LANGUAGE' | translate }}</span>
-          </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle" aria-labelledby="languageDropdown">
-            <li>
-              <a class="dropdown-item d-flex align-items-center gap-2" href="#"
-                (click)="switchLang('en'); $event.preventDefault()">
-                <img src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="English" />
-                <span>English</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item d-flex align-items-center gap-2" href="#"
-                (click)="switchLang('af'); $event.preventDefault()">
-                <img src="https://flagcdn.com/16x12/za.png" width="16" height="12" alt="Afrikaans" />
-                <span>Afrikaans</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-
-
+      <!-- Language Dropdown -->
+      <div class="dropdown ms-lg-3 mb-3 mb-lg-0 w-100 w-lg-auto">
+        <button class="btn btn-outline-light border-0 dropdown-toggle w-100 d-flex align-items-center justify-content-center justify-content-lg-start gap-2"
+          id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <img [src]="flagMap[currentLang]" width="16" height="12"
+            [alt]="currentLang === 'en' ? 'English' : 'Afrikaans'" />
+          <span class="text-dark">{{ 'NAV.LANGUAGE' | translate }}</span>
+        </button>
+        <ul class="dropdown-menu w-100 shadow-sm border-light-subtle" aria-labelledby="languageDropdown">
+          <li>
+            <a class="dropdown-item d-flex align-items-center gap-2" href="#"
+              (click)="switchLang('en'); $event.preventDefault()">
+              <img src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="English" />
+              <span>English</span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item d-flex align-items-center gap-2" href="#"
+              (click)="switchLang('af'); $event.preventDefault()">
+              <img src="https://flagcdn.com/16x12/za.png" width="16" height="12" alt="Afrikaans" />
+              <span>Afrikaans</span>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <!-- Auth Buttons -->
-      <ul class="navbar-nav ms-auto gap-2 align-items-center">
-        <li class="nav-item">
-          <a href="https://bullion.mycoop.co.za/account/register" target="_blank" rel="noopener">
-            <button type="button" class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2">
-              <i class="bi bi-person-plus-fill"></i> {{ 'NAV.REGISTER' | translate }}
-            </button>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="https://bullion.mycoop.co.za/account/login" target="_blank" rel="noopener">
-            <button type="button" class="btn btn-primary rounded-pill px-3 d-flex align-items-center gap-2 text-white">
-              <i class="bi bi-box-arrow-in-right"></i> {{ 'NAV.LOGIN' | translate }}
-            </button>
-          </a>
-        </li>
-      </ul>
-
+      <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 w-100 w-lg-auto">
+        <a class="btn btn-outline-primary rounded-pill px-1 d-flex align-items-center gap-2"
+          href="https://bullion.mycoop.co.za/account/register" target="_blank" rel="noopener">
+          <i class="bi bi-person-plus-fill"></i> {{ 'NAV.REGISTER' | translate }}
+        </a>
+        <a class="btn btn-primary rounded-pill px-2 d-flex align-items-center gap-2 text-white"
+          href="https://bullion.mycoop.co.za/account/login" target="_blank" rel="noopener">
+          <i class="bi bi-box-arrow-in-right"></i> {{ 'NAV.LOGIN' | translate }}
+        </a>
+      </div>
     </div>
   </div>
 </nav>
