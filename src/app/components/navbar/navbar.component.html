@@ -3,7 +3,7 @@
   <div class="container-fluid px-4">
 
     <!-- Logo & Brand -->
-    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
+    <a class="navbar-brand d-flex align-items-center " routerLink="/">
       <img src="bullion-logo.png" width="42" height="42" class="rounded-circle border border-1"
         alt="Bullion Co-Op Logo" />
       <span class="fw-semibold fs-5 text-dark">{{ 'NAV.BRAND' | translate }}</span>
@@ -59,14 +59,13 @@
       </ul>
 
       <!-- Language Switcher Dropdown -->
-      <!-- Language Switcher Dropdown -->
       <ul class="navbar-nav ms-3">
         <li class="nav-item dropdown">
           <button class="btn btn-sm btn-outline-light border-0 dropdown-toggle d-flex align-items-center gap-2"
             id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             <img [src]="flagMap[currentLang]" width="16" height="12"
               [alt]="currentLang === 'en' ? 'English' : 'Afrikaans'" />
-            <span class="d-none d-md-inline text-dark">{{ 'LANGUAGE' | translate }}</span>
+            <span class="d-none d-md-inline text-dark">{{ 'NAV.LANGUAGE' | translate }}</span>
           </button>
           <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle" aria-labelledby="languageDropdown">
             <li>

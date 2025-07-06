@@ -52,7 +52,7 @@
     "DOWNLOADS": "Downloads",
     "FAQ": "FAQ’s",
     "CONTACT": "Contact",
-    "LEARN": "Learn",
+    "LEARN": "Info",
     "REGISTER": "Register",
     "LOGIN": "Login",
     "LANGUAGE": "Language"
@@ -66,7 +66,7 @@
     "VALUATION_FLEXIBILITY_TITLE": "Valuation & Flexibility",
     "VALUATION_FLEXIBILITY_DESC": "Pools are valued daily. Members may buy or redeem units at the current unit price and can customize deposit allocation across available pools.",
     "OWNERSHIP_CONTROL_TITLE": "Ownership & Control",
-    "OWNERSHIP_CONTROL_DESC": "While the Co-op manages the pools, members own them via units. Units can be redeemed for cash or metals, and members can transfer or switch between pools with appropriate notice.",
+    "OWNERSHIP_CONTROL_DESC": "While the Co-op manages the pools, members own them via units. Units can be redeemed for cash or metals, and members can transfer units to other members or switch between pools with appropriate notice.",
     "MEMBERSHIP_REQUIREMENT_TITLE": "Membership Requirement",
     "MEMBERSHIP_REQUIREMENT_DESC": "Only members of Bullion Beperk Co-operative Limited can invest. Personal data and holdings are confidential. Members access personalized data and unit values via secure login.",
     "MEMBER_OPTIONS_TITLE": "Member Options After Investing",
@@ -119,7 +119,7 @@
     "TITLE": "Frequently Asked Questions",
     "Q1": "What makes Bullion's pricing and structure unique?",
     "A1": {
-      "INTRO": "Gold, Silver, or Platinum pools (i.e. the unit prices) are valued at the daily wholesale price (which is priced around a 5% premium over the London PM Fix). A member buys in and sells at this price. The admin fee and commission are added when buying in.",
+      "INTRO": "Gold and Silver pools (i.e. the unit prices) are valued at the daily wholesale price (which is priced around a 5% premium over the London PM Fix). A member buys in and sells at this price. The admin fee and commission are added when buying in.",
       "POINTS": [
         "Buying elsewhere may cost 10% or more over the London PM Fix. Selling may yield less.",
         "The unitized system ensures members rarely sell for less than wholesale (London PM Fix +5%).",
@@ -131,20 +131,11 @@
     },
     "Q2": "How safe are my holdings with Bullion?",
     "A2": {
-      "INTRO": "Most gold, silver, and platinum is stored securely at",
-      "POINTS": [
-        "Vault access is protected by eye-recognition technology and must be pre-arranged.",
-        "Stock insurance is underwritten by Zurich, approved by Bullion members at general meetings.",
-        "Visits allowed only for: Adding precious metals, Withdrawing precious metals, Auditing vault contents.",
-        "Every vault visit is accompanied by a Bullion Board member and an auditor representative.",
-        "Formal stock audits are performed at least once a year."
-      ]
+      "INTRO": "Please refer to Policies and Procedures document No 2-2025,  "
+
     },
     "Q3": "What are the investment requirements?",
     "A3": {
-      "INTRO1": "This is a very secure business vehicle for holding a member's precious metal assets.",
-      "INTRO2": "The Co-operative has the right of possession, while members share ownership of the pools according to the number of units allocated to them.",
-      "INTRO3": "The Co-operative has no creditors apart from the bank for bank charges and the auditors. Its only liability is to the members for their units.",
       "REQUIREMENTS": [
         "Minimum lump sum tranches of R5000 (initial or additional amounts).",
         "Minimum debit order of R500 per month.",
@@ -185,9 +176,9 @@
     "A8": {
       "INCOME": "Income Tax: None. No interest = no income tax.",
       "CGT": "Capital Gains Tax (CGT): Applies only when units are sold for cash or metals are sold thereafter.",
-      "VAT": "VAT: Not applicable to Krugerrands. Applies to silver/platinum. Bullion reclaims INPUT VAT and reinvests it."
+      "VAT": "VAT: Not applicable to Krugerrands. Applies to silver."
     },
-    "Q9": "What happens if Bullion sells or delivers silver/platinum?",
+    "Q9": "What happens if Bullion sells or delivers silver?",
     "A9": "VAT OUTPUT tax must be paid to SARS. Members may reclaim it if VAT registered."
   },
   "CONTACT": {
@@ -233,7 +224,7 @@
     "FEES": "Fees",
     "DOWNLOADS": "Downloads",
     "CONTACT": "Contact Us",
-    "LEARN": "Learn",
+    "LEARN": "Info",
     "TERMS": "Terms & Conditions",
     "PRIVACY": "Privacy Policy"
   }

@@ -16,10 +16,17 @@ export class LanguageService {
     this.useLanguage(selectedLang);
   }
 
-  useLanguage(lang: string) {
-    this.translate.use(lang);
-    localStorage.setItem('lang', lang);
-  }
+  useLanguage(lang: string): void {
+  this.translate.use(lang).subscribe({
+    next: () => {
+      localStorage.setItem('lang', lang);
+    },
+    error: (err) => {
+      console.error(`Failed to load language '${lang}':`, err);
+    }
+  });
+}
+
 
   getCurrentLanguage(): string {
     return this.translate.currentLang || this.defaultLang;

@@ -7,11 +7,12 @@ import {
   QueryList,
   ViewChildren
 } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.services';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { CommentDialogComponent, CommentEntry } from '../components/comment-dialog-component/comment-dialog-component.component';
-import { CommonModule } from '@angular/common';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-learn',
@@ -25,30 +26,21 @@ export class LearnComponent implements AfterViewInit {
   likeCount = 0;
   videoLiked = false;
   comments: (CommentEntry & { liked?: boolean; likesCount?: number })[] = [];
-
-  // Track playing state per video by index, initialize all false
   isPlaying: Record<number, boolean> = {
     1: false,
     2: false
   };
 
-  // Query all video players with their refs
   @ViewChildren('videoPlayer1, videoPlayer2') videoPlayers!: QueryList<ElementRef<HTMLVideoElement>>;
-
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
 
-  constructor(private translate: TranslateService) {
-  this.translate.addLangs(['en', 'af']);
-  this.translate.setDefaultLang('en');
+  constructor(private languageService: LanguageService) {
+    // ✅ Use the current language from the service
+    const lang = this.languageService.getCurrentLanguage();
+    this.languageService.useLanguage(lang);
+  }
 
-  const storedLang = localStorage.getItem('lang');
-  const langToUse = storedLang ?? this.translate.getBrowserLang()?.match(/en|af/)?.[0] ?? 'en';
-
-  this.translate.use(langToUse);
-}
-
-
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     const script = document.createElement('script');
     script.src = 'https://cdn.lordicon.com/lordicon.js';
     script.async = true;
@@ -68,14 +60,18 @@ export class LearnComponent implements AfterViewInit {
     }
   }
 
-  togglePlayPause(videoIndex: number) {
+  // ✅ Centralized language switching
+  switchLang(lang: 'en' | 'af'): void {
+    this.languageService.useLanguage(lang);
+  }
+
+  togglePlayPause(videoIndex: number): void {
     const videosArray = this.videoPlayers.toArray();
     const currentVideo = videosArray[videoIndex - 1]?.nativeElement;
 
     if (!currentVideo) return;
 
     if (currentVideo.paused || currentVideo.ended) {
-      // Pause other videos
       videosArray.forEach((videoEl, idx) => {
         if (idx !== videoIndex - 1) {
           videoEl.nativeElement.pause();
@@ -91,34 +87,31 @@ export class LearnComponent implements AfterViewInit {
     }
   }
 
-  onPlay(videoIndex: number) {
-    // When user clicks play on a video, pause others
+  onPlay(videoIndex: number): void {
     const videosArray = this.videoPlayers.toArray();
-
     videosArray.forEach((videoEl, idx) => {
       if (idx !== videoIndex - 1) {
         videoEl.nativeElement.pause();
         this.isPlaying[idx + 1] = false;
       }
     });
-
     this.isPlaying[videoIndex] = true;
   }
 
-  onPause(videoIndex: number) {
+  onPause(videoIndex: number): void {
     this.isPlaying[videoIndex] = false;
   }
 
-  likeVideo() {
+  likeVideo(): void {
     this.videoLiked = !this.videoLiked;
     this.videoLiked ? this.likeCount++ : this.likeCount--;
   }
 
-  openCommentsDialog() {
+  openCommentsDialog(): void {
     this.commentDialog.open();
   }
 
-  onNewComment(comment: CommentEntry) {
+  onNewComment(comment: CommentEntry): void {
     this.comments.push({
       ...comment,
       liked: false,
@@ -126,7 +119,7 @@ export class LearnComponent implements AfterViewInit {
     });
   }
 
-  toggleLike(comment: CommentEntry & { liked?: boolean; likesCount?: number }) {
+  toggleLike(comment: CommentEntry & { liked?: boolean; likesCount?: number }): void {
     if (!comment.likesCount) {
       comment.likesCount = 0;
     }

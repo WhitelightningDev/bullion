@@ -7,11 +7,12 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MaterialModule } from '../material.services';
 import { MetalsChartComponent } from '../components/metals-chart/metals-chart.component';
 import { CommentDialogComponent, CommentEntry } from '../components/comment-dialog-component/comment-dialog-component.component';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-homepage',
@@ -36,22 +37,14 @@ export class HomepageComponent implements AfterViewInit {
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
 
-  constructor(private translate: TranslateService) {
-  // Add available languages
-  this.translate.addLangs(['en', 'af']);
-  this.translate.setDefaultLang('en');
-
-  // ✅ Use saved language from localStorage or fallback to browser language
-  const savedLang = localStorage.getItem('lang');
-  const browserLang = this.translate.getBrowserLang();
-  const activeLang = savedLang || (browserLang?.match(/en|af/) ? browserLang : 'en');
-
-  this.translate.use(activeLang);
-}
-
+  constructor(private languageService: LanguageService) {
+    // ✅ Use persisted or default language on init
+    const lang = this.languageService.getCurrentLanguage();
+    this.languageService.useLanguage(lang);
+  }
 
   ngAfterViewInit(): void {
-    // Handle welcome header animation
+    // 👋 Welcome header animation
     const header = document.getElementById('welcome-header');
     const hasShown = localStorage.getItem('headerShown');
 
@@ -66,9 +59,9 @@ export class HomepageComponent implements AfterViewInit {
     }
   }
 
-  // Language switcher method
+  // 🌐 Language switcher that persists selection
   switchLang(lang: 'en' | 'af'): void {
-    this.translate.use(lang);
+    this.languageService.useLanguage(lang);
   }
 
   togglePlayPause(): void {
