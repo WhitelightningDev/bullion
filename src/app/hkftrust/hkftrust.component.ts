@@ -1,16 +1,23 @@
 import { Component } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from '../services/language.service';
-import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hkftrust',
-  imports: [ TranslateModule],
+  standalone: true,
+  imports: [TranslateModule],
   templateUrl: './hkftrust.component.html',
   styleUrl: './hkftrust.component.css'
 })
 export class HkftrustComponent {
-confirmRedirect(): void {
+  constructor(
+    public translate: TranslateService,
+    private languageService: LanguageService // if needed elsewhere
+  ) {}
+
+  confirmRedirect(): void {
     const userConfirmed = confirm(
+      this.translate.instant('REDIRECT_CONFIRM') ||
       'You are about to leave this site and go to the Hong Kong Trust registration page. Do you want to continue?'
     );
 
@@ -19,4 +26,7 @@ confirmRedirect(): void {
     }
   }
 
+  get heroImage(): string {
+    return this.translate.currentLang === 'af' ? 'hkftafimage.png' : 'hkftimage.png';
+  }
 }
