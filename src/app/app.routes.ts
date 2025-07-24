@@ -9,6 +9,7 @@ import { LearnComponent } from './learn/learn.component';
 import { animate } from '@angular/animations';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { HkftrustComponent } from './hkftrust/hkftrust.component';
 
 
 export const routes: Routes = [
@@ -42,5 +43,9 @@ export const routes: Routes = [
   },
   {
     path: 'privacy', component: PrivacyPolicyComponent, data: {animate: 'Privacy Policy'}
+  },
+  {
+    path: 'Hong-Kong-Foreign-Trust', component: HkftrustComponent, data: { animate: 'Hong Kong Foreign Trust' }
   }
+
 ];
