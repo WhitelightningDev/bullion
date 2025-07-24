@@ -43,7 +43,7 @@
     "ACCOUNT_TITLE_PART1": "Geregistreerde Lede",
     "ACCOUNT_TITLE_PART2": "Rekening Gids"
   },
-  "NAV": {
+ "NAV": {
   "BRAND": "Bullion Koöperatief",
   "HOME": "Tuis",
   "POOLS": "Poele",
@@ -53,11 +53,12 @@
   "CONTACT": "Kontak",
   "LEARN": "Inligting",
   "REGISTER": "Registreer",
-  "LOGIN": "In Teken",
+  "LOGIN": "Inteken",
   "LANGUAGE": "Taal",
   "ASSOCIATIONS": "Assosiasies",
   "HK_TRUST": "HK Buitelandse Trust",
-  "TAX_ACCOUNTING": "BELASTING / Rekeningkunde"
+  "TAX_ACCOUNTING": "Belasting / Rekeningkunde",
+  "MORE": "Meer"
 },
   "POOLS": {
     "INVESTMENT_POOLS": "Beleggingspoele",

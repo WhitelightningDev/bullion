@@ -44,13 +44,13 @@
     "ACCOUNT_TITLE_PART2": "Account Walkthrough"
   },
 
-  "NAV": {
+ "NAV": {
   "BRAND": "Bullion Co-Op",
   "HOME": "Home",
   "POOLS": "Pools",
   "FEES": "Fees",
   "DOWNLOADS": "Downloads",
-  "FAQ": "FAQ’s",
+  "FAQ": "FAQs",
   "CONTACT": "Contact",
   "LEARN": "Info",
   "REGISTER": "Register",
@@ -58,7 +58,8 @@
   "LANGUAGE": "Language",
   "ASSOCIATIONS": "Associations",
   "HK_TRUST": "HK Foreign Trust",
-  "TAX_ACCOUNTING": "TAX / Accounting"
+  "TAX_ACCOUNTING": "Tax / Accounting",
+  "MORE": "More"
 },
   "POOLS": {
     "INVESTMENT_POOLS": "Investment Pools",
