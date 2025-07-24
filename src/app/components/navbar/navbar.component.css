@@ -2,6 +2,7 @@
   border-bottom: 3px solid #040404; /* White underline, adjust as needed */
   transition: border-bottom 0.3s ease;
 }
+
 .floating-register-btn {
   position: fixed;
   bottom: 20px;

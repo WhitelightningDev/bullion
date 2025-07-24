@@ -45,18 +45,21 @@
   },
 
   "NAV": {
-    "BRAND": "Bullion Co-Op",
-    "HOME": "Home",
-    "POOLS": "Pools",
-    "FEES": "Fees",
-    "DOWNLOADS": "Downloads",
-    "FAQ": "FAQ’s",
-    "CONTACT": "Contact",
-    "LEARN": "Info",
-    "REGISTER": "Register",
-    "LOGIN": "Login",
-    "LANGUAGE": "Language"
-  },
+  "BRAND": "Bullion Co-Op",
+  "HOME": "Home",
+  "POOLS": "Pools",
+  "FEES": "Fees",
+  "DOWNLOADS": "Downloads",
+  "FAQ": "FAQ’s",
+  "CONTACT": "Contact",
+  "LEARN": "Info",
+  "REGISTER": "Register",
+  "LOGIN": "Login",
+  "LANGUAGE": "Language",
+  "ASSOCIATIONS": "Associations",
+  "HK_TRUST": "HK Foreign Trust",
+  "TAX_ACCOUNTING": "TAX / Accounting"
+},
   "POOLS": {
     "INVESTMENT_POOLS": "Investment Pools",
     "KRUGER_RAND_ALT": "Kruger Rand",

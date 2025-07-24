@@ -10,9 +10,8 @@
     </a>
 
     <!-- Toggler -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -29,17 +28,29 @@
           { route: '/faq', label: 'NAV.FAQ' },
           { route: '/contact-us', label: 'NAV.CONTACT' },
           { route: '/learn', label: 'NAV.LEARN' }
+
         ]">
-          <a class="nav-link fw-medium text-dark" [routerLink]="link.route" routerLinkActive="active"
+          <a class="nav-link fw-small text-dark w-auto px-2" [routerLink]="link.route" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
             {{ link.label | translate }}
           </a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ 'NAV.ASSOCIATIONS' | translate }}
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">{{ 'NAV.HK_TRUST' | translate }}</a></li>
+            <li><a class="dropdown-item" href="#">{{ 'NAV.TAX_ACCOUNTING' | translate }}</a></li>
+          </ul>
+        </li>
+
       </ul>
 
       <!-- Language Dropdown -->
       <div class="dropdown ms-lg-3 mb-3 mb-lg-0 w-100 w-lg-auto">
-        <button class="btn btn-outline-light border-0 dropdown-toggle w-100 d-flex align-items-center justify-content-center justify-content-lg-start gap-2"
+        <button
+          class="btn btn-outline-light border-0 dropdown-toggle w-100 d-flex align-items-center justify-content-center justify-content-lg-start gap-2"
           id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
           <img [src]="flagMap[currentLang]" width="16" height="12"
             [alt]="currentLang === 'en' ? 'English' : 'Afrikaans'" />
@@ -64,16 +75,17 @@
       </div>
 
       <!-- Auth Buttons -->
-      <div class="d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center gap-2 w-100 w-lg-auto">
-        <a class="btn btn-outline-primary rounded-pill px-1 d-flex align-items-center gap-2"
+      <div class="d-flex flex-column gap-1 w-100" style="max-width: 180px;">
+        <a class="btn btn-outline-primary rounded-pill px-2 py-1 btn-sm d-flex align-items-center gap-1 small"
           href="https://bullion.mycoop.co.za/account/register" target="_blank" rel="noopener">
           <i class="bi bi-person-plus-fill"></i> {{ 'NAV.REGISTER' | translate }}
         </a>
-        <a class="btn btn-primary rounded-pill px-2 d-flex align-items-center gap-2 text-white"
+        <a class="btn btn-primary rounded-pill px-2 py-1 btn-sm d-flex align-items-center gap-1 text-white small"
           href="https://bullion.mycoop.co.za/account/login" target="_blank" rel="noopener">
           <i class="bi bi-box-arrow-in-right"></i> {{ 'NAV.LOGIN' | translate }}
         </a>
       </div>
+
     </div>
   </div>
 </nav>

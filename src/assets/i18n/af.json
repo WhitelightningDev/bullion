@@ -44,18 +44,21 @@
     "ACCOUNT_TITLE_PART2": "Rekening Gids"
   },
   "NAV": {
-    "BRAND": "Bullion Koöperatief",
-    "HOME": "Tuis",
-    "POOLS": "Poele",
-    "FEES": "Fooie",
-    "DOWNLOADS": "Aflaaie",
-    "FAQ": "Vrae",
-    "CONTACT": "Kontak",
-    "LEARN": "Inligting",
-    "REGISTER": "Registreer",
-    "LOGIN": "Teken In",
-    "LANGUAGE": "Taal"
-  },
+  "BRAND": "Bullion Koöperatief",
+  "HOME": "Tuis",
+  "POOLS": "Poele",
+  "FEES": "Fooie",
+  "DOWNLOADS": "Aflaaie",
+  "FAQ": "Vrae",
+  "CONTACT": "Kontak",
+  "LEARN": "Inligting",
+  "REGISTER": "Registreer",
+  "LOGIN": "In Teken",
+  "LANGUAGE": "Taal",
+  "ASSOCIATIONS": "Assosiasies",
+  "HK_TRUST": "HK Buitelandse Trust",
+  "TAX_ACCOUNTING": "BELASTING / Rekeningkunde"
+},
   "POOLS": {
     "INVESTMENT_POOLS": "Beleggingspoele",
     "KRUGER_RAND_ALT": "Kruger Rand",
