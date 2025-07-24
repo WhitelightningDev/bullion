@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+import { LanguageService } from '../services/language.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hkftrust',
-  imports: [],
+  imports: [ TranslateModule],
   templateUrl: './hkftrust.component.html',
   styleUrl: './hkftrust.component.css'
 })

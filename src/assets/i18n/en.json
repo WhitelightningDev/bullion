@@ -232,5 +232,11 @@
     "TERMS": "Terms & Conditions",
     "PRIVACY": "Privacy Policy",
     "GET_APP": "Get the App"
-  }
+  },
+  "HKFT": {
+  "TITLE": "Welcome to your next step into asset protection",
+  "INTRO": "External Trust Services have been brought in to provide this service to our members at a very affordable price, especially for the first 30 days, up until 31 August 2025. Please watch the video and read all the information carefully before setting up your trust.",
+  "SETUP_BUTTON": "Setup Your Trust Here"
+}
+
 }

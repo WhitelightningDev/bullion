@@ -43,29 +43,36 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   }
 
   ngAfterViewInit(): void {
-    const navLinks = this.navbarCollapse.nativeElement.querySelectorAll('.nav-link');
-    navLinks.forEach((link: HTMLElement) => {
-      this.renderer.listen(link, 'click', () => this.closeNavbar());
-    });
-  }
+  if (!this.navbarCollapse) return;
+
+  const navLinks = this.navbarCollapse.nativeElement.querySelectorAll('.nav-link');
+  navLinks.forEach((link: HTMLElement) => {
+    this.renderer.listen(link, 'click', () => this.closeNavbar());
+  });
+}
+
 
   @HostListener('document:click', ['$event'])
-  handleDocumentClick(event: Event) {
-    const clickedInside = this.navbarCollapse.nativeElement.contains(event.target);
-    const isExpanded = this.navbarCollapse.nativeElement.classList.contains('show');
+ handleDocumentClick(event: Event) {
+  if (!this.navbarCollapse) return;
 
-    if (isExpanded && !clickedInside) {
-      this.closeNavbar();
-    }
+  const clickedInside = this.navbarCollapse.nativeElement.contains(event.target);
+  const isExpanded = this.navbarCollapse.nativeElement.classList.contains('show');
+
+  if (isExpanded && !clickedInside) {
+    this.closeNavbar();
   }
+}
 
   closeNavbar() {
-    const collapseEl = this.navbarCollapse.nativeElement;
-    if (collapseEl.classList.contains('show')) {
-      const collapse = new (window as any).bootstrap.Collapse(collapseEl);
-      collapse.hide();
-    }
+  if (!this.navbarCollapse) return;
+
+  const collapseEl = this.navbarCollapse.nativeElement;
+  if (collapseEl.classList.contains('show')) {
+    const collapse = new (window as any).bootstrap.Collapse(collapseEl);
+    collapse.hide();
   }
+}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
