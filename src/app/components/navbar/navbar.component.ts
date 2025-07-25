@@ -12,10 +12,12 @@ import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { RegisterpopupComponent } from '../../popups/registerpopup/registerpopup.component';
 
+declare var bootstrap: any;
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule, TranslateModule],
+  imports: [RouterModule, RegisterpopupComponent, CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -46,6 +48,12 @@ export class NavbarComponent implements AfterViewInit, OnInit {
 
     const collapseEl = this.navbarCollapse.nativeElement;
 
+    // Initialize dropdowns manually
+    const dropdownToggles = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+    dropdownToggles.forEach((toggle) => {
+      new bootstrap.Dropdown(toggle);
+    });
+
     // Collapse on nav-link click (but skip dropdown toggles)
     const navLinks = collapseEl.querySelectorAll('.nav-link');
     navLinks.forEach((link: HTMLElement) => {
@@ -57,12 +65,10 @@ export class NavbarComponent implements AfterViewInit, OnInit {
       });
     });
 
-    // Also collapse on any dropdown-item click
+    // Collapse when dropdown-item is clicked
     const dropdownItems = collapseEl.querySelectorAll('.dropdown-item');
     dropdownItems.forEach((item: HTMLElement) => {
-      this.renderer.listen(item, 'click', () => {
-        this.closeNavbar();
-      });
+      this.renderer.listen(item, 'click', () => this.closeNavbar());
     });
   }
 
@@ -84,7 +90,7 @@ export class NavbarComponent implements AfterViewInit, OnInit {
 
     const collapseEl = this.navbarCollapse.nativeElement;
     if (collapseEl.classList.contains('show')) {
-      const collapse = new (window as any).bootstrap.Collapse(collapseEl);
+      const collapse = new bootstrap.Collapse(collapseEl);
       collapse.hide();
     }
   }
