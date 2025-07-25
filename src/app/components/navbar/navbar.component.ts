@@ -15,7 +15,7 @@ import { RegisterpopupComponent } from '../../popups/registerpopup/registerpopup
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, RegisterpopupComponent, CommonModule, TranslateModule],
+  imports: [RouterModule, CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -36,43 +36,58 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   ) {}
 
   ngOnInit() {
-    // Initialize language from saved or default
     const savedLang = localStorage.getItem('preferredLang') as 'en' | 'af' | null;
     this.currentLang = savedLang ?? 'en';
     this.translate.use(this.currentLang);
   }
 
   ngAfterViewInit(): void {
-  if (!this.navbarCollapse) return;
+    if (!this.navbarCollapse) return;
 
-  const navLinks = this.navbarCollapse.nativeElement.querySelectorAll('.nav-link');
-  navLinks.forEach((link: HTMLElement) => {
-    this.renderer.listen(link, 'click', () => this.closeNavbar());
-  });
-}
+    const collapseEl = this.navbarCollapse.nativeElement;
 
+    // Collapse on nav-link click (but skip dropdown toggles)
+    const navLinks = collapseEl.querySelectorAll('.nav-link');
+    navLinks.forEach((link: HTMLElement) => {
+      this.renderer.listen(link, 'click', () => {
+        const isDropdownToggle = link.classList.contains('dropdown-toggle');
+        if (!isDropdownToggle) {
+          this.closeNavbar();
+        }
+      });
+    });
+
+    // Also collapse on any dropdown-item click
+    const dropdownItems = collapseEl.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach((item: HTMLElement) => {
+      this.renderer.listen(item, 'click', () => {
+        this.closeNavbar();
+      });
+    });
+  }
 
   @HostListener('document:click', ['$event'])
- handleDocumentClick(event: Event) {
-  if (!this.navbarCollapse) return;
+  handleDocumentClick(event: Event) {
+    if (!this.navbarCollapse) return;
 
-  const clickedInside = this.navbarCollapse.nativeElement.contains(event.target);
-  const isExpanded = this.navbarCollapse.nativeElement.classList.contains('show');
+    const collapseEl = this.navbarCollapse.nativeElement;
+    const clickedInside = collapseEl.contains(event.target);
+    const isExpanded = collapseEl.classList.contains('show');
 
-  if (isExpanded && !clickedInside) {
-    this.closeNavbar();
+    if (isExpanded && !clickedInside) {
+      this.closeNavbar();
+    }
   }
-}
 
   closeNavbar() {
-  if (!this.navbarCollapse) return;
+    if (!this.navbarCollapse) return;
 
-  const collapseEl = this.navbarCollapse.nativeElement;
-  if (collapseEl.classList.contains('show')) {
-    const collapse = new (window as any).bootstrap.Collapse(collapseEl);
-    collapse.hide();
+    const collapseEl = this.navbarCollapse.nativeElement;
+    if (collapseEl.classList.contains('show')) {
+      const collapse = new (window as any).bootstrap.Collapse(collapseEl);
+      collapse.hide();
+    }
   }
-}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
