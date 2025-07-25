@@ -1,53 +1,52 @@
-<div class="px-4 m-3 py-5 my-5 text-center bg-dark text-white rounded-4 shadow-lg">
-
+<div class="container px-3 px-md-4 py-5 my-5 text-center bg-dark text-white rounded-4 shadow-lg">
   <!-- Hero Image -->
   <img
-  class="d-block mx-auto mb-4 rounded-4 shadow"
-  [src]="heroImage"
-  [alt]="translate.currentLang === 'af' ? 'Hong Kong Trust - Afrikaans' : 'Hong Kong Trust'"
-  width="500"
-/>
+    class="img-fluid d-block mx-auto mb-4 rounded-4 shadow"
+    [src]="heroImage"
+    [alt]="translate.currentLang === 'af' ? 'Hong Kong Trust - Afrikaans' : 'Hong Kong Trust'"
+    style="max-width: 500px;"
+  />
+
   <!-- Headline -->
-  <h1 class="display-5 fw-bold">{{ 'HKFT.TITLE' | translate }}</h1>
+  <h1 class="display-6 display-md-5 fw-bold">{{ 'HKFT.TITLE' | translate }}</h1>
 
   <!-- Intro Paragraph -->
   <div class="col-lg-8 mx-auto">
     <p class="lead mb-4">
- {{ 'HKFT.INTRO' | translate }}    </p>
+      {{ 'HKFT.INTRO' | translate }}
+    </p>
 
     <!-- Register Button -->
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
       <button
-  (click)="confirmRedirect()"
-  class="btn btn-warning btn-lg px-5 fw-bold"
->
-{{ 'HKFT.SETUP_BUTTON' | translate }}</button>
-
+        (click)="confirmRedirect()"
+        class="btn btn-warning btn-lg px-5 fw-bold"
+      >
+        {{ 'HKFT.SETUP_BUTTON' | translate }}
+      </button>
     </div>
   </div>
 
   <!-- Embedded Google Drive Video -->
   <div class="mb-5">
-    <iframe
-      src="https://drive.google.com/file/d/15-lHJ0uVprYUMrgvY8Zs06nllFVit-gi/preview"
-      width="70%"
-      height="480"
-      class="rounded-4 shadow"
-      style="border: none;"
-      allow="autoplay"
-      allowfullscreen
-    ></iframe>
+    <div class="ratio ratio-16x9 rounded-4 shadow mx-auto" style="max-width: 800px;">
+      <iframe
+        src="https://drive.google.com/file/d/15-lHJ0uVprYUMrgvY8Zs06nllFVit-gi/preview"
+        allow="autoplay"
+        allowfullscreen
+        style="border: none;"
+      ></iframe>
+    </div>
   </div>
 
   <!-- Embedded PDF Viewer -->
   <div class="mb-5">
-    <iframe
-      src="assets/downloads/FAQ-HongKongForeignTrusts.pdf"
-      width="70%"
-      height="600"
-      class="rounded-4 shadow"
-      style="border: none;"
-    ></iframe>
+    <div class="ratio ratio-4x3 rounded-4 shadow mx-auto" style="max-width: 800px;">
+      <iframe
+        src="assets/downloads/FAQ-HongKongForeignTrusts.pdf"
+        allowfullscreen
+        style="border: none;"
+      ></iframe>
+    </div>
   </div>
-
 </div>
