@@ -39,3 +39,9 @@
     opacity: 0.7;
   }
 }
+
+@media (max-width: 768px) {
+  iframe[src$=".pdf"] {
+    height: 400px !important;
+  }
+}
