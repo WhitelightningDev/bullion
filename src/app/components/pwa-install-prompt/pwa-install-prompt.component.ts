@@ -7,11 +7,11 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <div *ngIf="showPrompt" class="pwa-install-prompt">
+    <!-- <div *ngIf="showPrompt" class="pwa-install-prompt">
       <p>Install this app on your device for a better experience.</p>
       <button (click)="install()">Install</button>
       <button (click)="close()">Maybe later</button>
-    </div>
+    </div> -->
   `,
   styles: [`
     .pwa-install-prompt {

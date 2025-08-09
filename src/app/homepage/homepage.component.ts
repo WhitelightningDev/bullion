@@ -1,3 +1,5 @@
+const CAMPAIGN_END = new Date(2025, 7, 31, 23, 59, 59); // 31 Aug 2025 local time
+const SUPPRESS_UNTIL_KEY = 'hkTrustPromo.suppressUntil.v1';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
@@ -46,16 +48,30 @@ export class HomepageComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    const hasSeenPromo = localStorage.getItem('promoShown');
-    if (!hasSeenPromo) {
-      this.promoVisible = true;
-      setTimeout(() => {
-        this.promoVisible = false;
-        localStorage.setItem('promoShown', 'true');
-      }, 6000);
-    } else {
+    // 1) Do not show after campaign end
+    const now = new Date();
+    if (now > CAMPAIGN_END) {
       this.promoVisible = false;
+      try {
+        localStorage.removeItem(SUPPRESS_UNTIL_KEY);
+      } catch {}
+      return;
     }
+
+    // 2) Frequency cap: show at most once per day
+    let suppressUntil = 0;
+    try {
+      suppressUntil = Number(localStorage.getItem(SUPPRESS_UNTIL_KEY) || 0);
+    } catch {}
+
+    if (Date.now() < suppressUntil) {
+      this.promoVisible = false;
+      return;
+    }
+
+    // 3) Show now, then auto-dismiss and suppress until next day
+    this.promoVisible = true;
+    setTimeout(() => this.dismissPromo('auto'), 6000);
   }
 
   ngAfterViewInit(): void {
@@ -110,5 +126,20 @@ export class HomepageComponent implements AfterViewInit, OnInit {
 
     comment.liked = !comment.liked;
     comment.likesCount += comment.liked ? 1 : -1;
+  }
+
+  private nextLocalMidnight(): number {
+    const now = new Date();
+    const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0);
+    return next.getTime();
+  }
+
+  dismissPromo(_source: 'manual' | 'auto' = 'manual'): void {
+    this.promoVisible = false;
+    // Suppress showing again until next day
+    const until = this.nextLocalMidnight();
+    try {
+      localStorage.setItem(SUPPRESS_UNTIL_KEY, String(until));
+    } catch {}
   }
 }
