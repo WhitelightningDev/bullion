@@ -3,7 +3,8 @@ import {
   CUSTOM_ELEMENTS_SCHEMA,
   AfterViewInit,
   ViewChild,
-  ElementRef
+  ElementRef,
+  OnInit
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -27,12 +28,13 @@ import { LanguageService } from '../services/language.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements AfterViewInit {
+export class HomepageComponent implements AfterViewInit, OnInit {
   likeCount = 0;
   videoLiked = false;
   comments: (CommentEntry & { liked?: boolean; likesCount?: number })[] = [];
   isPlaying = false;
   storyVideoLoaded = false;
+  public promoVisible = true;
 
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
@@ -41,6 +43,19 @@ export class HomepageComponent implements AfterViewInit {
     // ✅ Use persisted or default language on init
     const lang = this.languageService.getCurrentLanguage();
     this.languageService.useLanguage(lang);
+  }
+
+  ngOnInit(): void {
+    const hasSeenPromo = localStorage.getItem('promoShown');
+    if (!hasSeenPromo) {
+      this.promoVisible = true;
+      setTimeout(() => {
+        this.promoVisible = false;
+        localStorage.setItem('promoShown', 'true');
+      }, 6000);
+    } else {
+      this.promoVisible = false;
+    }
   }
 
   ngAfterViewInit(): void {

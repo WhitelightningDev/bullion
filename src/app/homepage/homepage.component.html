@@ -2,6 +2,25 @@
 
 <section class="text-white py-5 text-center">
   <div class="container">
+    <!-- Promo Lightbox: auto-dismiss after 5s (controlled in TS) -->
+    <div *ngIf="promoVisible" class="modal fade show d-block" tabindex="-1" aria-modal="true" role="dialog">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content bg-dark text-white border border-warning rounded-4 shadow">
+          <div class="modal-header border-0">
+            <h5 class="modal-title fw-semibold">Limited-Time Special</h5>
+            <button type="button" class="btn-close btn-close-white" aria-label="Close" (click)="promoVisible = false"></button>
+          </div>
+          <div class="modal-body pt-0">
+            <p class="mb-0 fs-5">
+              <strong>Hong Kong Foreign Trust</strong> on Special for
+              <span class="text-warning fw-semibold">R1500</span>
+              to members until end of August.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="promoVisible" class="modal-backdrop fade show"></div>
     <img src="bullion-logo.png" alt="Bullion Logo" class="img-fluid mb-4" style="max-width: 140px;" loading="lazy">
     <h1 class="display-5 fw-semibold mb-2">{{ 'HERO.TITLE' | translate }}</h1>
     <p class="lead text-secondary mb-0">{{ 'HERO.SUBTITLE' | translate }}</p>
