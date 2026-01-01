@@ -37,6 +37,8 @@ export class HomepageComponent implements AfterViewInit, OnInit {
   isPlaying = false;
   storyVideoLoaded = false;
   public promoVisible = true;
+  showColdWalletModal = false;
+  private coldWalletTimer?: number;
 
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
@@ -48,30 +50,30 @@ export class HomepageComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    // 1) Do not show after campaign end
     const now = new Date();
+    // 1) HK promo: suppress after campaign end or once per day
     if (now > CAMPAIGN_END) {
       this.promoVisible = false;
       try {
         localStorage.removeItem(SUPPRESS_UNTIL_KEY);
       } catch {}
-      return;
+    } else {
+      let suppressUntil = 0;
+      try {
+        suppressUntil = Number(localStorage.getItem(SUPPRESS_UNTIL_KEY) || 0);
+      } catch {}
+
+      if (Date.now() < suppressUntil) {
+        this.promoVisible = false;
+      } else {
+        this.promoVisible = true;
+        setTimeout(() => this.dismissPromo('auto'), 6000);
+      }
     }
 
-    // 2) Frequency cap: show at most once per day
-    let suppressUntil = 0;
-    try {
-      suppressUntil = Number(localStorage.getItem(SUPPRESS_UNTIL_KEY) || 0);
-    } catch {}
-
-    if (Date.now() < suppressUntil) {
-      this.promoVisible = false;
-      return;
-    }
-
-    // 3) Show now, then auto-dismiss and suppress until next day
-    this.promoVisible = true;
-    setTimeout(() => this.dismissPromo('auto'), 6000);
+    // 2) Cold Wallet popup: stagger behind HK promo if needed
+    const coldWalletDelay = this.promoVisible ? 6500 : 400;
+    this.scheduleColdWalletModal(coldWalletDelay);
   }
 
   ngAfterViewInit(): void {
@@ -141,5 +143,27 @@ export class HomepageComponent implements AfterViewInit, OnInit {
     try {
       localStorage.setItem(SUPPRESS_UNTIL_KEY, String(until));
     } catch {}
+
+    this.scheduleColdWalletModal(400);
+  }
+
+  dismissColdWallet(): void {
+    this.showColdWalletModal = false;
+  }
+
+  proceedToColdWallet(event?: Event): void {
+    event?.preventDefault();
+    this.showColdWalletModal = false;
+    window.open('https://wallet.bullionlimited.co.za/', '_blank', 'noopener');
+  }
+
+  private scheduleColdWalletModal(delayMs: number) {
+    if (this.coldWalletTimer) {
+      clearTimeout(this.coldWalletTimer);
+    }
+
+    this.coldWalletTimer = window.setTimeout(() => {
+      this.showColdWalletModal = true;
+    }, delayMs);
   }
 }

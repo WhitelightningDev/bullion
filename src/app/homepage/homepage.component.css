@@ -2,6 +2,69 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+.cold-wallet-flyout {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 1500;
+  background: radial-gradient(140% 140% at 10% 10%, rgba(255, 193, 7, 0.18), rgba(11, 12, 16, 0.9)),
+    linear-gradient(135deg, #0b0c10 0%, #0f1117 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f8f9fa;
+  max-width: 360px;
+  width: calc(100% - 36px);
+  padding: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.cold-wallet-thumb {
+  width: 84px;
+  height: 84px;
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.cold-wallet-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cold-wallet-pill {
+  background: rgba(255, 193, 7, 0.12);
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  color: #f8f9fa;
+  letter-spacing: 0.04em;
+}
+
+.cold-wallet-flyout .btn-warning {
+  background: linear-gradient(90deg, #ffda6a, #f8c146);
+  border: none;
+}
+
+.cold-wallet-flyout .btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #f8f9fa;
+}
+
+.cold-wallet-flyout .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 575.98px) {
+  .cold-wallet-flyout {
+    right: 12px;
+    left: 12px;
+    max-width: none;
+  }
+
+  .cold-wallet-thumb {
+    width: 72px;
+    height: 72px;
+  }
+}
+
 .skeleton-loader {
   background: linear-gradient(90deg, #444 25%, #555 37%, #444 63%);
   background-size: 400% 100%;

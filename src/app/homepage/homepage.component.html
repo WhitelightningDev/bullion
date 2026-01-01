@@ -1,3 +1,37 @@
+<!-- Cold Wallet Launch Flyout -->
+<div *ngIf="showColdWalletModal" class="cold-wallet-flyout shadow-lg rounded-4">
+  <div class="d-flex gap-3 align-items-start">
+    <div class="cold-wallet-thumb rounded-3 overflow-hidden flex-shrink-0">
+      <img src="atomimage.jpeg" alt="Cold Ghost Wallet with Visa Card" loading="lazy" />
+    </div>
+    <div class="flex-grow-1">
+      <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill cold-wallet-pill">
+        <span class="text-uppercase fw-semibold small">New Launch</span>
+        <span class="text-warning fw-semibold">Jan 2026</span>
+      </div>
+      <h5 class="mt-2 mb-1 fw-semibold text-white">Cold Ghost Wallet + Visa Card</h5>
+      <p class="text-secondary small mb-3">
+        Secure bullion in a cold wallet with a Visa card for seamless spends. Ready for your next move.
+      </p>
+      <div class="d-flex flex-wrap gap-2">
+        <a
+          class="btn btn-warning text-dark fw-semibold btn-sm rounded-pill px-3"
+          href="https://wallet.bullionlimited.co.za/"
+          target="_blank"
+          rel="noopener"
+          (click)="proceedToColdWallet($event)"
+        >
+          Open Cold Wallet
+        </a>
+        <button class="btn btn-outline-light btn-sm rounded-pill px-3" type="button" (click)="dismissColdWallet()">
+          Not now
+        </button>
+      </div>
+    </div>
+    <button type="button" class="btn-close btn-close-white ms-2" aria-label="Close" (click)="dismissColdWallet()"></button>
+  </div>
+</div>
+
 <!-- Hero Section -->
 
 <section class="text-white py-5 text-center">
