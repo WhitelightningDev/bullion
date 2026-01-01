@@ -8,6 +8,11 @@ import { LanguageService } from './services/language.service';
 import { environment } from '../environments/environment.prod';
 import { SwUpdate } from '@angular/service-worker';
 
+interface BeforeInstallPromptEvent extends Event {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
+}
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -17,9 +22,10 @@ import { SwUpdate } from '@angular/service-worker';
 })
 export class AppComponent implements OnInit {
   title = 'bullion';
-  deferredPrompt: any = null;
+  deferredPrompt: BeforeInstallPromptEvent | null = null;
   showInstallBanner = false;
   maintenanceMode = environment.maintenanceMode;
+  private readonly installFlagKey = 'pwaInstalled';
   private updates = inject(SwUpdate);
 
   prepareRoute = (outlet: RouterOutlet) => outlet?.activatedRouteData?.['animation'];
@@ -28,19 +34,21 @@ export class AppComponent implements OnInit {
     private languageService: LanguageService,
     private router: Router
   ) {
+    this.syncInstallState();
+
     // Handle install prompt
     window.addEventListener('beforeinstallprompt', (event: Event) => {
-      event.preventDefault();
-      this.deferredPrompt = event;
+      if (this.isAppInstalled()) return;
 
-      if (!this.isAppInstalled()) {
-        this.showInstallBanner = true;
-      }
+      event.preventDefault();
+      this.deferredPrompt = event as BeforeInstallPromptEvent;
+      localStorage.removeItem(this.installFlagKey);
+      this.showInstallBanner = true;
     });
 
     // Mark app as installed
     window.addEventListener('appinstalled', () => {
-      localStorage.setItem('pwaInstalled', 'true');
+      this.markAsInstalled();
     });
   }
 
@@ -68,10 +76,7 @@ export class AppComponent implements OnInit {
       this.languageService.useLanguage(lang);
     }
 
-    // 🧹 Clean old install flag if app is no longer installed
-    if (!this.isAppInstalled() && localStorage.getItem('pwaInstalled') === 'true') {
-      localStorage.removeItem('pwaInstalled');
-    }
+    this.syncInstallState();
   }
 
   installPWA() {
@@ -80,8 +85,7 @@ export class AppComponent implements OnInit {
     this.deferredPrompt.prompt();
     this.deferredPrompt.userChoice.then((choiceResult: any) => {
       if (choiceResult.outcome === 'accepted') {
-        localStorage.setItem('pwaInstalled', 'true');
-        this.showInstallBanner = false;
+        this.markAsInstalled();
       }
       this.deferredPrompt = null;
     });
@@ -92,9 +96,26 @@ export class AppComponent implements OnInit {
   }
 
   private isAppInstalled(): boolean {
+    return this.isRunningStandalone() || localStorage.getItem(this.installFlagKey) === 'true';
+  }
+
+  private isRunningStandalone(): boolean {
     const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const isFullscreen = window.matchMedia('(display-mode: fullscreen)').matches;
+    const isMinimalUi = window.matchMedia('(display-mode: minimal-ui)').matches;
     const isIosStandalone = (window.navigator as any).standalone === true;
-    const localFlag = localStorage.getItem('pwaInstalled') === 'true';
-    return (isStandalone || isIosStandalone) && localFlag;
+    return isStandalone || isFullscreen || isMinimalUi || isIosStandalone;
+  }
+
+  private syncInstallState() {
+    if (this.isRunningStandalone()) {
+      this.markAsInstalled();
+    }
+  }
+
+  private markAsInstalled() {
+    localStorage.setItem(this.installFlagKey, 'true');
+    this.showInstallBanner = false;
+    this.deferredPrompt = null;
   }
 }

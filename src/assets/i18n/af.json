@@ -56,16 +56,17 @@
   "LOGIN": "Inteken",
   "LANGUAGE": "Taal",
   "ASSOCIATIONS": "Assosiasies",
-  "HK_TRUST": "HK Buitelandse Trust",
+  "HK_TRUST": "Buitelandse Trusts",
+  "COLD_WALLETS": "Koue beursie",
   "TAX_ACCOUNTING": "Belasting / Rekeningkunde",
   "MORE": "Meer"
 },
   "POOLS": {
-    "INVESTMENT_POOLS": "Beleggingspoele",
+    "INVESTMENT_POOLS": "Poele",
     "KRUGER_RAND_ALT": "Kruger Rand",
     "DESCRIPTION": "Verken die voordele en kenmerke van ons edelmetaal-beleggingspoele.",
     "HOW_POOLS_WORK_TITLE": "Hoe die Poele Werk",
-    "HOW_POOLS_WORK_DESC": "Lede se fondse word gebruik om eenhede in poele te koop wat hulle kies. Hierdie poele word hoofsaaklik in edelmetale belê (95% of meer), insluitend Krugerrande (1Oz, 1/10Oz Goud, en 1Oz Silwer). Hierdie bates word wêreldwyd erken en is hoogs likied. Nota: Goud Krugerrande is nie onderhewig aan BTW nie. Die poele funksioneer uitsluitlik as ’n koöperatiewe toewysingstelsel om:\n- Gesamentlike aankope vir lede moontlik te maak\n- Bewarings-, versekerings- en administrasiekoste regverdig op ’n pro-rata grondslag toe te wys\n- Elke lid se ledebelang te bereken",
+    "HOW_POOLS_WORK_DESC": "Lede se fondse word gebruik om eenhede in poele te koop wat hulle kies. Hierdie poele word hoofsaaklik in edelmetale belê (95% of meer), insluitend Krugerrande (1 Oz, 1/10 Oz Goud, en 1 Oz Silwer). Hierdie bates word wêreldwyd erken en is hoogs likied. Nota: Goud Krugerrande is nie onderhewig aan BTW nie. Die poele funksioneer uitsluitlik as ’n koöperatiewe toewysingstelsel om:\n- Gesamentlike aankope vir lede moontlik te maak\n- Bewarings-, versekerings- en administrasiekoste regverdig op ’n pro-rata grondslag toe te wys\n- Elke lid se ledebelang te bereken",
     "VALUATION_FLEXIBILITY_TITLE": "Waardasie & Buigsaamheid",
     "VALUATION_FLEXIBILITY_DESC": "Poele word daagliks gewaardeer. Lede kan eenhede koop of verkoop teen die huidige eenheidsprys en kan deposito allokasie aanpas oor beskikbare poele.",
     "OWNERSHIP_CONTROL_TITLE": "Eienaarskap & Beheer",
@@ -244,7 +245,7 @@
   "HKFT": {
   "TITLE": "Welkom by jou volgende stap in batebeskerming",
   "INTRO": "Buitenshuise Trustdienste is ingevoer om hierdie diens aan ons lede teen 'n baie bekostigbare prys te verskaf. Kyk asseblief die video en lees alle inligting sorgvuldig deur voordat jy jou trust opstel.",
-  "SETUP_BUTTON": "Skep Jou Trust Hier"
+  "SETUP_BUTTON": "Skep Of wysig u Trust Hier"
 }
 
 }
