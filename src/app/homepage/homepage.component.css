@@ -4,8 +4,9 @@ body {
 
 .cold-wallet-flyout {
   position: fixed;
-  top: 18px;
-  right: 18px;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 1500;
   background: radial-gradient(140% 140% at 10% 10%, rgba(255, 193, 7, 0.18), rgba(11, 12, 16, 0.9)),
     linear-gradient(135deg, #0b0c10 0%, #0f1117 100%);
@@ -56,6 +57,7 @@ body {
   .cold-wallet-flyout {
     right: 12px;
     left: 12px;
+    transform: none;
     max-width: none;
   }
 
