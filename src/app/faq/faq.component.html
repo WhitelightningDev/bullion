@@ -34,7 +34,7 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          <p>{{ 'FAQ.A2.INTRO' | translate }} <a href="https://knox.co.za/" target="_blank">Knox Vault</a>.</p>
+          <p>{{ 'FAQ.A2.INTRO' | translate }} <a href="/downloads" target="_blank">(see downloads page)</a>.</p>
           <ul>
             <li *ngFor="let point of ('FAQ.A2.POINTS' | translate:undefined)">{{ point }}</li>
           </ul>
@@ -52,9 +52,7 @@
       </h2>
       <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          <p>{{ 'FAQ.A3.INTRO1' | translate }}</p>
-          <p>{{ 'FAQ.A3.INTRO2' | translate }}</p>
-          <p>{{ 'FAQ.A3.INTRO3' | translate }}</p>
+
           <ul>
             <li *ngFor="let req of ('FAQ.A3.REQUIREMENTS' | translate:undefined)">{{ req }}</li>
           </ul>

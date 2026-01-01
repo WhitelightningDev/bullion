@@ -9,12 +9,13 @@ import { LearnComponent } from './learn/learn.component';
 import { animate } from '@angular/animations';
 import { TermsAndConditionsComponent } from './components/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
-import { MaintenanceComponent } from './maintenance/maintenance.component';
+import { HkftrustComponent } from './hkftrust/hkftrust.component';
+import { AccountingComponent } from './accounting/accounting.component';
 
 
 export const routes: Routes = [
 
- { path: 'maintenance', component: MaintenanceComponent },
+
 
 
   { path: '', component: HomepageComponent, data: { animation: 'Home' } },
@@ -43,5 +44,10 @@ export const routes: Routes = [
   },
   {
     path: 'privacy', component: PrivacyPolicyComponent, data: {animate: 'Privacy Policy'}
-  }
+  },
+  {
+    path: 'Hong-Kong-Foreign-Trust', component: HkftrustComponent, data: { animate: 'Hong Kong Foreign Trust' }
+  },
+  {path: 'accounting', component: AccountingComponent, data: { animate: 'Accounting' }},
+
 ];

@@ -1,12 +1,28 @@
-<app-navbar></app-navbar>
-<main [@routeAnimations]="prepareRoute(outlet)">
-  <app-cookie-consent></app-cookie-consent>
-  <router-outlet #outlet="outlet"></router-outlet>
-</main>
-<!-- PWA Install Banner -->
-<div *ngIf="showInstallBanner" class="install-pwa-banner">
-  <span>Install this app for a better experience!</span>
-  <button (click)="installPWA()" class="install-btn">Install</button>
-  <button (click)="dismissInstallBanner()" class="dismiss-btn" aria-label="Dismiss install prompt">×</button>
-</div>
-<app-footer></app-footer>
+<!-- app.component.html -->
+<ng-container *ngIf="!maintenanceMode; else maintenanceBlock">
+  <app-navbar></app-navbar>
+  <main [@routeAnimations]="prepareRoute(outlet)">
+    <app-cookie-consent></app-cookie-consent>
+    <router-outlet #outlet="outlet"></router-outlet>
+  </main>
+
+  <!-- PWA Install Banner -->
+  <div *ngIf="showInstallBanner" class="install-pwa-banner">
+    <span>Install this app for a better experience!</span>
+    <button (click)="installPWA()" class="install-btn">Install</button>
+    <button (click)="dismissInstallBanner()" class="dismiss-btn" aria-label="Dismiss install prompt">×</button>
+  </div>
+
+  <app-footer></app-footer>
+</ng-container>
+
+<ng-template #maintenanceBlock>
+  <div class="maintenance-wrapper">
+    <div class="maintenance-overlay d-flex justify-content-center align-items-center text-center text-white">
+      <div>
+        <h1 class="display-4 mb-3">🚧 Site Under Maintenance</h1>
+        <p class="lead">We're currently making improvements. Please check back later.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

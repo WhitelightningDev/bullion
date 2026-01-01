@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { RegisterpopupComponent } from '../../popups/registerpopup/registerpopup.component';
 
+declare var bootstrap: any;
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -36,23 +38,47 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   ) {}
 
   ngOnInit() {
-    // Initialize language from saved or default
     const savedLang = localStorage.getItem('preferredLang') as 'en' | 'af' | null;
     this.currentLang = savedLang ?? 'en';
     this.translate.use(this.currentLang);
   }
 
   ngAfterViewInit(): void {
-    const navLinks = this.navbarCollapse.nativeElement.querySelectorAll('.nav-link');
+    if (!this.navbarCollapse) return;
+
+    const collapseEl = this.navbarCollapse.nativeElement;
+
+    // Initialize dropdowns manually
+    const dropdownToggles = document.querySelectorAll('[data-bs-toggle="dropdown"]');
+    dropdownToggles.forEach((toggle) => {
+      new bootstrap.Dropdown(toggle);
+    });
+
+    // Collapse on nav-link click (but skip dropdown toggles)
+    const navLinks = collapseEl.querySelectorAll('.nav-link');
     navLinks.forEach((link: HTMLElement) => {
-      this.renderer.listen(link, 'click', () => this.closeNavbar());
+      this.renderer.listen(link, 'click', () => {
+        const isDropdownToggle = link.classList.contains('dropdown-toggle');
+        if (!isDropdownToggle) {
+          this.closeNavbar();
+        }
+      });
+    });
+
+    // Collapse when dropdown-item is clicked
+    const dropdownItems = collapseEl.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach((item: HTMLElement) => {
+      this.renderer.listen(item, 'click', () => this.closeNavbar());
     });
   }
 
   @HostListener('document:click', ['$event'])
   handleDocumentClick(event: Event) {
-    const clickedInside = this.navbarCollapse.nativeElement.contains(event.target);
-    const isExpanded = this.navbarCollapse.nativeElement.classList.contains('show');
+    if (!this.navbarCollapse) return;
+
+    const collapseEl = this.navbarCollapse.nativeElement;
+    const clickedInside = collapseEl.contains(event.target);
+    const isExpanded = collapseEl.classList.contains('show');
 
     if (isExpanded && !clickedInside) {
       this.closeNavbar();
@@ -60,9 +86,11 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   }
 
   closeNavbar() {
+    if (!this.navbarCollapse) return;
+
     const collapseEl = this.navbarCollapse.nativeElement;
     if (collapseEl.classList.contains('show')) {
-      const collapse = new (window as any).bootstrap.Collapse(collapseEl);
+      const collapse = new bootstrap.Collapse(collapseEl);
       collapse.hide();
     }
   }

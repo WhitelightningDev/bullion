@@ -1,74 +1,94 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 rounded-4 border border-light-subtle">
-  <div class="container-fluid px-4">
+  <div class="container-fluid px-3 px-lg-4 d-flex align-items-center">
 
     <!-- Logo & Brand -->
-    <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/">
-      <img src="bullion-logo.png" width="42" height="42" class="rounded-circle border border-1"
+    <a class="navbar-brand d-flex align-items-center me-auto" routerLink="/">
+      <img src="bullion-logo.png" width="42" height="42" class="rounded-circle border me-2"
         alt="Bullion Co-Op Logo" />
       <span class="fw-semibold fs-5 text-dark">{{ 'NAV.BRAND' | translate }}</span>
     </a>
 
     <!-- Toggler -->
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Nav Items -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown" #navbarCollapse>
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarNav" #navbarCollapse>
 
       <!-- Main Navigation -->
-      <ul class="navbar-nav ms-5 me-4 mb-2 mb-lg-0 gap-lg-3">
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/" routerLinkActive="active"
+      <ul class="navbar-nav me-auto p-3 mb-2 mb-lg-0 gap-lg-3 align-items-lg-center">
+
+        <!-- Primary Links -->
+        <li class="nav-item" *ngFor="let link of [
+          { route: '/', label: 'NAV.HOME' },
+          { route: '/poolfeatures', label: 'NAV.POOLS' },
+          { route: '/fees', label: 'NAV.FEES' },
+          { route: '/Hong-Kong-Foreign-Trust', label: 'NAV.HK_TRUST' }
+        ]">
+          <a class="nav-link text-dark px-2" [routerLink]="link.route" routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }">
-            {{ 'NAV.HOME' | translate }}
+            {{ link.label | translate }}
           </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/poolfeatures" routerLinkActive="active">
-            {{ 'NAV.POOLS' | translate }}
+          <a
+            class="nav-link text-dark px-2"
+            href="https://wallet.bullionlimited.co.za/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ 'NAV.COLD_WALLETS' | translate }}
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/fees" routerLinkActive="active">
-            {{ 'NAV.FEES' | translate }}
+
+        <!-- Associations Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark px-2" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ 'NAV.ASSOCIATIONS' | translate }}
           </a>
+          <ul class="dropdown-menu shadow-sm">
+            <li><a class="dropdown-item" href="/accounting">{{ 'NAV.TAX_ACCOUNTING' | translate }}</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/downloads" routerLinkActive="active">
-            {{ 'NAV.DOWNLOADS' | translate }}
+
+        <!-- More Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark px-2" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            {{ 'NAV.MORE' | translate }}
           </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/faq" routerLinkActive="active">
-            {{ 'NAV.FAQ' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/contact-us" routerLinkActive="active">
-            {{ 'NAV.CONTACT' | translate }}
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-medium text-dark" routerLink="/learn" routerLinkActive="active">
-            {{ 'NAV.LEARN' | translate }}
-          </a>
+          <ul class="dropdown-menu shadow-sm">
+            <li *ngFor="let link of [
+              { route: '/downloads', label: 'NAV.DOWNLOADS' },
+              { route: '/faq', label: 'NAV.FAQ' },
+              { route: '/contact-us', label: 'NAV.CONTACT' },
+              { route: '/learn', label: 'NAV.LEARN' }
+            ]">
+              <a class="dropdown-item" [routerLink]="link.route">
+                {{ link.label | translate }}
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
 
-      <!-- Language Switcher Dropdown -->
-      <!-- Language Switcher Dropdown -->
-      <ul class="navbar-nav ms-3">
-        <li class="nav-item dropdown">
-          <button class="btn btn-sm btn-outline-light border-0 dropdown-toggle d-flex align-items-center gap-2"
+      <!-- Right Section: Language & Auth Buttons -->
+      <div class="d-flex align-items-center flex-wrap gap-3 ms-lg-3 mt-3 mt-lg-0">
+
+        <!-- Language Dropdown -->
+        <div class="dropdown">
+          <button
+            class="btn btn-outline-light border-0 dropdown-toggle d-flex align-items-center gap-2 text-dark"
             id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             <img [src]="flagMap[currentLang]" width="16" height="12"
               [alt]="currentLang === 'en' ? 'English' : 'Afrikaans'" />
-            <span class="d-none d-md-inline text-dark">{{ 'LANGUAGE' | translate }}</span>
+            <span>{{ 'NAV.LANGUAGE' | translate }}</span>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm border-light-subtle" aria-labelledby="languageDropdown">
+          <ul class="dropdown-menu shadow-sm border-light-subtle" aria-labelledby="languageDropdown">
             <li>
               <a class="dropdown-item d-flex align-items-center gap-2" href="#"
                 (click)="switchLang('en'); $event.preventDefault()">
@@ -84,41 +104,20 @@
               </a>
             </li>
           </ul>
-        </li>
-      </ul>
+        </div>
 
-
-
-      <!-- Auth Buttons -->
-      <ul class="navbar-nav ms-auto gap-2 align-items-center">
-        <li class="nav-item">
-          <a href="https://bullion.mycoop.co.za/account/register" target="_blank" rel="noopener">
-            <button type="button" class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2">
-              <i class="bi bi-person-plus-fill"></i> {{ 'NAV.REGISTER' | translate }}
-            </button>
+        <!-- Auth Buttons -->
+        <div class="d-flex flex-column flex-lg-row gap-2">
+          <a class="btn btn-outline-primary rounded-pill px-3 py-1 btn-sm d-flex align-items-center gap-2"
+            href="https://bullion.mycoop.co.za/account/register" target="_blank" rel="noopener">
+            <i class="bi bi-person-plus-fill"></i> {{ 'NAV.REGISTER' | translate }}
           </a>
-        </li>
-        <li class="nav-item">
-          <a href="https://bullion.mycoop.co.za/account/login" target="_blank" rel="noopener">
-            <button type="button" class="btn btn-primary rounded-pill px-3 d-flex align-items-center gap-2 text-white">
-              <i class="bi bi-box-arrow-in-right"></i> {{ 'NAV.LOGIN' | translate }}
-            </button>
+          <a class="btn btn-primary rounded-pill px-3 py-1 btn-sm d-flex align-items-center gap-2 text-white"
+            href="https://bullion.mycoop.co.za/account/login" target="_blank" rel="noopener">
+            <i class="bi bi-box-arrow-in-right"></i> {{ 'NAV.LOGIN' | translate }}
           </a>
-        </li>
-      </ul>
-
+        </div>
+      </div>
     </div>
   </div>
 </nav>
-
-<!-- Floating Register Button -->
-<a href="https://bullion.mycoop.co.za/account/register" target="_blank" rel="noopener noreferrer">
-  <button *ngIf="showFloatingRegister"
-    class="btn btn-outline-primary rounded-pill px-3 d-flex align-items-center gap-2 shadow floating-register-btn"
-    (click)="openRegisterPopup()">
-    <i class="bi bi-person-plus-fill"></i> {{ 'NAV.REGISTER' | translate }}
-  </button>
-</a>
-
-<!-- Register Modal -->
-<app-registerpopup></app-registerpopup>

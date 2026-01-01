@@ -1,11 +1,11 @@
 {
   "HERO": {
     "TITLE": "Welkom by Bullion Beperk",
-    "SUBTITLE": "Bemagtig jouself deur moderne, kollektiewe welvaart-skepping"
+    "SUBTITLE": "Bemagtig uself deur moderne, kollektiewe welvaartskepping"
   },
   "INTRO": {
     "TITLE": "'n Koöperasie vir die Toekoms",
-    "BODY": "Met ons unieke koöperatiewe model help Bullion Beperk jou om welvaart te bou deur kollektiewe beleggings in goud, silwer en ander bates.",
+    "BODY": "Met ons unieke koöperatiewe model help Bullion Beperk u om welvaart te bou deur kollektiewe beleggings in goud, silwer en ander bates.",
     "POINTS": {
       "1": "Bemagtiging van gemeenskapsbeleggings",
       "2": "Deursigtige, lede-gedrewe besluitneming",
@@ -18,17 +18,17 @@
   "HOW": {
     "TITLE": "Hoe Dit Werk",
     "SUB": "'n Slimmer manier om jou toekoms te bou en te beveilig",
-    "POOL": "Geunitiseerde Beleggingsdamme",
-    "POOL_DESC": "Beleggings word geunitiseer en in damme geplaas, sodat jy maklik kan inkom of onttrek met jou eie eenhede.",
+    "POOL": "Verenigde Poele",
+    "POOL_DESC": "Beleggings word saamgevoeg en verenig, wat buigsame toetrede en uitgang deur u eie lid-eenhede moontlik maak.",
     "OWNED": "Lid-besit Stelsel",
-    "OWNED_DESC": "Jy besit die eenhede. Die Koöperasie bestuur dit deursigtig, met volle toegang via veilige aanmelding.",
+    "OWNED_DESC": "U besit die eenhede. Die Koöperasie bestuur dit deursigtig, met volle toegang via veilige aanmelding.",
     "REDEEM": "Buigsame Ontrekking",
     "REDEEM_DESC": "Onttrek eenhede vir kontant of edelmetale met gemak."
   },
   "FUTURE": {
-    "MORE_INFO": "Vir meer inligting, klik hier >",
+    "MORE_INFO": "Vir meer inligting, kliek hier >",
     "TITLE": "Bly voor die kurwe… ‘n skuif na moderne finansiering!",
-    "BODY": "Bullion het met Fractal Global Payment Solutions saamgewerk om jou toegang te gee tot jou eie wêreldwye transaksionele rekening. Nadat jou lidmaatskap goedgekeur is, sal jy 'n onboarding-skakel ontvang om jou rekening oop te maak—wat naatlose transaksies in Suid-Afrika en internasionaal moontlik maak.",
+    "BODY": "Bullion het met Fractal Global Payment Solutions saamgewerk om u toegang te gee tot u eie wêreldwye transaksionele rekening. Nadat u lidmaatskap goedgekeur is, sal u 'n toegang-skakel ontvang om u rekening oop te maak—wat gladde transaksies in Suid-Afrika en internasionaal moontlik maak.",
     "LINK": "Aflaaie",
     "CTA": "Word vandag 'n lid vir net",
     "JOIN": "Sluit Nou Aan"
@@ -43,31 +43,36 @@
     "ACCOUNT_TITLE_PART1": "Geregistreerde Lede",
     "ACCOUNT_TITLE_PART2": "Rekening Gids"
   },
-  "NAV": {
-    "BRAND": "Bullion Koöperatief",
-    "HOME": "Tuis",
-    "POOLS": "Poole",
-    "FEES": "Fooie",
-    "DOWNLOADS": "Aflaaie",
-    "FAQ": "Vrae",
-    "CONTACT": "Kontak",
-    "LEARN": "Leer",
-    "REGISTER": "Registreer",
-    "LOGIN": "Teken In",
-    "LANGUAGE": "Taal"
-  },
+ "NAV": {
+  "BRAND": "Bullion Koöperatief",
+  "HOME": "Tuis",
+  "POOLS": "Poele",
+  "FEES": "Fooie",
+  "DOWNLOADS": "Aflaaie",
+  "FAQ": "Vrae",
+  "CONTACT": "Kontak",
+  "LEARN": "Inligting",
+  "REGISTER": "Registreer",
+  "LOGIN": "Inteken",
+  "LANGUAGE": "Taal",
+  "ASSOCIATIONS": "Assosiasies",
+  "HK_TRUST": "Buitelandse Trusts",
+  "COLD_WALLETS": "Koue beursie",
+  "TAX_ACCOUNTING": "Belasting / Rekeningkunde",
+  "MORE": "Meer"
+},
   "POOLS": {
-    "INVESTMENT_POOLS": "Beleggingspoele",
+    "INVESTMENT_POOLS": "Poele",
     "KRUGER_RAND_ALT": "Kruger Rand",
     "DESCRIPTION": "Verken die voordele en kenmerke van ons edelmetaal-beleggingspoele.",
     "HOW_POOLS_WORK_TITLE": "Hoe die Poele Werk",
-    "HOW_POOLS_WORK_DESC": "Lede se fondse word gebruik om eenhede in poele te koop wat hulle kies. Hierdie poele word hoofsaaklik in edelmetale belê (95% of meer), insluitend Krugerrande (1Oz, 1/10Oz Goud, en 1Oz Silwer). Hierdie bates word wêreldwyd erken en is hoogs likwid. Nota: Goud Krugerrande is nie onderhewig aan BTW nie.",
+    "HOW_POOLS_WORK_DESC": "Lede se fondse word gebruik om eenhede in poele te koop wat hulle kies. Hierdie poele word hoofsaaklik in edelmetale belê (95% of meer), insluitend Krugerrande (1 Oz, 1/10 Oz Goud, en 1 Oz Silwer). Hierdie bates word wêreldwyd erken en is hoogs likied. Nota: Goud Krugerrande is nie onderhewig aan BTW nie. Die poele funksioneer uitsluitlik as ’n koöperatiewe toewysingstelsel om:\n- Gesamentlike aankope vir lede moontlik te maak\n- Bewarings-, versekerings- en administrasiekoste regverdig op ’n pro-rata grondslag toe te wys\n- Elke lid se ledebelang te bereken",
     "VALUATION_FLEXIBILITY_TITLE": "Waardasie & Buigsaamheid",
-    "VALUATION_FLEXIBILITY_DESC": "Poele word daagliks gewaardeer. Lede kan eenhede koop of inlos teen die huidige eenheidsprys en kan deposito-toewysing aanpas oor beskikbare poele.",
+    "VALUATION_FLEXIBILITY_DESC": "Poele word daagliks gewaardeer. Lede kan eenhede koop of verkoop teen die huidige eenheidsprys en kan deposito allokasie aanpas oor beskikbare poele.",
     "OWNERSHIP_CONTROL_TITLE": "Eienaarskap & Beheer",
-    "OWNERSHIP_CONTROL_DESC": "Terwyl die Koöperatief die poele bestuur, besit lede dit deur eenhede. Eenhede kan vir kontant of metale ingewissel word, en lede kan met toepaslike kennisgewing tussen poele oorskakel of oordra.",
+    "OWNERSHIP_CONTROL_DESC": "Terwyl die Koöperatief die poele bestuur, besit lede dit deur eenhede. Eenhede kan vir kontant of metale verkoop word, en lede kan met toepaslike kennisgewing eenhede tussen poele oorskakel of oordra na ander lede.",
     "MEMBERSHIP_REQUIREMENT_TITLE": "Lidmaatskapvereiste",
-    "MEMBERSHIP_REQUIREMENT_DESC": "Slegs lede van Bullion Beperk Koöperatief Beperk mag belê. Persoonlike data en besittings is vertroulik. Lede kry toegang tot persoonlike data en eenheidswaardes via veilige aanmelding.",
+    "MEMBERSHIP_REQUIREMENT_DESC": "Slegs lede van Bullion Beperk Koöperatief mag belê. Persoonlike data en beleggings is vertroulik. Lede kry toegang tot persoonlike data en eenheidswaardes via veilige aanmelding.",
     "MEMBER_OPTIONS_TITLE": "Lidopsies Na Belegging",
     "MEMBER_OPTIONS_DESC": "Lede kan eenhede vir kontant en/of metale onttrek met kennisgewing. Fisiese afhaling is beskikbaar in Pretoria of Johannesburg, of aflewering deur veilige koerier.",
     "DEPOSIT_PROCESS_TITLE": "Bullion Deposito-proses",
@@ -76,14 +81,14 @@
   },
   "FEES": {
     "TITLE": "Koste en Fooie",
-    "DESCRIPTION": "Fooie wat van die swembaddens verhaal word, word gebruik om koste soos administrasie, versekering en veilige bewaring van bates te dek.",
+    "DESCRIPTION": "Fooie wat van die poele verhaal word, word gebruik om koste soos administrasie, versekering en veilige bewaring van bates te dek.",
     "OVERVIEW_TITLE": "Oorsig van Fooie",
     "OVERVIEW_TEXT": "Voorraad word teen groothandelspryse gekoop sonder enige winsmarge. Alle koste is volledig deursigtig. Die fooi-struktuur hieronder kan met dertig dae kennisgewing verander word, en enige veranderinge sal op ons webwerf gepubliseer word. Alle fooie is onderhewig aan BTW.",
     "STRUCTURE_TITLE": "Fooi-struktuur",
     "STRUCTURE_NOTE": "Alle fooie is uitgesluit van BTW, tensy anders vermeld.",
     "TABLE_HEADER_TYPE": "Tipe Fooi",
     "TABLE_HEADER_PERCENT": "Persentasie",
-    "ADMIN_FEE": "Administrasiefooi (van toepassing op deposito's)",
+    "ADMIN_FEE": "Administrasiefooi (van toepassing op depositos)",
     "COMMISSION": "Kommissie (soos met verwysingspersoon ooreengekom)",
     "VARIABLE": "Veranderlik",
     "SWITCHING_FEE": "Oorskakelingsfooi",
@@ -110,15 +115,15 @@
   },
   "DOWNLOADS": {
     "TITLE": "Laai Dokumente Af",
-    "DESCRIPTION": "Hier kan jy alle dokumente wat relevant is tot hierdie Koöperasie aflaai.",
+    "DESCRIPTION": "Hier kan u alle dokumente wat relevant is tot hierdie Koöperasie aflaai.",
     "CIPC_TITLE": "Bullion CIPC Dokument",
     "CIPC_DESCRIPTION": "Toegang en aflaai van die amptelike dokumente vir die Bullion Koöperasie hieronder.",
     "CONSTITUTION_TITLE": "Bullion Grondwet",
     "CONSTITUTION_DESCRIPTION": "Toegang en aflaai van die grondwet vir die Bullion Koöperasie hieronder.",
     "FRACTAL_TITLE": "Fractal Global Betaaloplossings",
-    "FRACTAL_DESCRIPTION": "Laai volledige inligting af oor ons vennootskap met Fractal Global en hoe jy daarby kan baat.",
+    "FRACTAL_DESCRIPTION": "Laai volledige inligting af oor ons vennootskap met Fractal Global en hoe u daarby kan baat.",
     "FRACTAL_CARD_TITLE": "Fractal Global Betaalvennoot-inligting",
-    "FRACTAL_CARD_DESCRIPTION": "Leer hoe Bullion-lede toegang kan kry tot globale finansiële hulpmiddels via ons vennootskap met Fractal Global Betaaloplossings. Laai die profiel hieronder af vir meer inligting oor hoe om jou internasionale transaksionele rekening te aktiveer en te gebruik.",
+    "FRACTAL_CARD_DESCRIPTION": "Leer hoe Bullion-lede toegang kan kry tot globale finansiële hulpmiddels via ons vennootskap met Fractal Global Betaaloplossings. Laai die profiel hieronder af vir meer inligting oor hoe om u internasionale transaksionele rekening te aktiveer en te gebruik.",
     "VIEW_BUTTON": "Besigtig",
     "DOWNLOAD_BUTTON": "Laai PDF Af"
   },
@@ -126,7 +131,7 @@
     "TITLE": "Gereelde Vrae",
     "Q1": "Wat maak Bullion se pryse en struktuur uniek?",
     "A1": {
-      "INTRO": "Goud-, silwer- en platinumpoele word gewaardeer teen die daaglikse groothandelsprys (+/- 5% premie bo die London PM Fix). Lede koop en verkoop teen hierdie prys. Administrasiefooi en kommissie word by aankoop gehef.",
+      "INTRO": "Goud en silwer poele word gewaardeer teen die daaglikse groothandelsprys (+/- 5% premie bo die London PM Fix). Lede koop en verkoop teen hierdie prys. Administrasiefooi en kommissie word by aankoop gehef.",
       "POINTS": [
         "Ander plekke vra dalk 10% of meer bo die London PM Fix. Verkoop lewer dalk minder op.",
         "Die eenheidstelsel verseker dat lede selde teen minder as groothandel verkoop.",
@@ -134,23 +139,16 @@
         "Bullion bied volle deursigtigheid en lae pryse aan lede.",
         "Tradisionele eenheidstrusts mag nie fisiese edelmetale hou nie — Bullion vul daardie gaping."
       ],
-      "REDEMPTION": "Verlossing: Lede kan hul eenhede in kontant, goud, silwer of platinum omskep — of enige kombinasie daarvan."
+      "REDEMPTION": "Afkoping: Lede kan hul eenhede in kontant, goud, silwer of platinum omskep — of enige kombinasie daarvan."
     },
     "Q2": "Hoe veilig is my bates by Bullion?",
     "A2": {
-      "INTRO": "Meeste edelmetale word veilig by",
-      "POINTS": [
-        "Toegang is biometries en vooraf gereël.",
-        "Verseker deur Zurich; goedgekeur tydens ledevergaderings.",
-        "Toegang slegs vir: Byvoeging, onttrekking of ouditering.",
-        "Elke besoek word deur 'n Raadslid en ouditeur vergesel.",
-        "Jaarlikse formele oudits word uitgevoer."
-      ]
+      "INTRO": "Verwys asseblief na Beleids en Prosedures dokument nr. 2-2025"
     },
     "Q3": "Wat is die beleggingsvereistes?",
     "A3": {
       "INTRO1": "‘n Veilige struktuur vir die hou van edelmetale.",
-      "INTRO2": "Die Koöperasie besit die bates; lede besit 'n aandeel ooreenkomstig eenhede.",
+      "INTRO2": "Die Koöperasie besit die bates; lede besit 'n belang ooreenkomstig eenhede.",
       "INTRO3": "Geen skulde, behalwe vir bankkoste en ouditeurs. Slegs aanspreeklik teenoor lede.",
       "REQUIREMENTS": [
         "Minimum eenmalige belegging: R5000.",
@@ -165,7 +163,7 @@
         "Laat afgeronde bedrae toe sonder presiese metaalpryse.",
         "Laat kleiner beleggings toe met vol metaalblootstelling.",
         "Geldonttrekkings is buigsaam.",
-        "Pool dra koste — nie die lid nie.",
+        "Poel dra koste — nie die lid nie.",
         "Maklike oorskakeling tussen poele teen ±0.25%.",
         "Geen kommissies of prysverlagings soos elders nie."
       ],
@@ -192,9 +190,9 @@
     "A8": {
       "INCOME": "Inkomstebelasting: Geen. Geen rente verdien nie.",
       "CGT": "Kapitaalwinsbelasting: Slegs betaalbaar indien verkoop vir kontant.",
-      "VAT": "BTW: Nie van toepassing op Krugerrande nie. Van toepassing op silwer/platinum. Bullion eis BTW terug en belê dit weer."
+      "VAT": "BTW: Nie van toepassing op Krugerrande nie. Van toepassing op silwer."
     },
-    "Q9": "Wat gebeur as silwer/platinum verkoop of afgelewer word?",
+    "Q9": "Wat gebeur as silwer verkoop of afgelewer word?",
     "A9": "BTW-uitsetbelasting betaalbaar aan SARS. Lid kan dit terug eis indien BTW-geregistreer."
   },
   "CONTACT": {
@@ -230,17 +228,24 @@
     "PHONE": "Tel: +27 84 795 3225",
     "RIGHTS": "Alle regte voorbehou.",
     "QUICK_LINKS": "Vinnige Skakels",
-    "CONNECT": "Verbind",
+    "CONNECT": "Kontak",
     "LOCATION": "Tergniet, Wes-Kaap, Suid-Afrika"
   },
   "NAVFOOTER": {
     "HOME": "Tuis",
-    "POOL_FEATURES": "Swembadkenmerke",
+    "POOL_FEATURES": "Poele",
     "FEES": "Fooie",
     "DOWNLOADS": "Aflaaie",
     "CONTACT": "Kontak Ons",
-    "LEARN": "Leer",
+    "LEARN": "Inligting",
     "TERMS": "Bepalings & Voorwaardes",
-    "PRIVACY": "Privaatheidsbeleid"
-  }
+    "PRIVACY": "Privaatheidsbeleid",
+    "GET_APP": "Laai die toepassing af"
+  },
+  "HKFT": {
+  "TITLE": "Welkom by jou volgende stap in batebeskerming",
+  "INTRO": "Buitenshuise Trustdienste is ingevoer om hierdie diens aan ons lede teen 'n baie bekostigbare prys te verskaf. Kyk asseblief die video en lees alle inligting sorgvuldig deur voordat jy jou trust opstel.",
+  "SETUP_BUTTON": "Skep Of wysig u Trust Hier"
+}
+
 }

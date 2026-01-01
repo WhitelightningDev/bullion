@@ -36,3 +36,23 @@
   cursor: pointer;
   margin-left: 1rem;
 }
+
+/* Make sure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* prevent scrolling */
+}
+
+/* Full viewport overlay with dark background */
+.maintenance-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121212; /* or your bg-dark color */
+  z-index: 9999; /* above everything */
+  padding: 0 20px;
+}

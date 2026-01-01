@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MaintenanceComponent } from './maintenance.component';
+import { HkftrustComponent } from './hkftrust.component';
 
-describe('MaintenanceComponent', () => {
-  let component: MaintenanceComponent;
-  let fixture: ComponentFixture<MaintenanceComponent>;
+describe('HkftrustComponent', () => {
+  let component: HkftrustComponent;
+  let fixture: ComponentFixture<HkftrustComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MaintenanceComponent]
+      imports: [HkftrustComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MaintenanceComponent);
+    fixture = TestBed.createComponent(HkftrustComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

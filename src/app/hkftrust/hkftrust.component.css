@@ -1,0 +1,47 @@
+/* Skeleton Styles */
+.skeleton-image,
+.skeleton-title,
+.skeleton-paragraph,
+.skeleton-iframe {
+  background-color: #ccc;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-image {
+  width: 500px;
+  height: 300px;
+}
+
+.skeleton-title {
+  width: 60%;
+  height: 40px;
+}
+
+.skeleton-paragraph {
+  width: 70%;
+  height: 20px;
+}
+
+.skeleton-iframe {
+  width: 70%;
+  height: 480px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 768px) {
+  iframe[src$=".pdf"] {
+    height: 400px !important;
+  }
+}

@@ -2,6 +2,42 @@
 
 <section class="text-white py-5 text-center">
   <div class="container">
+    <!-- Promo Lightbox: auto-dismiss after 5s (controlled in TS) -->
+    <div *ngIf="promoVisible" class="modal fade show d-block" tabindex="-1" aria-modal="true" role="dialog" aria-labelledby="hkPromoTitle">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg overflow-hidden">
+          <!-- Accent bar -->
+          <div class="w-100" style="height:6px; background: linear-gradient(90deg, #ffc107, #ffda6a);"></div>
+
+          <div class="modal-body p-4 bg-dark text-white">
+            <div class="d-flex align-items-start gap-3">
+              <div class="fs-3 lh-1 flex-shrink-0">
+                <i class="bi bi-megaphone-fill text-warning"></i>
+              </div>
+              <div class="flex-grow-1">
+                <h5 id="hkPromoTitle" class="fw-semibold mb-2">Hong Kong Foreign Trust</h5>
+                <p class="mb-2">Limited-time special for members:</p>
+                <div class="d-inline-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-warning text-dark px-3 py-2">R1500</span>
+                  <span class="text-secondary small">until end of August</span>
+                </div>
+
+                <div class="d-grid gap-2">
+                  <a class="btn btn-warning fw-semibold" href="/Hong-Kong-Foreign-Trust">
+                    View Details & Register
+                  </a>
+                  <a class="text-decoration-underline small text-secondary text-center" href="/Hong-Kong-Foreign-Trust">
+                    Learn more about the Hong Kong Foreign Trust
+                  </a>
+                </div>
+              </div>
+              <button type="button" class="btn-close btn-close-white ms-2" aria-label="Close" (click)="dismissPromo('manual')"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="promoVisible" class="modal-backdrop fade show" (click)="dismissPromo('manual')"></div>
     <img src="bullion-logo.png" alt="Bullion Logo" class="img-fluid mb-4" style="max-width: 140px;" loading="lazy">
     <h1 class="display-5 fw-semibold mb-2">{{ 'HERO.TITLE' | translate }}</h1>
     <p class="lead text-secondary mb-0">{{ 'HERO.SUBTITLE' | translate }}</p>
@@ -106,7 +142,7 @@
       <a href="/downloads">{{ 'FUTURE.LINK' | translate }}</a>.
     </p>
     <p class="h5 fw-semibold text-light mb-3">
-      {{ 'FUTURE.CTA' | translate }} <span class="text-warning">R350</span> {{ 'INTRO.BODY' | translate }}
+      {{ 'FUTURE.CTA' | translate }} <span class="text-warning">R350.</span> {{ 'INTRO.BODY' | translate }}
     </p>
     <a href="https://bullion.mycoop.co.za/account/register" target="_blank" class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm">
       {{ 'FUTURE.JOIN' | translate }}
