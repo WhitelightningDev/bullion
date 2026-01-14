@@ -17,7 +17,7 @@ declare var bootstrap: any;
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, RegisterpopupComponent, CommonModule, TranslateModule],
+  imports: [RouterModule, CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
