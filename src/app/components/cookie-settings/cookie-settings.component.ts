@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-cookie-settings',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './cookie-settings.component.html'
+  templateUrl: './cookie-settings.component.html',
+  styleUrl: './cookie-settings.component.css'
 })
 export class CookieSettingsComponent {
   currentStatus: string | null = localStorage.getItem('cookieConsent');

@@ -1,80 +1,207 @@
-<footer class="bg-black text-light py-5 mt-5 border-top border-secondary">
-  <div class="container">
-    <div class="row gy-5">
-
-      <!-- Logo & Company Info -->
-      <div class="col-md-4">
-        <div class="d-flex align-items-center mb-3">
-          <img src="bullion-logo.png" alt="Bullion Logo" width="50" height="50"
-            class="me-3 bg-white p-1 rounded-circle shadow-sm" />
-          <h5 class="fw-bold text-white mb-0">{{ 'FOOTER.COMPANY_NAME' | translate }}</h5>
+<footer class="app-footer mt-5">
+  <div class="container py-5">
+    <div class="row gy-4">
+      <!-- Company -->
+      <div class="col-12 col-lg-4">
+        <div class="footer-section-header">
+          <div class="d-flex align-items-center gap-3">
+            <img src="bullion-logo.png" alt="Bullion Logo" width="44" height="44" class="footer-logo" />
+            <div>
+              <div class="footer-brand text-white">{{ 'FOOTER.COMPANY_NAME' | translate }}</div>
+            </div>
+          </div>
         </div>
-        <p class="text-white small mb-2">
-          <span class="footer-description">{{ 'FOOTER.DESCRIPTION' | translate }}</span><br />
-          {{ 'FOOTER.REG_NO' | translate }}<br />
-          {{ 'FOOTER.ADDRESS' | translate }}<br />
-          {{ 'FOOTER.REPRESENTED_BY' | translate }}<br />
-          {{ 'FOOTER.PHONE' | translate }}
-        </p>
-        <p class="text-white small mb-0 mt-3">&copy; 2025 {{ 'FOOTER.COMPANY_NAME' | translate }}. {{ 'FOOTER.RIGHTS' |
-          translate }}</p>
-      </div>
 
-      <!-- Navigation -->
-      <div class="col-md-4">
-        <h6 class="text-uppercase text-white fw-semibold mb-4">{{ 'FOOTER.QUICK_LINKS' | translate }}</h6>
-        <ul class="list-unstyled text-white small">
-          <li class="mb-2"><a href="/" class="text-decoration-none text-white">{{ 'NAVFOOTER.HOME' | translate }}</a>
-          </li>
-          <li class="mb-2"><a href="/poolfeatures" class="text-decoration-none text-white">{{ 'NAVFOOTER.POOL_FEATURES'
-              | translate }}</a></li>
-          <li class="mb-2"><a href="/fees" class="text-decoration-none text-white">{{ 'NAVFOOTER.FEES' | translate
-              }}</a></li>
-          <li class="mb-2"><a href="/downloads" class="text-decoration-none text-white">{{ 'NAVFOOTER.DOWNLOADS' |
-              translate }}</a></li>
-          <li class="mb-2"><a href="/contact-us" class="text-decoration-none text-white">{{ 'NAVFOOTER.CONTACT' |
-              translate }}</a></li>
-          <li class="mb-2"><a href="/learn" class="text-decoration-none text-white">{{ 'NAVFOOTER.LEARN' | translate
-              }}</a></li>
-          <li class="mb-2"><a href="/terms" class="text-decoration-none text-white">{{ 'NAVFOOTER.TERMS' | translate
-              }}</a></li>
-          <li><a href="/privacy" class="text-decoration-none text-white">{{ 'NAVFOOTER.PRIVACY' | translate }}</a></li>
-        </ul>
-      </div>
+        <div class="footer-section-body footer-card-grid">
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-calculator-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.ACCOUNTANTS_TITLE' | translate }}</div>
+            </div>
+            <div class="footer-card-body footer-muted small">
+              {{ 'FOOTER.ACCOUNTANTS_NAME' | translate }}
+            </div>
+          </div>
 
-      <!-- Contact & App Download -->
-      <div class="col-md-4">
-        <h6 class="text-uppercase text-white fw-semibold mb-4">{{ 'FOOTER.CONNECT' | translate }}</h6>
-        <ul class="list-unstyled text-white small">
-          <li class="mb-3 d-flex align-items-start">
-            <i class="pi pi-envelope me-2 text-info mt-1"></i>
-            <a href="mailto:info@bullionlimited.co.za" class="text-decoration-none text-white">
-              info&#64;bullionlimited.co.za
-            </a>
-          </li>
-          <li class="mb-3 d-flex align-items-start">
-            <i class="pi pi-map-marker me-2 text-info mt-1"></i>
-            <span>{{ 'FOOTER.LOCATION' | translate }}</span>
-          </li>
-          <li>
-            <a href="#" data-bs-toggle="modal" data-bs-target="#cookieSettingsModal"
-              class="text-decoration-underline text-info">
-              <app-cookie-settings></app-cookie-settings>
-            </a>
-          </li>
-        </ul>
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-file-earmark-text-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.REGISTRATION' | translate }}</div>
+            </div>
+            <div class="footer-card-body footer-muted small">
+              {{ 'FOOTER.REG_NO' | translate }}
+            </div>
+          </div>
 
-        <!-- Download App Section -->
-        <div class="mt-4">
-          <h6 class="text-uppercase text-white fw-semibold mb-3">{{ 'NAVFOOTER.GET_APP' | translate }}</h6>
-          <a href="https://play.google.com/store/apps/details?id=com.whitelightningdev.bullion&pcampaignid=web_share"
-            target="_blank" rel="noopener">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Get it on Google Play" style="height: 50px; width: auto;" />
-          </a>
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-geo-alt-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.ADDRESS_TITLE' | translate }}</div>
+            </div>
+            <div class="footer-card-body footer-muted small">
+              {{ 'FOOTER.ADDRESS' | translate }}
+            </div>
+          </div>
+
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-person-badge-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.REPRESENTATION' | translate }}</div>
+            </div>
+            <div class="footer-card-body footer-muted small">
+              {{ 'FOOTER.REPRESENTED_BY' | translate }}
+            </div>
+          </div>
+
+          <div class="footer-card footer-card--span">
+            <div class="footer-card-head">
+              <i class="bi bi-telephone-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.PHONE_TITLE' | translate }}</div>
+            </div>
+            <div class="footer-card-body footer-muted small">
+              {{ 'FOOTER.PHONE' | translate }}
+            </div>
+          </div>
         </div>
       </div>
 
+      <!-- Resources -->
+      <div class="col-6 col-md-4 col-lg-3">
+        <div class="footer-section-header">
+          <div class="footer-title">{{ 'FOOTER.RESOURCES' | translate }}</div>
+        </div>
+        <div class="footer-section-body">
+          <div class="footer-card footer-nav-card">
+            <ul class="footer-link-list">
+              <li>
+                <a href="/" class="footer-link-block">
+                  <i class="bi bi-chevron-right footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.HOME' | translate }}</span>
+                </a>
+              </li>
+              <li>
+                <a href="/poolfeatures" class="footer-link-block">
+                  <i class="bi bi-chevron-right footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.POOL_FEATURES' | translate }}</span>
+                </a>
+              </li>
+              <li>
+                <a href="/fees" class="footer-link-block">
+                  <i class="bi bi-chevron-right footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.FEES' | translate }}</span>
+                </a>
+              </li>
+              <li>
+                <a href="/downloads" class="footer-link-block">
+                  <i class="bi bi-chevron-right footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.DOWNLOADS' | translate }}</span>
+                </a>
+              </li>
+              <li>
+                <a href="/learn" class="footer-link-block">
+                  <i class="bi bi-chevron-right footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.LEARN' | translate }}</span>
+                </a>
+              </li>
+              <li>
+                <a href="/contact-us" class="footer-link-block">
+                  <i class="bi bi-chevron-right footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.CONTACT' | translate }}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legal -->
+      <div class="col-6 col-md-4 col-lg-2">
+        <div class="footer-section-header">
+          <div class="footer-title">{{ 'FOOTER.LEGAL' | translate }}</div>
+        </div>
+        <div class="footer-section-body">
+          <div class="footer-card footer-nav-card">
+            <ul class="footer-link-list">
+              <li>
+                <a href="/terms" class="footer-link-block">
+                  <i class="bi bi-shield-check footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.TERMS' | translate }}</span>
+                </a>
+              </li>
+              <li>
+                <a href="/privacy" class="footer-link-block">
+                  <i class="bi bi-shield-check footer-link-icon" aria-hidden="true"></i>
+                  <span>{{ 'NAVFOOTER.PRIVACY' | translate }}</span>
+                </a>
+              </li>
+              <li class="footer-cookie-row">
+                <i class="bi bi-cookie footer-link-icon" aria-hidden="true"></i>
+                <app-cookie-settings></app-cookie-settings>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Connect -->
+      <div class="col-12 col-md-4 col-lg-3">
+        <div class="footer-section-header">
+          <div class="footer-title">{{ 'FOOTER.CONNECT' | translate }}</div>
+        </div>
+        <div class="footer-section-body footer-card-stack">
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-envelope-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.EMAIL_TITLE' | translate }}</div>
+            </div>
+            <div class="footer-card-body small">
+              <a href="mailto:info@bullionlimited.co.za" class="footer-link">info&#64;bullionlimited.co.za</a>
+            </div>
+          </div>
+
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-geo-alt-fill footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'FOOTER.LOCATION_TITLE' | translate }}</div>
+            </div>
+            <div class="footer-card-body footer-muted small">
+              {{ 'FOOTER.LOCATION' | translate }}
+            </div>
+          </div>
+
+          <div class="footer-card">
+            <div class="footer-card-head">
+              <i class="bi bi-google-play footer-card-icon" aria-hidden="true"></i>
+              <div class="footer-card-title">{{ 'NAVFOOTER.GET_APP' | translate }}</div>
+            </div>
+            <div class="footer-card-body">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.whitelightningdev.bullion&pcampaignid=web_share"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                  alt="Get it on Google Play"
+                  class="footer-store-badge"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="footer-divider my-4" />
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
+      <div class="footer-muted small">
+        &copy; {{ currentYear }} {{ 'FOOTER.COMPANY_NAME' | translate }}. {{ 'FOOTER.RIGHTS' | translate }}
+      </div>
+      <div class="d-flex flex-wrap gap-3">
+        <a href="/terms" class="footer-link small">{{ 'NAVFOOTER.TERMS' | translate }}</a>
+        <a href="/privacy" class="footer-link small">{{ 'NAVFOOTER.PRIVACY' | translate }}</a>
+      </div>
     </div>
   </div>
 </footer>

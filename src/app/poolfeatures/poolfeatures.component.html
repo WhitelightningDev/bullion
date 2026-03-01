@@ -1,66 +1,80 @@
-<div class="container py-5 text-white">
-
-  <!-- Header -->
-  <div class="text-center mb-5">
-    <h1 class="display-5 fw-semibold">
-      {{ 'POOLS.INVESTMENT_POOLS' | translate }}
-      <img src="kruger-rand.png" alt="{{ 'POOLS.KRUGER_RAND_ALT' | translate }}" style="width: 90px;" />
-    </h1>
-    <p class="lead mt-3 text-secondary">{{ 'POOLS.DESCRIPTION' | translate }}</p>
-  </div>
-
-  <!-- Info Cards -->
-  <div class="row g-4">
-    <div class="col-12" *ngFor="let card of infoCards">
-      <div class="card bg-dark border-light text-white shadow rounded-4">
-        <div class="card-body">
-          <h2 class="h5 fw-semibold d-flex align-items-center">
-            <img [src]="card.icon" class="me-3" style="width: 60px;" [alt]="card.iconAlt | translate" />
-            {{ card.title | translate }}
-          </h2>
-          <p class="mt-3">{{ card.description | translate }}</p>
+<div class="pools-page">
+  <div class="container py-5 text-white">
+    <!-- Hero -->
+    <section class="pools-hero">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <div class="pools-kicker">{{ 'POOLS.INVESTMENT_POOLS' | translate }}</div>
+          <h1 class="display-6 fw-semibold mb-3">{{ 'POOLS.INVESTMENT_POOLS' | translate }}</h1>
+          <p class="lead pools-muted mb-0">{{ 'POOLS.DESCRIPTION' | translate }}</p>
+        </div>
+        <div class="col-12 col-lg-4 text-lg-end">
+          <div class="pools-hero-badge">
+            <img src="kruger-rand.png" alt="{{ 'POOLS.KRUGER_RAND_ALT' | translate }}" class="pools-hero-icon" />
+            <span class="pools-hero-label">{{ 'POOLS.KRUGER_RAND_ALT' | translate }}</span>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <hr class="mt-5">
+    <!-- Features -->
+    <section class="mt-5">
+      <div class="pools-section-header">
+        <div class="pools-section-title">{{ 'POOLS.FEATURES_TITLE' | translate }}</div>
+      </div>
 
-  <!-- Video Section -->
-  <section id="video-section" class="py-5 text-center text-white border-bottom">
-    <h2 class="fw-semibold mb-4">{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}</h2>
+      <div class="row g-4 mt-1">
+        <div class="col-12 col-md-6 col-xl-4" *ngFor="let card of infoCards">
+          <div class="pools-card h-100">
+            <div class="pools-card-head">
+              <div class="pools-card-icon" aria-hidden="true">
+                <img [src]="card.icon" alt="" aria-hidden="true" />
+              </div>
+              <h2 class="h6 fw-semibold mb-0">{{ card.title | translate }}</h2>
+            </div>
+            <div class="pools-card-body pools-muted small pools-preline">
+              {{ card.description | translate }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="d-flex justify-content-center">
-      <div class="col-lg-8 col-md-10 col-12 p-4">
-        <!-- Skeleton Placeholder -->
-        <div *ngIf="!videoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div>
+    <!-- Video -->
+    <section id="video-section" class="mt-5">
+      <div class="pools-section-header">
+        <div class="pools-section-title">{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}</div>
+      </div>
 
-        <!-- Actual Video -->
-        <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!videoLoaded">
+      <div class="pools-surface mt-3">
+        <div class="ratio ratio-16x9 pools-video-frame">
+          <div *ngIf="!videoLoaded" class="skeleton-loader rounded-4"></div>
           <iframe
+            [hidden]="!videoLoaded"
             src="https://www.youtube.com/embed/0uOaGmvSSjs"
             title="{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}"
             allowfullscreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            class="rounded-4 border border-secondary"
-            (load)="onVideoLoad()">
-          </iframe>
+            class="rounded-4"
+            (load)="onVideoLoad()"
+          ></iframe>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Responsive Centered Image Section -->
-  <div class="container my-5">
-    <div class="text-center">
-      <h2 class="fw-semibold mb-4">{{ 'POOLS.CURRENT_POOLS_TITLE' | translate }}</h2>
-      <img
-        src="poolsimage.jpeg"
-        alt="{{ 'POOLS.CURRENT_POOLS_ALT' | translate }}"
-        class="pools-image img-fluid rounded shadow-lg mx-auto d-block"
-        style="height: auto;"
-      />
-    </div>
+    <!-- Current Pools -->
+    <section class="mt-5">
+      <div class="pools-section-header">
+        <div class="pools-section-title">{{ 'POOLS.CURRENT_POOLS_TITLE' | translate }}</div>
+      </div>
+
+      <div class="pools-surface mt-3 text-center">
+        <img
+          src="poolsimage.jpeg"
+          alt="{{ 'POOLS.CURRENT_POOLS_ALT' | translate }}"
+          class="pools-image img-fluid"
+        />
+      </div>
+    </section>
   </div>
-
 </div>
