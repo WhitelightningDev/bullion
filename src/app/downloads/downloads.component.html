@@ -1,93 +1,55 @@
-<!-- Hero Section -->
-<section class="bg-dark text-white text-center py-5">
-  <div class="container">
-    <i class="bi bi-cloud-download-fill fs-1 mb-3"></i>
-    <h2 class="display-6">{{ 'DOWNLOADS.TITLE' | translate }}</h2>
-    <p class="lead">{{ 'DOWNLOADS.DESCRIPTION' | translate }}</p>
-  </div>
-</section>
-
-<!-- First Document Section -->
-<section class="container py-5">
-  <div class="row align-items-center g-5">
-    <div class="col-md-6">
-      <img src="bullion-beperk-image.png" alt="Bullion Co-op" class="img-fluid rounded shadow-sm mx-auto d-block"
-        style="max-width: 300px;" loading="lazy">
-    </div>
-    <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">{{ 'DOWNLOADS.CIPC_TITLE' | translate }}</h1>
-      <p class="mb-4 text-white">{{ 'DOWNLOADS.CIPC_DESCRIPTION' | translate }}</p>
-      <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4" (click)="openCipcDocument()">
-          <i class="bi bi-eye me-2"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
-        </button>
-        <a href="assets/downloads/BULLIONBEPERK-COOP11CPIC.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
-        </a>
+<div class="downloads-page">
+  <div class="container py-5 text-white">
+    <!-- Page Hero -->
+    <section class="downloads-hero">
+      <div class="downloads-kicker">
+        <i class="bi bi-cloud-download-fill" aria-hidden="true"></i>
+        <span>{{ 'DOWNLOADS.TITLE' | translate }}</span>
       </div>
-    </div>
-  </div>
-</section>
+      <h1 class="display-6 fw-semibold mb-3">{{ 'DOWNLOADS.TITLE' | translate }}</h1>
+      <p class="lead downloads-muted mb-0">{{ 'DOWNLOADS.DESCRIPTION' | translate }}</p>
+    </section>
 
-<!-- Constitution Section -->
-<section class="bg-dark text-white text-center py-5">
-  <div class="container">
-    <i class="bi bi-cloud-download-fill fs-1 mb-3"></i>
-    <h2 class="display-6">{{ 'DOWNLOADS.CONSTITUTION_TITLE' | translate }}</h2>
-    <p class="lead">{{ 'DOWNLOADS.CONSTITUTION_DESCRIPTION' | translate }}</p>
-  </div>
-</section>
-
-<section class="container py-5">
-  <div class="row align-items-center g-5">
-    <div class="col-md-6">
-      <img src="constitution.png" alt="Bullion Co-op" class="img-fluid rounded shadow-sm mx-auto d-block"
-        style="max-width: 300px;" loading="lazy">
-    </div>
-    <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">{{ 'DOWNLOADS.CONSTITUTION_TITLE' | translate }}</h1>
-      <p class="mb-4 text-white">{{ 'DOWNLOADS.CONSTITUTION_DESCRIPTION' | translate }}</p>
-      <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4" (click)="openConstitutionDocument()">
-          <i class="bi bi-eye me-2"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
-        </button>
-        <a href="assets/downloads/BULLIONFINANCIALCO-OPCONSTITUTION.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
-        </a>
+    <!-- Document Sections (kept as distinct sections) -->
+    <section class="downloads-section mt-5" *ngFor="let doc of documents">
+      <div class="downloads-section-header">
+        <div class="downloads-section-title">
+          <i class="bi downloads-section-icon" [ngClass]="doc.iconClass" aria-hidden="true"></i>
+          <span>{{ doc.titleKey | translate }}</span>
+          <span class="downloads-badge ms-2">PDF</span>
+        </div>
+        <p class="downloads-muted mb-0">{{ doc.descriptionKey | translate }}</p>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- Fractal Global Profile Section -->
-<section class="bg-dark text-white text-center py-5">
-  <div class="container">
-    <i class="bi bi-file-earmark-text-fill fs-1 mb-3"></i>
-    <h2 class="display-6">{{ 'DOWNLOADS.FRACTAL_TITLE' | translate }}</h2>
-    <p class="lead">{{ 'DOWNLOADS.FRACTAL_DESCRIPTION' | translate }}</p>
-  </div>
-</section>
+      <div class="downloads-surface mt-3">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-5">
+            <div class="downloads-preview">
+              <img [src]="doc.imageSrc" alt="" aria-hidden="true" loading="lazy" />
+            </div>
+          </div>
 
-<section class="container py-5">
-  <div class="row align-items-center g-5">
-    <div class="col-md-6">
-      <img src="/FractalAccount.png" alt="Bullion Profile Document" class="img-fluid rounded shadow-sm mx-auto d-block"
-        style="max-width: 300px;" loading="lazy">
-    </div>
-    <div class="col-md-6 text-md-start text-center">
-      <h1 class="fw-bold mb-3 text-white">{{ 'DOWNLOADS.FRACTAL_CARD_TITLE' | translate }}</h1>
-      <p class="mb-4 text-white">{{ 'DOWNLOADS.FRACTAL_CARD_DESCRIPTION' | translate }}</p>
-      <div class="d-grid gap-3 d-md-flex justify-content-md-start">
-        <button type="button" class="btn btn-primary btn-lg px-4" (click)="openBullionProfileDocument()">
-          <i class="bi bi-eye me-2"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
-        </button>
-        <a href="assets/downloads/BULLIONPROFILE-V2.pdf" download class="btn btn-outline-secondary btn-lg px-4">
-          <i class="bi bi-download me-2"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
-        </a>
+          <div class="col-12 col-md-7">
+            <h2 class="h5 fw-semibold mb-2">
+              {{ doc.cardTitleKey | translate }}
+            </h2>
+            <p class="downloads-muted mb-4">
+              {{ doc.cardDescriptionKey | translate }}
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="button" class="btn btn-warning fw-semibold" (click)="openDocument(doc.pdfSrc)">
+                <i class="bi bi-eye me-2" aria-hidden="true"></i>{{ 'DOWNLOADS.VIEW_BUTTON' | translate }}
+              </button>
+              <a class="btn btn-outline-light" [href]="doc.downloadHref" download>
+                <i class="bi bi-download me-2" aria-hidden="true"></i>{{ 'DOWNLOADS.DOWNLOAD_BUTTON' | translate }}
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
-</section>
+</div>
 
 <!-- PDF Viewer Modal -->
 <app-pdf-viewer-popup

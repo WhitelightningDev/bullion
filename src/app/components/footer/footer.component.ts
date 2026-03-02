@@ -10,6 +10,8 @@ import { CookieSettingsComponent } from "../cookie-settings/cookie-settings.comp
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
+  readonly currentYear = new Date().getFullYear();
+
   constructor(private translate: TranslateService) {}
 
   switchLang(lang: 'en' | 'af') {

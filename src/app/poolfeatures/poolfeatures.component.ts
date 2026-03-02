@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-poolfeatures',
@@ -16,11 +16,6 @@ export class PoolfeaturesComponent implements AfterViewInit {
   isPlaying = false;
 
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
-
-  constructor(private translate: TranslateService) {
-    // Optional: Set default language or do language switching here
-    this.translate.setDefaultLang('en');
-  }
 
   ngAfterViewInit() {
     // You could listen for video events here if needed

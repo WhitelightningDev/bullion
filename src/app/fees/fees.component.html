@@ -1,78 +1,110 @@
-<div class="container py-5 text-white">
+<div class="fees-page">
+  <div class="container py-5 text-white">
+    <!-- Hero -->
+    <section class="fees-hero">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-8">
+          <div class="fees-kicker">
+            <i class="bi bi-cash-coin" aria-hidden="true"></i>
+            <span>{{ 'FEES.TITLE' | translate }}</span>
+          </div>
+          <h1 class="display-6 fw-semibold mb-3">{{ 'FEES.TITLE' | translate }}</h1>
+          <p class="lead fees-muted mb-0">{{ 'FEES.DESCRIPTION' | translate }}</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Header Section -->
-  <div class="text-center mb-4">
-    <h1 class="display-5 fw-bold">
-      {{ 'FEES.TITLE' | translate }} <i class="bi bi-cash-coin"></i>
-    </h1>
-    <p class="lead">{{ 'FEES.DESCRIPTION' | translate }}</p>
-  </div>
+    <div class="row g-4 mt-4">
+      <!-- Overview -->
+      <div class="col-12 col-lg-5">
+        <div class="fees-surface h-100">
+          <div class="fees-section-header">
+            <div class="fees-section-title">{{ 'FEES.OVERVIEW_TITLE' | translate }}</div>
+          </div>
+          <p class="fees-muted mb-0">{{ 'FEES.OVERVIEW_TEXT' | translate }}</p>
+        </div>
+      </div>
 
-  <!-- Overview Card -->
-  <div class="card bg-dark border-light text-white mb-4 shadow-sm">
-    <div class="card-body">
-      <h2 class="h5">{{ 'FEES.OVERVIEW_TITLE' | translate }}</h2>
-      <p class="card-text">{{ 'FEES.OVERVIEW_TEXT' | translate }}</p>
-    </div>
-  </div>
+      <!-- Structure -->
+      <div class="col-12 col-lg-7">
+        <div class="fees-surface h-100">
+          <div class="fees-section-header">
+            <div class="fees-section-title">{{ 'FEES.STRUCTURE_TITLE' | translate }}</div>
+          </div>
+          <p class="fees-muted small mb-3">{{ 'FEES.STRUCTURE_NOTE' | translate }}</p>
 
-  <!-- Fee Table Card -->
-  <div class="card bg-dark border-light text-white mb-4 shadow-sm">
-    <div class="card-body">
-      <h2 class="h5">{{ 'FEES.STRUCTURE_TITLE' | translate }}</h2>
-      <p class="mb-3">{{ 'FEES.STRUCTURE_NOTE' | translate }}</p>
-      <div class="table-responsive">
-        <table class="table table-dark table-bordered align-middle">
-          <thead>
-            <tr>
-              <th scope="col">{{ 'FEES.TABLE_HEADER_TYPE' | translate }}</th>
-              <th scope="col">{{ 'FEES.TABLE_HEADER_PERCENT' | translate }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{ 'FEES.ADMIN_FEE' | translate }}</td>
-              <td>
-                <ul class="mb-0 ps-3 list-unstyled">
-                  <li>{{ '< R100,000: 1.50%' }}</li>
-                  <li>{{ '≥ R100,000: 1.25%' }}</li>
-                  <li>{{ '≥ R500,000: 0.75%' }}</li>
-                  <li>{{ '≥ R1,000,000: 0.50%' }}</li>
-                  <li>{{ '≥ R2,500,000: 0.25%' }}</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td>{{ 'FEES.COMMISSION' | translate }}</td>
-              <td>{{ 'FEES.VARIABLE' | translate }}</td>
-            </tr>
-            <tr>
-              <td>{{ 'FEES.SWITCHING_BETWEEN_POOLS' | translate }}</td>
-              <td>0.25%</td>
-            </tr>
-            <tr>
-              <td>{{ 'FEES.TRANSFER_BETWEEN_MEMBERS' | translate }}</td>
-              <td>0.25%</td>
-            </tr>
-            <tr>
-              <td>{{ 'FEES.WITHDRAWALS' | translate }}</td>
-              <td>0.25%</td>
-            </tr>
-            <tr>
-              <td>{{ 'FEES.COURIER_CHARGES' | translate }}</td>
-              <td>{{ 'FEES.TO_BE_CONFIRMED' | translate }}</td>
-            </tr>
-            <tr>
-              <td>{{ 'FEES.ONGOING_FEES' | translate }}</td>
-              <td>1% p.a. (Gold) / 0.8% p.a. (Silver)</td>
-            </tr>
-          </tbody>
-        </table>
+          <div class="table-responsive fees-table-wrap">
+            <table class="table fees-table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">{{ 'FEES.TABLE_HEADER_TYPE' | translate }}</th>
+                  <th scope="col" class="text-end">{{ 'FEES.TABLE_HEADER_PERCENT' | translate }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.ADMIN_FEE' | translate }}</td>
+                  <td class="text-end">
+                    <ul class="fees-tier-list mb-0">
+                      <li>&lt; R100,000: <strong>1.50%</strong></li>
+                      <li>&ge; R100,000: <strong>1.25%</strong></li>
+                      <li>&ge; R500,000: <strong>0.75%</strong></li>
+                      <li>&ge; R1,000,000: <strong>0.50%</strong></li>
+                      <li>&ge; R2,500,000: <strong>0.25%</strong></li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.COMMISSION' | translate }}</td>
+                  <td class="text-end"><span class="fees-badge">{{ 'FEES.VARIABLE' | translate }}</span></td>
+                </tr>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.SWITCHING_BETWEEN_POOLS' | translate }}</td>
+                  <td class="text-end"><span class="fees-badge fees-badge--gold">0.25%</span></td>
+                </tr>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.TRANSFER_BETWEEN_MEMBERS' | translate }}</td>
+                  <td class="text-end"><span class="fees-badge fees-badge--gold">0.25%</span></td>
+                </tr>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.WITHDRAWALS' | translate }}</td>
+                  <td class="text-end"><span class="fees-badge fees-badge--gold">0.25%</span></td>
+                </tr>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.COURIER_CHARGES' | translate }}</td>
+                  <td class="text-end"><span class="fees-badge">{{ 'FEES.TO_BE_CONFIRMED' | translate }}</span></td>
+                </tr>
+                <tr>
+                  <td class="fees-col-type">{{ 'FEES.ONGOING_FEES' | translate }}</td>
+                  <td class="text-end">
+                    <span class="fees-badge">1% p.a. (Gold)</span>
+                    <span class="fees-badge ms-2">0.8% p.a. (Silver)</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Visual breakdown -->
+    <section class="mt-5">
+      <div class="fees-section-header">
+        <div class="fees-section-title">{{ 'FEES.PIE_TITLE' | translate }}</div>
+      </div>
+      <div class="fees-surface mt-3">
+        <div class="row g-4 align-items-center">
+          <div class="col-12 col-lg-8">
+            <div class="fees-chart-wrap">
+              <canvas id="feesChart" [attr.aria-label]="'FEES.PIE_TITLE' | translate"></canvas>
+            </div>
+          </div>
+          <div class="col-12 col-lg-4 fees-muted small">
+            {{ 'FEES.OVERVIEW_TEXT' | translate }}
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-
-
-
-
 </div>

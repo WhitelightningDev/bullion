@@ -1,3 +1,192 @@
 .footer-description {
   white-space: pre-line;
 }
+
+.app-footer {
+  background: linear-gradient(180deg, #0b0c10 0%, #07080b 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(248, 249, 250, 0.92);
+}
+
+.footer-logo {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45);
+}
+
+.footer-brand {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+.footer-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(248, 249, 250, 0.75);
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.footer-section-header {
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-section-body {
+  margin-top: 14px;
+}
+
+.footer-muted {
+  color: rgba(248, 249, 250, 0.66);
+}
+
+.footer-link {
+  color: rgba(248, 249, 250, 0.78);
+  text-decoration: none;
+  transition: color 160ms ease, text-decoration-color 160ms ease;
+}
+
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+.footer-icon {
+  color: rgba(255, 193, 7, 0.9);
+  font-size: 0.95rem;
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+.footer-store-badge {
+  height: 44px;
+  width: auto;
+  filter: saturate(1.05);
+}
+
+.footer-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.footer-card-stack {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+}
+
+.footer-nav-card {
+  padding: 10px;
+}
+
+.footer-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.footer-link-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  color: rgba(248, 249, 250, 0.80);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.footer-link-block:hover,
+.footer-link-block:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  outline: none;
+}
+
+.footer-link-icon {
+  color: rgba(255, 193, 7, 0.9);
+  font-size: 0.95rem;
+  flex: 0 0 auto;
+}
+
+.footer-cookie-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+}
+
+.footer-card--span {
+  grid-column: 1 / -1;
+}
+
+.footer-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.footer-card-icon {
+  color: rgba(255, 193, 7, 0.9);
+  font-size: 1rem;
+}
+
+.footer-card-title {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(248, 249, 250, 0.72);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.footer-card-body {
+  line-height: 1.35;
+}
+
+.footer-card-body a {
+  text-decoration: none;
+}
+
+.footer-card-body a:hover,
+.footer-card-body a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+  outline: none;
+}
+
+@media (max-width: 575.98px) {
+  .footer-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-card--span {
+    grid-column: auto;
+  }
+}
