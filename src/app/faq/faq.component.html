@@ -1,9 +1,17 @@
-<div class="container my-5 py-4">
-  <h1 class="text-center text-primary mb-4 fw-bold">
-    {{ 'FAQ.TITLE' | translate }}
-  </h1>
+<div class="faq-page">
+  <div class="container py-5 text-white">
+    <!-- Hero -->
+    <section class="faq-hero">
+      <div class="faq-kicker">
+        <i class="bi bi-question-circle-fill" aria-hidden="true"></i>
+        <span>{{ 'FAQ.TITLE' | translate }}</span>
+      </div>
+      <h1 class="display-6 fw-semibold mb-0">{{ 'FAQ.TITLE' | translate }}</h1>
+    </section>
 
-  <div class="accordion shadow-sm rounded-4" id="faqAccordion">
+    <section class="mt-5">
+      <div class="faq-surface">
+        <div class="accordion faq-accordion" id="faqAccordion">
 
     <!-- FAQ 1 -->
     <div class="accordion-item">
@@ -34,7 +42,10 @@
       </h2>
       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
         <div class="accordion-body">
-          <p>{{ 'FAQ.A2.INTRO' | translate }} <a href="/downloads" target="_blank">(see downloads page)</a>.</p>
+          <p>
+            {{ 'FAQ.A2.INTRO' | translate }}
+            <a class="faq-link" routerLink="/downloads">(see downloads page)</a>.
+          </p>
           <ul>
             <li *ngFor="let point of ('FAQ.A2.POINTS' | translate:undefined)">{{ point }}</li>
           </ul>
@@ -94,8 +105,13 @@
           <p>{{ 'FAQ.A5.DAY1' | translate }}</p>
           <p>{{ 'FAQ.A5.DAY2' | translate }}</p>
           <p><em>{{ 'FAQ.A5.NOTE' | translate }}</em></p>
-          <div class="text-center mt-4">
-            <img src="faqpiechart.png" alt="How Does Unitizing Work Diagram" class="img-fluid rounded shadow" style="max-width: 600px;">
+          <div class="faq-media mt-4">
+            <img
+              src="faqpiechart.png"
+              alt="How Does Unitizing Work Diagram"
+              class="img-fluid faq-illustration"
+              loading="lazy"
+            >
           </div>
         </div>
       </div>
@@ -165,5 +181,8 @@
       </div>
     </div>
 
+        </div>
+      </div>
+    </section>
   </div>
 </div>

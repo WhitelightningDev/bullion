@@ -1,65 +1,144 @@
-/* fees.component.css */
-
-/* Layout spacing */
-.card {
-  margin-bottom: 1.5rem;
+/* Fees page: dashboard-style surfaces to match footer/nav */
+.fees-page {
+  color: rgba(248, 249, 250, 0.92);
 }
 
-.card-body {
-  padding: 1.25rem;
+.fees-muted {
+  color: rgba(248, 249, 250, 0.66);
 }
 
-h1, h2 {
-  font-weight: bold;
+.fees-hero {
+  border-radius: 18px;
+  padding: 28px;
+  background:
+    radial-gradient(140% 140% at 10% 10%, rgba(255, 193, 7, 0.18), rgba(11, 12, 16, 0.85)),
+    linear-gradient(180deg, rgba(11, 12, 16, 0.62), rgba(7, 8, 11, 0.72));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
 }
 
-/* Chart canvas background */
-canvas {
-  background-color: #222;
+.fees-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 193, 7, 0.14);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  color: rgba(248, 249, 250, 0.85);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
-/* Table styling */
-.table {
-  width: 100%;
-  margin-bottom: 1.5rem;
+.fees-section-header {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
-.table th,
-.table td {
-  text-align: center;
-  vertical-align: middle;
-  white-space: nowrap;
-  font-size: 0.95rem;
-  padding: 0.75rem;
+.fees-section-title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(248, 249, 250, 0.72);
+  font-weight: 800;
 }
 
-/* Allow horizontal scrolling on small screens */
-.table-responsive {
-  overflow-x: auto;
+.fees-surface {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.40);
 }
 
-/* Improve nested list readability inside table cells */
-.table td div {
-  margin-bottom: 0.25rem;
+.fees-table-wrap {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.16);
 }
 
-/* Responsive tweaks for mobile */
-@media (max-width: 576px) {
-  h1 {
-    font-size: 1.75rem;
+.fees-table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: rgba(255, 255, 255, 0.03);
+  --bs-table-color: rgba(248, 249, 250, 0.90);
+  --bs-table-border-color: rgba(255, 255, 255, 0.08);
+  color: var(--bs-table-color);
+  margin: 0;
+}
+
+.fees-table thead th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(248, 249, 250, 0.72);
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 12px 14px;
+}
+
+.fees-table tbody td {
+  padding: 14px;
+  vertical-align: top;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fees-col-type {
+  font-weight: 650;
+  color: rgba(248, 249, 250, 0.86);
+}
+
+.fees-tier-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+  color: rgba(248, 249, 250, 0.78);
+}
+
+.fees-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: rgba(248, 249, 250, 0.82);
+  font-weight: 650;
+  font-size: 0.85rem;
+}
+
+.fees-badge--gold {
+  background: rgba(255, 193, 7, 0.14);
+  border-color: rgba(255, 193, 7, 0.35);
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.fees-chart-wrap {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.fees-chart-wrap canvas {
+  width: 100% !important;
+  height: 320px !important;
+}
+
+@media (max-width: 575.98px) {
+  .fees-hero {
+    padding: 20px;
   }
 
-  h2 {
-    font-size: 1.25rem;
-  }
-
-  .table th,
-  .table td {
-    font-size: 0.85rem;
-    padding: 0.5rem;
-  }
-
-  .card-body {
-    padding: 1rem;
+  .fees-chart-wrap canvas {
+    height: 260px !important;
   }
 }
+

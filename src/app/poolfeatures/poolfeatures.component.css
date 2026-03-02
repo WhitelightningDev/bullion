@@ -1,28 +1,167 @@
-.pools-image {
-  max-width: 250px;
+/* Pools page: dashboard-style surfaces to match footer/nav */
+.pools-page {
+  color: rgba(248, 249, 250, 0.92);
+}
+
+.pools-muted {
+  color: rgba(248, 249, 250, 0.66);
+}
+
+.pools-preline {
+  white-space: pre-line;
+}
+
+.pools-hero {
+  border-radius: 18px;
+  padding: 28px;
+  background:
+    radial-gradient(140% 140% at 10% 10%, rgba(255, 193, 7, 0.18), rgba(11, 12, 16, 0.85)),
+    linear-gradient(180deg, rgba(11, 12, 16, 0.62), rgba(7, 8, 11, 0.72));
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(10px);
+}
+
+.pools-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 193, 7, 0.14);
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  color: rgba(248, 249, 250, 0.85);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.pools-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.pools-hero-icon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px;
+}
+
+.pools-hero-label {
+  color: rgba(248, 249, 250, 0.78);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.pools-section-header {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.pools-section-title {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(248, 249, 250, 0.72);
+  font-weight: 800;
+}
+
+.pools-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.28);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.pools-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.42);
+}
+
+.pools-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.pools-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 193, 7, 0.20) 0%,
+    rgba(255, 193, 7, 0.10) 55%,
+    rgba(0, 0, 0, 0.22) 100%
+  );
+  border: 1px solid rgba(255, 193, 7, 0.35);
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+}
+
+.pools-card-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+  filter: brightness(1.12) saturate(1.05);
+}
+
+.pools-card-body {
+  line-height: 1.5;
+}
+
+.pools-surface {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.40);
+}
+
+.pools-video-frame {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.pools-video-frame .skeleton-loader {
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+.pools-video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-.card-title img {
-  vertical-align: middle;
+.pools-image {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
 }
 
-.card {
-  transition: box-shadow 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
-}
-
-.text-secondary {
-  color: #adb5bd !important;
-}
 .skeleton-loader {
   background: linear-gradient(90deg, #444 25%, #555 37%, #444 63%);
   background-size: 400% 100%;
@@ -33,7 +172,6 @@ body {
 @keyframes skeleton {
   0% {
     background-position: 100% 0;
-    
   }
   100% {
     background-position: -100% 0;
