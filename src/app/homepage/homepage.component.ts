@@ -1,12 +1,9 @@
-const CAMPAIGN_END = new Date(2025, 7, 31, 23, 59, 59); // 31 Aug 2025 local time
-const SUPPRESS_UNTIL_KEY = 'hkTrustPromo.suppressUntil.v1';
 import {
   Component,
   CUSTOM_ELEMENTS_SCHEMA,
   AfterViewInit,
   ViewChild,
   ElementRef,
-  OnInit
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -30,15 +27,12 @@ import { LanguageService } from '../services/language.service';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
-export class HomepageComponent implements AfterViewInit, OnInit {
+export class HomepageComponent implements AfterViewInit {
   likeCount = 0;
   videoLiked = false;
   comments: (CommentEntry & { liked?: boolean; likesCount?: number })[] = [];
   isPlaying = false;
   storyVideoLoaded = false;
-  public promoVisible = true;
-  showColdWalletModal = false;
-  private coldWalletTimer?: number;
 
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
@@ -47,33 +41,6 @@ export class HomepageComponent implements AfterViewInit, OnInit {
     // ✅ Use persisted or default language on init
     const lang = this.languageService.getCurrentLanguage();
     this.languageService.useLanguage(lang);
-  }
-
-  ngOnInit(): void {
-    const now = new Date();
-    // 1) HK promo: suppress after campaign end or once per day
-    if (now > CAMPAIGN_END) {
-      this.promoVisible = false;
-      try {
-        localStorage.removeItem(SUPPRESS_UNTIL_KEY);
-      } catch {}
-    } else {
-      let suppressUntil = 0;
-      try {
-        suppressUntil = Number(localStorage.getItem(SUPPRESS_UNTIL_KEY) || 0);
-      } catch {}
-
-      if (Date.now() < suppressUntil) {
-        this.promoVisible = false;
-      } else {
-        this.promoVisible = true;
-        setTimeout(() => this.dismissPromo('auto'), 6000);
-      }
-    }
-
-    // 2) Cold Wallet popup: stagger behind HK promo if needed
-    const coldWalletDelay = this.promoVisible ? 6500 : 400;
-    this.scheduleColdWalletModal(coldWalletDelay);
   }
 
   ngAfterViewInit(): void {
@@ -130,40 +97,4 @@ export class HomepageComponent implements AfterViewInit, OnInit {
     comment.likesCount += comment.liked ? 1 : -1;
   }
 
-  private nextLocalMidnight(): number {
-    const now = new Date();
-    const next = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0, 0);
-    return next.getTime();
-  }
-
-  dismissPromo(_source: 'manual' | 'auto' = 'manual'): void {
-    this.promoVisible = false;
-    // Suppress showing again until next day
-    const until = this.nextLocalMidnight();
-    try {
-      localStorage.setItem(SUPPRESS_UNTIL_KEY, String(until));
-    } catch {}
-
-    this.scheduleColdWalletModal(400);
-  }
-
-  dismissColdWallet(): void {
-    this.showColdWalletModal = false;
-  }
-
-  proceedToColdWallet(event?: Event): void {
-    event?.preventDefault();
-    this.showColdWalletModal = false;
-    window.open('https://wallet.bullionlimited.co.za/', '_blank', 'noopener');
-  }
-
-  private scheduleColdWalletModal(delayMs: number) {
-    if (this.coldWalletTimer) {
-      clearTimeout(this.coldWalletTimer);
-    }
-
-    this.coldWalletTimer = window.setTimeout(() => {
-      this.showColdWalletModal = true;
-    }, delayMs);
-  }
 }
