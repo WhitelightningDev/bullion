@@ -12,7 +12,6 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.services';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommentDialogComponent, CommentEntry } from '../components/comment-dialog-component/comment-dialog-component.component';
-import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-learn',
@@ -34,11 +33,7 @@ export class LearnComponent implements AfterViewInit {
   @ViewChildren('videoPlayer1, videoPlayer2') videoPlayers!: QueryList<ElementRef<HTMLVideoElement>>;
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
 
-  constructor(private languageService: LanguageService) {
-    // ✅ Use the current language from the service
-    const lang = this.languageService.getCurrentLanguage();
-    this.languageService.useLanguage(lang);
-  }
+  constructor() {}
 
   ngAfterViewInit(): void {
     const script = document.createElement('script');
@@ -58,11 +53,6 @@ export class LearnComponent implements AfterViewInit {
     } else if (header) {
       header.style.opacity = '1';
     }
-  }
-
-  // ✅ Centralized language switching
-  switchLang(lang: 'en' | 'af'): void {
-    this.languageService.useLanguage(lang);
   }
 
   togglePlayPause(videoIndex: number): void {

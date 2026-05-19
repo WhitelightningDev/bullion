@@ -37,6 +37,66 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+.language-toggle {
+  padding: 0.35rem 0.6rem;
+}
+
+.language-toggle img {
+  flex: 0 0 auto;
+}
+
+.language-toggle-label {
+  color: #6c757d; /* Bootstrap secondary */
+  font-size: 0.9rem;
+}
+
+.language-toggle-current {
+  font-weight: 600;
+}
+
+.language-toggle-code {
+  display: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Keep the language switch + auth buttons stable on desktop when labels change length */
+@media (min-width: 992px) {
+  .navbar-right {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .language-toggle {
+    min-width: 190px;
+    justify-content: center;
+  }
+
+  .language-toggle-label {
+    white-space: nowrap;
+  }
+
+  .language-toggle-current {
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .language-toggle {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .language-toggle-label,
+  .language-toggle-current {
+    display: none;
+  }
+
+  .language-toggle-code {
+    display: inline;
+  }
+}
+
 .navbar-nav .nav-link {
   transition: color 0.2s ease;
 }

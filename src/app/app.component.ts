@@ -70,12 +70,6 @@ export class AppComponent implements OnInit {
       });
     }
 
-    // 🌐 Load preferred language
-    const lang = localStorage.getItem('lang');
-    if (lang) {
-      this.languageService.useLanguage(lang);
-    }
-
     this.syncInstallState();
   }
 

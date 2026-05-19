@@ -79,31 +79,45 @@
       </ul>
 
       <!-- Right Section: Language & Auth Buttons -->
-      <div class="d-flex align-items-center flex-wrap gap-3 ms-lg-3 mt-3 mt-lg-0">
+      <div class="d-flex align-items-center flex-wrap flex-lg-nowrap gap-3 ms-lg-3 mt-3 mt-lg-0 navbar-right">
 
         <!-- Language Dropdown -->
         <div class="dropdown">
           <button
-            class="btn btn-outline-light border-0 dropdown-toggle d-flex align-items-center gap-2 text-dark"
+            #languageDropdownButton
+            type="button"
+            class="btn btn-outline-light border-0 dropdown-toggle d-flex align-items-center gap-2 text-dark language-toggle"
             id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
             <img [src]="flagMap[currentLang]" width="16" height="12"
               [alt]="currentLang === 'en' ? 'English' : 'Afrikaans'" />
-            <span>{{ 'NAV.LANGUAGE' | translate }}</span>
+            <span class="language-toggle-label">{{ 'NAV.LANGUAGE' | translate }}</span>
+            <span class="language-toggle-current">
+              {{ currentLang === 'en' ? 'English' : 'Afrikaans' }}
+            </span>
+            <span class="language-toggle-code">{{ currentLang.toUpperCase() }}</span>
           </button>
           <ul class="dropdown-menu shadow-sm border-light-subtle" aria-labelledby="languageDropdown">
             <li>
-              <a class="dropdown-item d-flex align-items-center gap-2" href="#"
-                (click)="switchLang('en'); $event.preventDefault()">
-                <img src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="English" />
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center gap-2"
+                (click)="switchLang('en')"
+                [class.active]="currentLang === 'en'"
+              >
+                <img [src]="flagMap.en" width="16" height="12" alt="English" />
                 <span>English</span>
-              </a>
+              </button>
             </li>
             <li>
-              <a class="dropdown-item d-flex align-items-center gap-2" href="#"
-                (click)="switchLang('af'); $event.preventDefault()">
-                <img src="https://flagcdn.com/16x12/za.png" width="16" height="12" alt="Afrikaans" />
+              <button
+                type="button"
+                class="dropdown-item d-flex align-items-center gap-2"
+                (click)="switchLang('af')"
+                [class.active]="currentLang === 'af'"
+              >
+                <img [src]="flagMap.af" width="16" height="12" alt="Afrikaans" />
                 <span>Afrikaans</span>
-              </a>
+              </button>
             </li>
           </ul>
         </div>

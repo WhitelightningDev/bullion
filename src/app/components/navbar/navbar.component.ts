@@ -5,12 +5,16 @@ import {
   ViewChild,
   Renderer2,
   AfterViewInit,
-  OnInit
+  OnInit,
+  DestroyRef,
+  inject
 } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { RegisterpopupComponent } from '../../popups/registerpopup/registerpopup.component';
+import { LanguageCode, LanguageService } from '../../services/language.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 declare var bootstrap: any;
 
@@ -23,36 +27,35 @@ declare var bootstrap: any;
 })
 export class NavbarComponent implements AfterViewInit, OnInit {
   @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;
+  @ViewChild('languageDropdownButton') languageDropdownButton!: ElementRef<HTMLButtonElement>;
 
   showFloatingRegister = false;
-  currentLang: 'en' | 'af' = 'en';
+  currentLang: LanguageCode = 'en';
 
   flagMap = {
-    en: 'https://flagcdn.com/16x12/gb.png',
-    af: 'https://flagcdn.com/16x12/za.png'
+    en: 'flags/gb.png',
+    af: 'flags/za.png'
   };
+
+  private readonly destroyRef = inject(DestroyRef);
 
   constructor(
     private renderer: Renderer2,
-    private translate: TranslateService
+    private languageService: LanguageService
   ) {}
 
   ngOnInit() {
-    const savedLang = localStorage.getItem('preferredLang') as 'en' | 'af' | null;
-    this.currentLang = savedLang ?? 'en';
-    this.translate.use(this.currentLang);
+    this.currentLang = this.languageService.getCurrentLanguage();
+
+    this.languageService.currentLang$
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((lang) => (this.currentLang = lang));
   }
 
   ngAfterViewInit(): void {
     if (!this.navbarCollapse) return;
 
     const collapseEl = this.navbarCollapse.nativeElement;
-
-    // Initialize dropdowns manually
-    const dropdownToggles = document.querySelectorAll('[data-bs-toggle="dropdown"]');
-    dropdownToggles.forEach((toggle) => {
-      new bootstrap.Dropdown(toggle);
-    });
 
     // Collapse on nav-link click (but skip dropdown toggles)
     const navLinks = collapseEl.querySelectorAll('.nav-link');
@@ -109,8 +112,18 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   }
 
   switchLang(lang: 'en' | 'af') {
-    this.currentLang = lang;
-    this.translate.use(lang);
-    localStorage.setItem('preferredLang', lang);
+    this.languageService.setLanguage(lang);
+    this.closeLanguageDropdown();
+  }
+
+  private closeLanguageDropdown(): void {
+    try {
+      const btn = this.languageDropdownButton?.nativeElement;
+      if (!btn) return;
+      const dropdown = bootstrap.Dropdown.getInstance(btn) ?? bootstrap.Dropdown.getOrCreateInstance(btn);
+      dropdown?.hide?.();
+    } catch {
+      // no-op: bootstrap might not be available in some test environments
+    }
   }
 }

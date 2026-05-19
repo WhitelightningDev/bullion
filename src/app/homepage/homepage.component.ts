@@ -12,7 +12,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MaterialModule } from '../material.services';
 import { MetalsChartComponent } from '../components/metals-chart/metals-chart.component';
 import { CommentDialogComponent, CommentEntry } from '../components/comment-dialog-component/comment-dialog-component.component';
-import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-homepage',
@@ -37,11 +36,7 @@ export class HomepageComponent implements AfterViewInit {
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
 
-  constructor(private languageService: LanguageService) {
-    // ✅ Use persisted or default language on init
-    const lang = this.languageService.getCurrentLanguage();
-    this.languageService.useLanguage(lang);
-  }
+  constructor() {}
 
   ngAfterViewInit(): void {
     // 👋 Welcome header animation
@@ -57,11 +52,6 @@ export class HomepageComponent implements AfterViewInit {
     } else if (header) {
       header.style.opacity = '1';
     }
-  }
-
-  // 🌐 Language switcher that persists selection
-  switchLang(lang: 'en' | 'af'): void {
-    this.languageService.useLanguage(lang);
   }
 
   togglePlayPause(): void {

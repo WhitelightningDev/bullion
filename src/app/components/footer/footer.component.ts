@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { CookieSettingsComponent } from "../cookie-settings/cookie-settings.component";
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-footer',
@@ -12,9 +13,9 @@ import { CookieSettingsComponent } from "../cookie-settings/cookie-settings.comp
 export class FooterComponent {
   readonly currentYear = new Date().getFullYear();
 
-  constructor(private translate: TranslateService) {}
+  constructor(private languageService: LanguageService) {}
 
   switchLang(lang: 'en' | 'af') {
-    this.translate.use(lang);
+    this.languageService.setLanguage(lang);
   }
 }
