@@ -9,6 +9,34 @@ body {
   object-fit: contain;
 }
 
+@media (max-width: 576px) {
+  .home-hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .home-hero .display-5 {
+    font-size: 2rem;
+    line-height: 1.15;
+  }
+
+  .home-hero .lead {
+    font-size: 1rem;
+  }
+
+  .home-intro,
+  .home-story,
+  .home-how,
+  .home-future {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .home-intro-image {
+    max-height: 260px;
+  }
+}
+
 .skeleton-loader {
   background: linear-gradient(90deg, #444 25%, #555 37%, #444 63%);
   background-size: 400% 100%;

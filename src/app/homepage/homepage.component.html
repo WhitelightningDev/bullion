@@ -8,9 +8,9 @@
 </section>
 
 <!-- Introduction Section -->
-<section class="py-5">
+<section class="home-intro py-5">
   <div class="container">
-    <div class="row align-items-center g-5">
+    <div class="row align-items-center g-4 g-lg-5">
       <div class="col-md-6 text-center">
         <img
           src="bullion-market-image.png"
@@ -42,11 +42,11 @@
 </section>
 
 <!-- Story Section -->
-<section class="py-5 text-center text-white">
+<section class="home-story py-5 text-center text-white">
   <h2 class="fw-semibold mb-4">{{ 'STORY.TITLE' | translate }}</h2>
 
-  <div class="d-flex justify-content-center"> 
-    <div class="col-lg-8 col-md-10 col-12 p-4">
+  <div class="d-flex justify-content-center">
+    <div class="col-lg-8 col-md-10 col-12 p-0 p-sm-4">
       <!-- Skeleton Loader While Video Loads -->
    <div *ngIf="!storyVideoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div> 
 
@@ -66,7 +66,7 @@
 </section>
 
 <!-- How It Works Section -->
-<section class="text-white py-5">
+<section class="home-how text-white py-5">
   <div class="container">
     <div class="text-center mb-5">
       <h2 class="fw-semibold">{{ 'HOW.TITLE' | translate }}</h2>
@@ -96,7 +96,7 @@
 </section>
 
 <!-- The Future Section -->
-<section class="py-5">
+<section class="home-future py-5">
   <div class="container text-center">
     <h3>
       <a href="/poolfeatures#video-section" class="text-info small text-decoration-none">
@@ -112,7 +112,11 @@
     <p class="h5 fw-semibold text-light mb-3">
       {{ 'FUTURE.CTA' | translate }} <span class="text-warning">R350.</span> {{ 'INTRO.BODY' | translate }}
     </p>
-    <a href="https://bullion.mycoop.co.za/account/register" target="_blank" class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm">
+    <a
+      href="https://bullion.mycoop.co.za/account/register"
+      target="_blank"
+      class="btn btn-warning px-4 py-2 fw-semibold rounded-pill shadow-sm w-100 w-sm-auto"
+    >
       {{ 'FUTURE.JOIN' | translate }}
     </a>
   </div>
