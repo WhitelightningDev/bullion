@@ -62,23 +62,11 @@
           </div>
 
           <div class="row g-3 mt-2">
-            <div class="col-12 col-md-6">
+            <div class="col-12">
               <div class="contact-mini">
                 <div class="contact-mini-title">{{ 'CONTACT.ADMIN_QUERIES' | translate }}</div>
                 <ul class="contact-mini-list">
                   <li *ngFor="let person of ('CONTACT.ADMIN_CONTACTS' | translate:undefined)">
-                    <i class="bi bi-person-fill contact-mini-icon" aria-hidden="true"></i>
-                    <span>{{ person }}</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="col-12 col-md-6">
-              <div class="contact-mini">
-                <div class="contact-mini-title">{{ 'CONTACT.OTHER_INFO' | translate }}</div>
-                <ul class="contact-mini-list">
-                  <li *ngFor="let person of ('CONTACT.OTHER_CONTACTS' | translate:undefined)">
                     <i class="bi bi-person-fill contact-mini-icon" aria-hidden="true"></i>
                     <span>{{ person }}</span>
                   </li>

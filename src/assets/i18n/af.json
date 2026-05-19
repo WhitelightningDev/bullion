@@ -218,9 +218,9 @@
       "ERROR_SUMMARY": "Onvolledige Vorm",
       "ERROR_DETAIL": "Vul asseblief al die velde in."
     },
-    "ADMIN_CONTACTS": ["Willem – 083 375 9003", "Anneke – 082 297 3542"],
+    "ADMIN_CONTACTS": ["Steven Volschenk – +27 82 508 0564", "Dr. Dennis Kotze – +27 84 795 3225"],
     "OTHER_INFO": "Ander Inligting:",
-    "OTHER_CONTACTS": ["Johan Keyser – 083 627 0670"]
+    "OTHER_CONTACTS": []
   },  "LEARN": {
     "START_HERE": "Begin Hier",
     "BULLION_REGISTRATION_TUTORIAL": "Bullion Registrasie Handleiding",
