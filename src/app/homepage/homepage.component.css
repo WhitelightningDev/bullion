@@ -2,6 +2,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+.home-intro-image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+}
+
 .skeleton-loader {
   background: linear-gradient(90deg, #444 25%, #555 37%, #444 63%);
   background-size: 400% 100%;
