@@ -47,18 +47,31 @@
 
   <div class="d-flex justify-content-center">
     <div class="col-lg-8 col-md-10 col-12 p-0 p-sm-4">
-      <!-- Skeleton Loader While Video Loads -->
-   <div *ngIf="!storyVideoLoaded" class="ratio ratio-16x9 skeleton-loader rounded-4 mb-3"></div> 
-
-      <!-- YouTube Video Embed -->
-      <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden" [hidden]="!storyVideoLoaded">
+      <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden video-shell">
+        <button
+          *ngIf="!storyVideoActive"
+          type="button"
+          class="video-poster-button"
+          (click)="playStoryVideo()"
+          aria-label="Play The Bullion Story video"
+        >
+          <img
+            [src]="storyVideoPoster"
+            alt="The Bullion Story video preview"
+            class="video-poster-image"
+            loading="eager"
+          >
+          <span class="video-play-button" aria-hidden="true">
+            <span class="video-play-icon"></span>
+          </span>
+        </button>
         <iframe
-          src="https://www.youtube.com/embed/bHxUF92a8lo"
+          *ngIf="storyVideoActive"
+          src="https://www.youtube.com/embed/bHxUF92a8lo?autoplay=1&rel=0&modestbranding=1"
           title="The Bullion Story"
           allowfullscreen
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          class="rounded-4 border border-secondary"
-          (load)="storyVideoLoaded = true"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="rounded-4 border border-secondary video-iframe"
         ></iframe>
       </div>
     </div> 

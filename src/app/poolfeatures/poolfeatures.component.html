@@ -48,15 +48,30 @@
 
       <div class="pools-surface mt-3">
         <div class="ratio ratio-16x9 pools-video-frame">
-          <div *ngIf="!videoLoaded" class="skeleton-loader rounded-4"></div>
+          <button
+            *ngIf="!videoActive"
+            type="button"
+            class="video-poster-button"
+            (click)="playVideo()"
+            [attr.aria-label]="'LEARN.PLAY_VIDEO' | translate"
+          >
+            <img
+              [src]="videoPoster"
+              alt="{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}"
+              class="video-poster-image"
+              loading="lazy"
+            >
+            <span class="video-play-button" aria-hidden="true">
+              <span class="video-play-icon"></span>
+            </span>
+          </button>
           <iframe
-            [hidden]="!videoLoaded"
-            src="https://www.youtube.com/embed/0uOaGmvSSjs"
+            *ngIf="videoActive"
+            src="https://www.youtube.com/embed/0uOaGmvSSjs?autoplay=1&rel=0&modestbranding=1"
             title="{{ 'POOLS.DEPOSIT_PROCESS_TITLE' | translate }}"
             allowfullscreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            class="rounded-4"
-            (load)="onVideoLoad()"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            class="rounded-4 video-iframe"
           ></iframe>
         </div>
       </div>

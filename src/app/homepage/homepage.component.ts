@@ -31,7 +31,8 @@ export class HomepageComponent implements AfterViewInit {
   videoLiked = false;
   comments: (CommentEntry & { liked?: boolean; likesCount?: number })[] = [];
   isPlaying = false;
-  storyVideoLoaded = false;
+  storyVideoActive = false;
+  readonly storyVideoPoster = 'https://i.ytimg.com/vi/bHxUF92a8lo/maxresdefault.jpg';
 
   @ViewChild('commentDialog') commentDialog!: CommentDialogComponent;
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
@@ -64,6 +65,10 @@ export class HomepageComponent implements AfterViewInit {
   likeVideo(): void {
     this.videoLiked = !this.videoLiked;
     this.videoLiked ? this.likeCount++ : this.likeCount--;
+  }
+
+  playStoryVideo(): void {
+    this.storyVideoActive = true;
   }
 
   openCommentsDialog(): void {

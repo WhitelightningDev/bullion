@@ -12,7 +12,8 @@ import { TranslateModule } from '@ngx-translate/core';
 export class PoolfeaturesComponent implements AfterViewInit {
   likeCount = 0;
   videoLiked = false;
-  videoLoaded = false;
+  videoActive = false;
+  readonly videoPoster = 'https://i.ytimg.com/vi/0uOaGmvSSjs/maxresdefault.jpg';
   isPlaying = false;
 
   @ViewChild('videoPlayer', { static: false }) videoPlayerRef!: ElementRef<HTMLVideoElement>;
@@ -34,8 +35,8 @@ export class PoolfeaturesComponent implements AfterViewInit {
     }
   }
 
-  onVideoLoad() {
-    this.videoLoaded = true;
+  playVideo() {
+    this.videoActive = true;
   }
 
   infoCards = [
