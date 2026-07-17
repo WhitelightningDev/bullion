@@ -22,7 +22,7 @@ export class HkftrustComponent {
     );
 
     if (userConfirmed) {
-      window.open('https://hongkongtrust.vercel.app/', '_blank');
+      window.open('https://www.trusthub.biz', '_blank');
     }
   }
 
